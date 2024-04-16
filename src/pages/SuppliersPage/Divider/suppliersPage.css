@@ -1,0 +1,607 @@
+
+
+/* 1ST SECTION */
+/* MAIN */
+.main-section {
+  width: 97%;
+  margin: 24px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 1;
+}
+
+.main-content {
+  max-width: 97%; /* Fixed width */
+  height: 368px;
+  text-align: left;
+  margin-left: 80px;
+  margin-top: 65px;
+  margin-bottom: 80px;
+}
+
+.main-content h1 {
+  font-family: "Body Grotesque Large Trial", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -0.25px;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 16px;
+}
+
+.main-content p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 64px;
+}
+
+.main-buttons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.btn {
+  padding: 16px 32px; /* Adjust as needed */
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.1px;
+  flex: none; /* do not grow or shrink */
+}
+
+.btn-primary {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(15, 23, 33, 1);
+}
+
+@media (max-width: 768px) {
+  .main-buttons {
+    flex-direction: column; /* stack buttons vertically on smaller screens */
+    gap: 8px; /* smaller gap for smaller screens */
+  }
+
+  .btn {
+    width: 100%; /* full width buttons on smaller screens */
+    padding: 12px 24px; /* slightly smaller padding on smaller screens */
+  }
+}
+
+/* SAVE TIME SECTION */
+
+.order-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px;
+    border: none;
+    margin: 24px;
+  }
+
+.conditions-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px;
+  border: none;
+  margin: 24px;
+}
+
+.save-time-content {
+  width: 48%; /* Adjust based on your design */
+}
+
+.save-time-title {
+  font-family: "Body Grotesque Fit Trial", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.0025em;
+  text-align: left;
+  color: rgba(15, 23, 33, 1);
+}
+
+.suplier-item {
+  display: flex;
+  align-items: flex-start; /* Align the items to the start of the cross axis */
+  padding-left: 8px;
+  margin-bottom: 16px;
+}
+
+.suplier-item span {
+  padding-left: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: rgba(15, 23, 33, 1); /* Assuming you want the text to be white */
+}
+
+.suplier-item .suplier-highlight {
+  background: rgba(230, 70, 70, 1); /* Green background for highlighted text */
+  color: #ffffff; /* White text color for highlighted text */
+  padding: 0.2em; /* Optional: if you want padding around the highlighted text */
+}
+
+.save-time-list {
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.star-icon {
+  margin-right: 8px; /* Adjust the space between the icon and the text */
+}
+
+.save-time-button {
+  width: 218px; /* Fixed width */
+  height: 56px; /* Fixed height */
+  border-radius: 16px; /* Rounded top-left corner */
+  border: 2px solid rgba(82, 76, 189, 1); /* Solid border with specified color */
+  background: rgba(255, 255, 255, 1); /* White background */
+  color: rgba(82, 76, 189, 1); /* Text color matching the border */
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  text-align: center;
+}
+
+.save-time-visual {
+  position: relative;
+  width: 48%; /* Adjust based on your design */
+}
+
+.phone-image {
+  width: 100%;
+  display: block; /* Makes sure the image doesn't have extra space below */
+}
+
+.statuses-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjust the gap between the text and the image */
+  }
+  
+  .statuses-text {
+    margin: 0; /* Removes default margin from the span if present */
+    font-size: 16px; /* Example font-size, adjust as needed */
+    font-weight: bold; /* Example font-weight, adjust as needed */
+    color: #333; /* Example text color, adjust as needed */
+  }
+  
+  .statuses-icon {
+    height: auto; /* Maintain the aspect ratio */
+    width: auto; /* Adjust width as necessary to fit your design */
+  }
+  
+
+/* 2ND SECTION */
+
+.integration-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px;
+  border: none;
+  margin: 24px;
+}
+
+.notification-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px;
+    border: none;
+    margin: 24px;
+  }
+
+.find-products-title {
+  font-family: "Body Grotesque Fit Trial", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.0025em;
+  text-align: left;
+  color: rgba(15, 23, 33, 1);
+}
+
+.integration-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+
+.integration-item .suplier-highlight {
+  background: rgba(230, 70, 70, 1); /* Green background for highlighted text */
+  color: #ffffff; /* White text color for highlighted text */
+  padding: 0.2em;
+}
+
+.integration-item span {
+  margin-right: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: rgba(15, 23, 33, 1);
+}
+
+/* Testimonials */
+
+.testimonials {
+  background: #ffffff;
+  padding: 40px; /* Adjust the padding as needed */
+}
+
+.testimonials-title {
+  font-family: "Body Grotesque Fit Trial", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.0025em;
+  text-align: center;
+  color: rgba(15, 23, 33, 1);
+  margin-bottom: 70px;
+  height: 48px;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial {
+  width: 0%; /* Full width on small screens */
+  margin-bottom: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(245, 245, 245, 1);
+  border-radius: 32px;
+  padding: 48px;
+  box-sizing: border-box;
+}
+
+.testimonial-text {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: rgba(15, 23, 33, 1);
+  margin-top: 0;
+}
+
+.testimonial-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 16px; /* Adjust border-radius as needed */
+}
+
+.testimonial-avatar {
+  width: 64px; /* Adjust size as needed */
+  height: 64px; /* Adjust size as needed */
+  border-radius: 50%;
+  margin-right: 16px; /* Adjust space between avatar and text as needed */
+}
+
+.testimonial-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-author {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(15, 23, 33, 1);
+  margin-bottom: 2px; /* Adjust space between author and role as needed */
+}
+
+.testimonial-role {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba(102, 108, 116, 1); /* Lighter text color */
+}
+
+@media (min-width: 768px) {
+  .testimonials-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .testimonial {
+    /* Adjust width for two or three items per row */
+    width: calc(50% - 24px); /* for tablets */
+    padding: 24px; /* Smaller padding on larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonial {
+    width: calc(33.333% - 24px); /* for desktops */
+    height: 250px;
+  }
+}
+
+/* ACCESS */
+
+.access-section {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
+  text-align: center; /* Centers text */
+  margin-left: 250px;
+  padding: 20px 0;
+}
+
+.access-content {
+  width: 100%; /* Full width on mobile */
+  max-width: 550px; /* Adjust to the max-width as needed */
+  text-align: center; /* Center the text and content */
+  margin-bottom: 20px;
+}
+
+.access-title {
+  position: relative;
+  font-family: "Body Grotesque Fit Trial", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.0025em;
+  text-align: left;
+  color: rgba(15, 23, 33, 1);
+  width: 65%;
+}
+
+.access-title .highlight {
+  position: relative;
+  font-family: "Body Grotesque Fit Trial", sans-serif; /* If 'бесплатно' should have the same font */
+  font-size: 40px; /* Assuming 'бесплатно' should be the same size as the rest of the title */
+  font-weight: 700; /* Assuming 'бесплатно' should have the same weight as the rest of the title */
+  line-height: 48px; /* Assuming 'бесплатно' should have the same line-height as the rest of the title */
+  letter-spacing: -0.0025em; /* Assuming 'бесплатно' should have the same letter spacing */
+  color: rgba(250, 166, 19, 1); /* Replace with the actual color if different */
+  text-align: left;
+}
+
+.ellipse-behind {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Start at the horizontal center of the .highlight span */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Adjust the positioning to truly center based on the element's size */
+  z-index: -1; /* Places the ellipse behind the text */
+  width: 250px;
+  height: auto;
+}
+
+/* Adjust the size of the ellipse on smaller screens */
+@media (max-width: 768px) {
+  .ellipse-behind {
+    width: 60vw; /* Smaller size for smaller screens */
+  }
+}
+
+/* Further adjust for very small screens */
+@media (max-width: 480px) {
+  .ellipse-behind {
+    width: 200px; /* Even smaller size for mobile screens */
+  }
+}
+
+.access-description {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: rgba(102, 108, 116, 1); /* Light gray color */
+}
+
+/* Responsive design adjustments, if needed */
+@media (max-width: 768px) {
+  .access-title,
+  .access-title .highlight {
+    font-size: 32px; /* Smaller font size on mobile devices */
+    line-height: 40px; /* Adjust line-height accordingly */
+  }
+
+  .access-description {
+    font-size: 16px; /* Smaller font size on mobile devices */
+    line-height: 22px; /* Adjust line-height accordingly */
+  }
+}
+
+/* CSS styling */
+.access-buttons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+  margin-top: 45px;
+}
+
+.access-button {
+  width: 50%;
+  padding: 16px 51px; /* Adjust the padding to fit your design */
+  font-size: 16px; /* Adjust font-size as needed */
+  font-weight: 500; /* Font weight for better readability */
+  border-radius: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+  flex: none;
+}
+
+.access-button-solid {
+  background-color: rgba(82, 76, 189, 1);
+  color: white;
+  border: 2px solid rgba(82, 76, 189, 1); /* For consistent sizing with outlined button */
+}
+
+.access-button-outlined {
+  background-color: transparent;
+  color: rgba(82, 76, 189, 1);
+  border-color: rgba(82, 76, 189, 1);
+}
+
+.access-button:hover {
+  opacity: 0.8;
+}
+
+.access-visual {
+  position: relative;
+  width: 40%; /* Adjust width as necessary */
+}
+
+.access-visual img.Visualphone {
+  width: 80%; /* Make the phone image responsive within the container */
+}
+
+.access-visual img.star {
+  position: absolute;
+  top: 2%; /* Position from the top of the .access-visual container */
+  transform: translate(-80%, -50%); /* Adjust the translation if necessary */
+  width: 40px; /* Example size, adjust using percentages for responsiveness if needed */
+  height: 40px; /* Keep the height same as width for a square aspect ratio */
+  z-index: 10; /* Ensures the star is above other elements */
+}
+
+/* Example media query for smaller screens */
+@media (max-width: 768px) {
+  .access-visual img.star {
+    width: 10%; /* Reduce size on smaller screens */
+    top: 5%; /* Adjust the top position for smaller screens */
+    right: 5%; /* Adjust the right position for smaller screens */
+    transform: translate(
+      50%,
+      -50%
+    ); /* Adjust if necessary for smaller screens */
+  }
+}
+
+/* FAQ */
+
+.faq {
+  background: #ffffff; /* or any other color */
+  padding: 20px;
+  border-radius: 10px; /* Adjust as needed */
+}
+
+.faq-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Body Grotesque Fit Trial", sans-serif; /* Replace with the correct font-family if it is different */
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.0025em;
+  color: rgba(15, 23, 33, 1); /* Assuming you want to set text color */
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically, if there's extra space */
+  margin: 0 auto; /* Center the container within its parent */
+  padding: 24px; /* Padding around the entire container */
+  width: 63%;
+}
+
+.faq-item {
+  width: 100%;
+  padding: 25px;
+  margin: 10px; /* Set margin around the item */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05); /* Adjust the box shadow as per design */
+  border-radius: 8px; /* Rounded corners */
+  background-color: rgba(245, 245, 245, 1); /* White background */
+  box-sizing: border-box;
+  color: rgba(15, 23, 33, 1);
+}
+
+.faq-question {
+  font-family: "Inter", sans-serif; /* Use Inter font-family */
+  font-size: 18px; /* Set the font size */
+  font-weight: 600; /* Bold font weight as specified */
+  line-height: 24px; /* Line height for readability */
+  letter-spacing: -0.25px; /* Adjust letter spacing as needed */
+  text-align: left; /* Align text to the left */
+  color: rgba(15, 23, 33, 1); /* Dark text color for better readability */
+  display: flex; /* Flex display to align icon and text */
+  justify-content: space-between; /* Space out the question and the icon */
+  align-items: center; /* Vertically align items in the middle */
+  cursor: pointer; /* Change cursor to pointer to indicate clickable area */
+}
+
+.faq-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out,
+    box-shadow 0.3s ease-out;
+  background-color: transparent;
+}
+
+.faq-answer.show {
+  max-height: 1000px; /* Maximum height when expanded */
+  overflow: visible;
+  padding-top: 24px;
+  color: rgba(102, 108, 116, 1); /* Text color for the answer */
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+}
+
+/* Content styles */
+.faq-answer-content {
+  color: rgba(102, 108, 116, 1); /* The color for the answer text */
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+}

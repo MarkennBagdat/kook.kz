@@ -1,0 +1,352 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 48px;
+  background-color: rgba(31, 31, 31, 1); /* Change as needed */
+  color: #fff;
+  border-radius: 32px;
+  height: 300px;
+}
+
+.logo {
+  display: flex; /* This will align the logo and text side by side */
+  align-items: center; /* This will vertically center align the items */
+  background-color: rgba(
+    31,
+    31,
+    31,
+    1
+  ); /* This matches the black background in your photo */
+  color: #fff; /* This is the text color */
+}
+
+.logo-image {
+  /* Assuming you want some space between the image and the text */
+  margin-right: 12px; /* Adjust the spacing to match your design */
+}
+
+.logo-text {
+  margin: 0; /* Removes default margin */
+  font-family: "Body Grotesque Fit Trial", sans-serif; /* Replace with your font or web-safe alternative */
+  font-size: 20px; /* Sets the font size */
+  font-weight: 700; /* Sets the weight to bold */
+  line-height: 24px; /* Sets the line height */
+  letter-spacing: -0.0025em; /* Sets the letter spacing */
+  text-align: left; /* Aligns the text to the left */
+  color: #fff;
+}
+
+.paragraph-style {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: rgba(202, 203, 205, 1);
+}
+
+
+
+.store-badges {
+  display: flex;
+  justify-content: start; /* or space-between, depending on layout */
+  align-items: center;
+  gap: 12px; /* space between buttons */
+}
+
+
+.store-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 20px; /* Rounded corners */
+  background-color: rgba(31, 31, 31, 1); /* Background color */
+  border: 2px solid #FFF; /* White border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  text-decoration: none;
+  width: 33%; /* Fixed width */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  transition: all 0.3s ease;
+}
+.store-badge a {
+  display: flex;
+}
+
+.store-badge:hover {
+  background-color: rgba(50, 50, 50, 1); /* Slightly lighter background on hover */
+  border-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white border on hover */
+}
+
+.store-badge img {
+  height: auto;
+  width: auto; /* To keep the aspect ratio */
+  margin-right: 8px; /* Space between the image and the text */
+}
+
+/* Assuming you have a light theme, you might want to invert the colors to white */
+.store-badge img {
+  filter: invert(100%);
+}
+
+/* Text next to the store badge */
+.store-badge-text {
+  display: inline-flex;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif; /* Specify the font-family */
+  font-size: 16px; /* Set the font-size */
+  font-weight: 600; /* Set the font-weight to semi-bold */
+  line-height: 24px; /* Set the line-height */
+  letter-spacing: -0.1px; /* Set the letter-spacing */
+  text-align: center; /* Center the text */
+  color: rgba(255, 255, 255, 1);
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  flex: 1; /* Allow text to fill the space after the icon */
+  text-align: left;
+  margin-left: 8px; /* Adjust as needed */
+  white-space: nowrap;
+}
+
+
+.footer-star {
+  position: absolute;
+  right: 0;
+  left: 98%;
+  top: 3%; /* Adjust this value as necessary */
+  transform: translateY(-50%); /* This will vertically center it */
+}
+
+.footer-sitemap h3,
+.footer-contacts h3 {
+  margin-bottom: 10px;
+}
+
+.footer-sitemap ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-sitemap ul li a,
+.footer-contacts a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-contacts .social-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.store-badges a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-sitemap,
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-sitemap {
+  margin-right: 280px;
+}
+.footer-sitemap h3 {
+  font-family: "Body Grotesque Fit Trial", sans-serif; /* Adjust if needed */
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.0025em;
+  text-align: left;
+  margin-bottom: 24px; /* Space below the heading */
+}
+
+.footer-sitemap ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.footer-sitemap ul li {
+  margin-bottom: 12px; /* Space between list items */
+}
+
+.footer-sitemap ul li:last-child {
+  margin-bottom: 0; /* No margin for the last item */
+}
+
+.footer-sitemap a {
+  font-family: "Inter", sans-serif; /* Adjust if needed */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: #ffffff; /* Adjust if needed */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.footer-sitemap a:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+}
+
+/* Add more styles as needed */
+
+.footer-contacts {
+  color: #ffffff; /* Adjust if needed */
+  margin-right: 280px;
+}
+
+.footer-contacts h3 {
+  font-family: "Body Grotesque Fit Trial", sans-serif; /* Adjust if needed */
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.0025em;
+  text-align: left;
+  margin-bottom: 24px; /* Space below the heading */
+}
+
+.footer-contacts a {
+  display: block; /* To ensure the full width is clickable and to position the icons below the email */
+  font-family: "Inter", sans-serif; /* Adjust if needed */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: #ffffff; /* Adjust if needed */
+  margin-bottom: 12px; /* Space between the email and the social icons */
+}
+
+.social-links {
+  display: flex;
+  gap: 12px; /* Space between icons */
+}
+
+.social-links img {
+  width: 24px; /* Adjust if needed */
+  height: 24px; /* Adjust if needed */
+}
+
+/* Additional styles for links to remove the default blue color and underline */
+.footer-contacts a,
+.social-links a {
+  color: inherit; /* Inherits the white color specified above */
+  text-decoration: none; /* No underline */
+}
+
+/*LANGUAGE*/
+
+.footer-language button {
+  background-color: rgba(31, 31, 31, 1); /* Dark background as in the photo */
+  color: #fff; /* White text color */
+  border: 2px solid #fff; /* White border as indicated */
+  border-radius: 12px; /* As specified */
+  padding: 8px 16px; /* Top and Bottom - 8px, Left and Right - 16px */
+  font-size: 16px; /* Based on typical design, adjust as needed */
+  display: inline-flex; /* To align the text and the icon */
+  align-items: center; /* Centers items on the cross-axis */
+  gap: 4px; /* Space between "Русский" and the chevron icon */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding some shadow for depth, adjust as needed */
+  cursor: pointer; /* To indicate the button is clickable */
+  transition: background-color 0.3s ease;
+  margin-top: 15px; /* Adjust as needed for positioning */
+}
+
+/* Hover effect - Lighten the button color */
+.footer-language button:hover {
+  background-color: rgba(50, 50, 50, 1); /* Lighter shade when hovered */
+}
+
+/* Image icon adjustment if necessary */
+.footer-language img {
+  /* If the Chevron is an image */
+  width: 12px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  filter: invert(100%); /* Invert color to white if necessary */
+}
+
+/* Base styles - Don't repeat these, they're assumed to be already present */
+/* ... */
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start on small screens */
+    padding: 24px; /* Less padding on smaller screens */
+    height: auto; /* Height should be auto on small screens */
+  }
+
+  .footer-brand,
+  .footer-content {
+    width: 100%; /* Full width on small screens */
+  }
+
+  .footer-sitemap,
+  .footer-contacts,
+  .footer-language {
+    margin-right: 0; /* Remove margin on small screens */
+    margin-bottom: 20px; /* Add some space between the sections */
+  }
+
+  .footer-sitemap ul,
+  .footer-contacts .social-links {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .footer-sitemap ul li,
+  .footer-contacts .social-links a {
+    margin-bottom: 10px; /* Less space between items on small screens */
+  }
+
+  .footer-sitemap ul li:last-child,
+  .footer-contacts .social-links a:last-child {
+    margin-bottom: 0; /* Remove margin on the last item */
+  }
+
+  .social-links {
+    flex-wrap: wrap; /* Allow social links to wrap */
+    justify-content: flex-start; /* Align to start */
+  }
+
+  .store-badges a {
+    margin-bottom: 10px; /* Stack store badges vertically */
+  }
+
+  .footer-star {
+    left: 50%;
+    top: -30px; /* Adjust to place the star above the footer */
+    transform: translateX(-50%) translateY(-50%); /* Center horizontally */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-brand h2,
+  .footer-sitemap h3,
+  .footer-contacts h3 {
+    font-size: 18px; /* Smaller text on very small screens */
+  }
+
+  .footer-brand p,
+  .footer-sitemap a,
+  .footer-contacts a,
+  .footer-language button {
+    font-size: 14px; /* Smaller text on very small screens */
+  }
+}
+
+/* Add more media queries as needed for different breakpoints */
