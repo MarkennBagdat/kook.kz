@@ -1,0 +1,357 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  background-color: #ffffff; /* Background color */
+}
+
+.navbar-section.left {
+  display: flex;
+  align-items: center;
+  padding-left: 48px; /* Left padding as per design */
+}
+
+.navbar-logo img {
+  height: 60px; /* Adjust based on your logo size */
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  margin-left: 48px;
+}
+
+.nav-link {
+  margin-right: 48px; /* Space between links */
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  color: rgba(15, 23, 33, 1); /* Adjust the font color as per design */
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  /* height: 48px; Adjust as per design, ensures vertical centering */
+  padding: 20px 0; /* Padding top and bottom */
+  position: relative;
+  cursor: pointer;
+}
+
+
+.navbar-actions {
+  display: flex;
+  gap: 10px; /* Gap between action buttons */
+}
+
+.nav-link-active {
+  color: rgba(120, 120, 120, 1); /* Dark gray color for active link */
+}
+
+/* Ensure that the active link styling overrides the default link styling */
+.nav-link.nav-link-active {
+  color: rgba(120, 120, 120, 1); /* Dark gray color for active link */
+}
+
+/* Dropdown Button */
+
+.contact-dropdown {
+  width: 243px; /* 'Hug' implies the width should fit content up to this max width */
+  position: relative;
+}
+.dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}
+
+.dropbtn.active:after {
+  /* This transforms the arrow to point up when the dropdown is active */
+  transform: rotate(180deg);
+  color: rgba(168, 169, 170, 1);
+}
+
+/* Dropdown Content */
+/* Styles for the dropdown menu */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  overflow: hidden; /* For rounded corners */
+  position: absolute;
+  top: 60px; /* Dropdown appears 48px below the button */
+  width: 280px; /* Width of the dropdown */
+  height: auto; /* Height of the dropdown */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 16px; /* Top left corner rounded */
+  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  gap: 12px; /* Space between items */
+  opacity: 1; /* Ensure the dropdown is fully visible */
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 8px; /* Space between the icon and text */
+  padding: 5px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.dropdown-item:hover {
+  background-color: #f7f7f7; /* Background color on hover */
+}
+
+.action-icon:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.action-icon {
+  margin-left: 12px; /* Space between the text/email and action icon */
+}
+
+/* Styles for the social icons container */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centers the icons in the dropdown */
+  align-items: center; /* Aligns icons vertically */
+  gap: 16px; /* Space between icons */
+  padding-top: 8px;
+  border-top: 1px solid rgba(230, 232, 234, 1);
+}
+
+/* Individual social icon link */
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px; /* Width of the icon */
+  height: 25px; /* Height of the icon */
+  margin-top: 10px;
+  padding: 0 24px;
+}
+
+.social-link:last-child {
+  margin-right: 0; /* Remove right margin for the last icon */
+}
+
+.social-link:not(:last-child) {
+  border-right: 1px solid rgba(230, 232, 234, 1);
+}
+
+.icon {
+  display: flex; /* Use flex to center SVG images */
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* SVG will take up the full width of the .icon container */
+  height: 100%; /* SVG will take up the full height of the .icon container */
+}
+
+.icon img {
+  width: 24px; /* Adjust width as needed */
+  height: auto; /* Height will scale automatically */
+}
+
+/* Icon classes */
+.phone-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}
+
+.email-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}
+
+.linkedin-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}
+
+.instagram-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+
+.whatsapp-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* Adjust the gap to match your design */
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none; /* No background for a link-like button */
+  border: none; /* No border unless specified in your design */
+  color: #000000; /* Text color - adjust as needed */
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.action-button--accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px; /* Space between text and any icons */
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.1px;
+  text-align: center;
+  color: #ffffff; /* Text color */
+  background-color: rgba(82, 76, 189, 1); /* Button background color */
+  border: none;
+  border-radius: 12px; /* Top left border radius */
+  width: 174px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  cursor: pointer;
+  opacity: 1; /* Fully opaque */
+}
+
+.action-login.active {
+  color: rgba(168, 169, 170, 1);
+}
+/* Style for the globe/world icon if it is not part of a button */
+.world-icon {
+  width: 24px; /* Set the width as per your design */
+  height: 24px; /* Set the height as per your design */
+}
+
+
+.dropdown-content-login {
+  position: absolute;
+  top: 100px;
+  transform: translateX(-50%); /* Shift to the left by half of its own width to center it */
+  background: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden; /* To ensure rounded corners are respected */
+  width: 250px; /* Set a fixed width or use 'width: auto' for automatic width */
+  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  gap: 12px; /* Space between items */
+  opacity: 1;
+}
+
+.dropdown-item-login {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #EAEAEA;
+  text-decoration: none;
+  color: #000000;
+}
+
+.dropdown-item-login:last-child {
+  border-bottom: none; /* No border for the last item */
+}
+
+.dropdown-item-login:hover {
+  background-color: #F8F8F8; /* Light grey background on hover */
+}
+
+.icon-login, .chevron-right {
+  margin-right: 12px; /* Space between the icon and the text */
+}
+
+.icon-login {
+  width: 24px; /* Size of the icon */
+  height: 24px; /* Size of the icon */
+}
+
+.chevron-right {
+  margin-left: auto; /* Pushes the chevron to the right */
+  width: 24px; /* Size of the chevron */
+  height: 24px; /* Size of the chevron */
+}
+
+/*LANGUAGE*/
+
+/* Add this inside your navbar.css file */
+.world-icon {
+  transition: color 0.3s ease;
+}
+
+.world-icon.hover {
+  color: rgba(168, 169, 170, 1);
+}
+
+.dropdown-content-language {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #FFF;
+  min-width: 160px; /* Adjust based on your content */
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Adjust as necessary */
+  padding: 5px 0;
+  z-index: 1;
+}
+
+.nav-link.language-dropdown:hover .dropdown-content-language {
+  display: block;
+}
+
+.dropdown-item-language {
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+  font-size: 16px; /* Adjust as necessary */
+}
+
+.dropdown-item-language:hover {
+  background-color: #F7F7F7;
+}
+
+
+
+/* ... your button styles ... */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar-links,
+  .navbar-actions {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+  }
+}
