@@ -46,7 +46,7 @@ const FormSection = ({ toggleModal }) => {
       <h3 className="section-title">О компании</h3>
       <div className="input-group">
         <input type="text" placeholder="Название компании *" required />
-        <textarea placeholder="Описание деятельности"></textarea>
+        <textarea type="text" placeholder="Описание деятельности"className="textarea"></textarea>
         <input type="text" placeholder="БИН" />
       </div>
       <h3 className="section-title">ЕЩЁ</h3>

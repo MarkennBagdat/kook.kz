@@ -92,9 +92,10 @@
 
 /* Добавьте стили для hover эффекта, если это необходимо */
 .form-tab:hover {
-  background-color: rgba(82, 76, 189, 1); /* Цвет фона для вкладки при наведении */
+  background-color: rgb(201, 199, 243); /* Цвет фона для вкладки при наведении */
   color: white; /* Цвет текста для вкладки при наведении */
   opacity: 0.8; /* Непрозрачность для вкладки при наведении */
+  border-radius: 8px;
 }
 
 
@@ -114,14 +115,31 @@
   input[type="text"],
   input[type="tel"],
   input[type="email"],
+  textarea[type="text"],
   select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    
+    border: 1px solid #ccc; /* светло-серая граница */
+  border-radius: 8px; /* скругление углов */
+  font-size: 16px; /* размер шрифта */
   }
+
+  .textarea{
+    height: 120px;
+  }
+/* Стиль полей ввода при наведении курсора */
+input:hover, textarea:hover {
+  border-color: #a9a9a9; /* темно-серая граница */
+}
+
+/* Стиль полей ввода при фокусе */
+input:focus, textarea:focus {
+  border-color: #666; /* еще более темная граница, если нужно */
+  outline: none; 
+  font-size: 16px;
+}
+
   
   .form-actions {
     display: flex;
