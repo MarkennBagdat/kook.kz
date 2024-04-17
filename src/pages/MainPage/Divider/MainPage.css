@@ -1,3 +1,11 @@
+
+@media (max-width: 768px) {
+  .main-page{
+    width: 768px;
+  }
+}
+
+
 .features {
   display: flex;
   justify-content: center;
@@ -51,41 +59,37 @@
   margin-bottom: 32px; /* space below the buttons */
 }
 
+.button-free, .button-demo {
+  /* Общие стили */
+  border-radius: 16px; /* rounded corners */
+  font-family: "Inter", sans-serif; /* font family */
+  font-size: 1rem; /* font size */
+  font-weight: 600; /* font weight */
+  line-height: 1.5rem; /* line height */
+  letter-spacing: -0.1px; /* letter spacing */
+  text-align: center; /* text alignment */
+  cursor: pointer; /* cursor shape when hovering */
+  padding: 1rem 1.5rem; /* padding instead of fixed width/height for better scaling */
+  border: none; /* no border by default */
+}
+
 .button-free {
   background-color: rgba(82, 76, 189, 1); /* button background color */
   color: #ffffff; /* button text color - assuming white */
-  border-radius: 16px; /* rounded corners on the top left */
-  border: none; /* no border */
-  width: 218px; /* width of the button */
-  height: 56px; /* height of the button */
-  font-family: "Inter", sans-serif; /* font family */
-  font-size: 16px; /* font size */
-  font-weight: 600; /* font weight */
-  line-height: 24px; /* line height */
-  letter-spacing: -0.1px; /* letter spacing */
-  text-align: center; /* text alignment */
-  cursor: pointer; /* cursor shape when hovering */
 }
 
 .button-demo {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    1
-  ); /* button background color - white */
+  background-color: rgba(255, 255, 255, 1); /* button background color - white */
   color: rgba(82, 76, 189, 1); /* button text color */
-  border-radius: 16px; /* rounded corners on the top right */
   border: 2px solid rgba(82, 76, 189, 1); /* border color and size */
-  width: 218px; /* width of the button */
-  height: 56px; /* height of the button */
-  font-family: "Inter", sans-serif; /* font family */
-  font-size: 16px; /* font size */
-  font-weight: 600; /* font weight */
-  line-height: 24px; /* line height */
-  letter-spacing: -0.1px; /* letter spacing */
-  text-align: center; /* text alignment */
-  cursor: pointer; /* cursor shape when hovering */
+}
+
+@media (max-width: 768px) {
+  .button-free, .button-demo {
+    width: auto; /* buttons take up the width of their content + padding */
+    font-size: 0.9rem; /* smaller font size */
+    padding: 0.8rem 1.2rem; /* smaller padding */
+  }
 }
 
 /* MainPage.css */
@@ -163,8 +167,6 @@
   letter-spacing: -0.0025em;
   text-align: center;
   color: rgba(15, 23, 33, 1);
-  margin-bottom: 32px;
-  height: 48px;
 }
 
 .testimonials-container {
@@ -174,7 +176,6 @@
 }
 
 .testimonial {
-  width: 90%; /* Full width on small screens */
   margin-bottom: 24px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: rgba(245, 245, 245, 1);
@@ -231,43 +232,74 @@
 }
 
 @media (min-width: 768px) {
+  .testimonials-title{
+    
+  height: 48px;
+  margin-bottom: 70px;
+  }
   .testimonials-container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
   }
   .testimonial {
-    /* Adjust width for two or three items per row */
-    width: calc(50% - 24px); /* for tablets */
-    padding: 24px; /* Smaller padding on larger screens */
+    width: calc(50% - 24px);
+    padding: 24px; 
   }
 }
 
 @media (min-width: 1024px) {
   .testimonial {
-    width: calc(33.333% - 24px); /* for desktops */
+    width: calc(33.333% - 24px);
     height: 250px;
   }
 }
 
+@media (max-width: 768px) {
+
+  .testimonials-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .testimonial {
+    width: 500px;
+    margin: 0 auto; 
+    margin-bottom: 24px;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+
+  .access-buttons{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
 /* Service */
 .service-section {
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
   justify-content: center;
-  align-items: center;
-  margin-bottom: 60px; /* Adjust as needed */
-  margin-top: 60px;
-  height: 100%; /* Set to the height of the parent container if needed */
+  align-items: flex-start; /* Changed to flex-start for better control when wrapping */
+  margin: 60px 0; /* Adjust as needed */
+  height: auto; /* Changed to auto to accommodate varying content heights */
 }
 
 .service {
   background-color: rgba(245, 245, 245, 1); /* White background */
   border-radius: 32px; /* Rounded corners on the top-left and bottom-left */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  width: 40%;
+  width: 100%; /* Full width on small screens */
+  max-width: 700px; /* Maximum width to control size on larger screens */
   padding: 16px;
   padding-bottom: 32px;
-  margin-right: 24px;
+  margin: 12px; /* Space between services */
 }
 
 .service-image {
@@ -279,9 +311,8 @@
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   justify-content: center;
-  margin-left: 6.25%;
-  margin-right: 6.25%;
-  width: 87.5%;
+  padding: 0 6.25%; /* Padding instead of margin for better control */
+  width: auto;
 }
 
 * {
@@ -332,50 +363,80 @@
   margin-right: 8px; /* Space after the icon */
 }
 
-.service-button-in {
-  display: inline-block;
+.service-button-in, .service-button-out {
   padding: 16px 32px;
   width: 87.5%;
   height: 56px;
-  background-color: rgba(82, 76, 189, 1);
-  color: rgba(255, 255, 255, 1);
-  border-radius: 16px;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.1em;
+  font-size: 1rem; /* Using rem for scalable text */
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
   text-align: center;
-  border: none;
   cursor: pointer;
-  margin-right: 4px; /* assuming there's a gap between this and the next button */
+  display: flex; /* For inline layout with flexibility */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  border: none;
+  transition: background-color 0.3s ease;
+  gap: 10px;
+  border-radius: 16px;
+  margin-right: 12px;
+}
+
+.service-button-in {
+  background-color: rgba(82, 76, 189, 1);
+  color: #ffffff;
 }
 
 .service-button-out {
-  display: flex;
-  justify-content: center; /* Centers children horizontally */
-  align-items: center;
-  width: 87.5%; /* Adjust the width as necessary */
-  height: 56px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
   color: rgba(82, 76, 189, 1);
-  border-radius: 16px;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.1em;
-  text-align: center;
   border: 2px solid rgba(82, 76, 189, 1);
-  cursor: pointer;
-  /* Centers children vertically */
-  padding: 16px 32px;
-  gap: 10px; /* This creates space between the text and the icon */
 }
 
 .button-image-out {
-  width: auto; /* Maintain aspect ratio */
-  height: 16px; /* Example height for your arrow icon */
+  margin-left: 8px; /* Space between text and image */
+  width: 1rem; /* Use rem for scalable image size */
+  height: 1rem; /* Use rem for scalable image size */
+}
+
+@media (min-width: 768px) {
+
+  .service {
+    width: 100%; /* Set width for larger screens */
+    margin-right: 24px; /* Only add right margin for spacing between items */
+  }
+
+
+  .button-image-out {
+    width: 1rem; /* Keep original size on larger screens */
+    height: 1rem;
+  }
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 767px) {
+  .service-section {
+    flex-direction: column; /* Stack services vertically on small screens */
+    align-items: center; /* Center items for single column layout */
+  }
+
+  .service {
+    width: auto; /* Full width on small screens */
+    margin-right: 0; /* Remove right margin since items will stack */
+  }
+
+  .service-button-in, .service-button-out {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
+    margin: 8px 0; /* Reduce margin for a tighter layout */
+  }
+
+  .button-image-out {
+    width: 0.8rem; /* Adjust image size on small screens */
+    height: 0.8rem;
+  }
 }
 
 /* Adjust the flex container if the buttons are next to each other */
@@ -412,13 +473,15 @@
 
 /* ACCESS */
 
+/* ACCESS */
+
 .access-section {
   display: flex;
   align-items: center; /* Centers items vertically */
   justify-content: center; /* Centers items horizontally */
   text-align: center; /* Centers text */
   margin-left: 250px;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 .access-content {
@@ -526,6 +589,7 @@
 .access-button-solid {
   background-color: rgba(82, 76, 189, 1);
   color: white;
+  border: 2px solid rgba(82, 76, 189, 1); /* For consistent sizing with outlined button */
 }
 
 .access-button-outlined {
@@ -566,6 +630,65 @@
       50%,
       -50%
     ); /* Adjust if necessary for smaller screens */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .access-section {
+    flex-direction: column-reverse; /* Текст будет над изображением */
+    text-align: center; /* Центрирование текста */
+    margin-left: 0; /* Сброс дополнительных отступов */
+  }
+
+  .access-title, .access-title .highlight, .access-description {
+    width: 100%; /* Полная ширина контейнера */
+    text-align: center; /* Центрирование текста */
+  }
+
+  .access-content, .access-visual {
+    text-align: center;
+  }
+
+  .access-visual img.Visualphone {
+    width: 100%; /* Ширина изображения телефона на всю ширину блока на мобильных устройствах */
+  }
+
+  .access-visual img.star {
+    width: 30px; /* Уменьшаем размер звезды на мобильных устройствах */
+    top: -15px; /* Смещаем звезду чуть выше изображения телефона */
+    left: 50%; /* Центрируем звезду относительно ширины экрана */
+    transform: translate(-50%, 0); /* Смещение для точного центрирования звезды */
+  }
+
+  /* Уменьшаем размер и интервал кнопок для мобильных устройств */
+  .access-buttons {
+    display: flex;
+  flex-direction: row; /* Располагаем кнопки вертикально */
+  align-items: center; /* Выравниваем кнопки по центру по горизонтали */
+  gap: 16px; /* Расстояние между кнопками */
+  width: 60%; /* Заставляем контейнер занимать всю ширину родителя */
+  margin-top: 45px;
+  }
+
+  .access-button {
+    width: 100%; /* Расширяем кнопки на всю ширину доступного пространства */
+  padding: 10px 20px; /* Уменьшаем внутренние отступы */
+  box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+  margin: 0; /* Уменьшение padding для мобильных устройств */
+  }
+
+  /* Правки заголовка для мобильных устройств */
+  .access-title, .access-title .highlight {
+   
+    line-height: 32px; /* Подстройка межстрочного интервала */
+  }
+
+  /* Правки описания для мобильных устройств */
+  .access-description {
+    font-size: 16px; /* Уменьшение размера шрифта описания */
+    line-height: 22px; /* Подстройка межстрочного интервала */
   }
 }
 
@@ -664,18 +787,28 @@
 }
 
 /* MainPage.css */
-.qr-container {
+
+.qr-section {
   position: fixed; /* Keep the QR code fixed on the screen */
+  bottom: 30px; /* Position from the bottom */
+  left: 24px; /* Position from the left */
+  padding: 24px; /* Padding inside the container */
+  display: flex;
+  align-items: center; /* Center content horizontally */
+}
+
+.qr-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center;
   width: 18%; /* Width as a percentage of the screen width */
   min-width: 250px; /* Minimum width to ensure readability */
   height: auto; /* Height adjusted to content */
   bottom: 30px; /* Position from the bottom */
   left: 24px; /* Position from the left */
   padding: 24px; /* Padding inside the container */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
   background-color: rgba(
     63,
     132,
@@ -717,4 +850,31 @@
   width: 100%; /* Full width of the container */
   height: auto; /* Height adjusted to the image aspect ratio */
   margin-top: 16px; /* Spacing above the image */
+}
+
+.qr-collapsed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+  /* Добавьте стили для текста и изображения внутри */
+}
+
+.qrcode-image {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px; /* или значение gap, которое вы хотите использовать */
+}
+
+.qrcode-text {
+  font-family: "Inter", sans-serif;  
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  color: rgba(15, 23, 33, 1);
+  margin: 0; /* Это уберет стандартные отступы у параграфа */
 }

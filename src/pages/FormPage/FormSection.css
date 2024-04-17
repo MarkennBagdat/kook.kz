@@ -1,0 +1,83 @@
+/* FormSection.css */
+
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* High z-index to be on top of other content */
+  }
+  
+  .modal-content {
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    z-index: 1001; /* Higher z-index than modal background */
+  }
+  
+  .close-btn {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  .form-tab {
+    background-color: #635DFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .form-btn.cancel {
+    background-color: #ccc;
+  }
+  
+  .form-btn.submit {
+    background-color: #635DFF;
+    color: white;
+  }
+  
+  .open-modal-btn {
+    /* Стилизация кнопки, которая открывает модальное окно */
+  }
+  
