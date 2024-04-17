@@ -14,7 +14,7 @@ import ChevronUp from "./Photo/chevron-up.svg";
 import RestIcon from "./Photo/Rest.svg";
 import PostIcon from "./Photo/Post.svg";
 
-function Navbar() {
+function Navbar({ onFreeTrialClick }) {
   const [isContactDropdownOpen, setIsContactDropdownOpen] = useState(false);
   const [isLoginDropdownOpen, setIsLoginDropdownOpen] = useState(false);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
@@ -145,9 +145,9 @@ function Navbar() {
             </div>
           )}
         </div>
-        <button className="action-button action-button--accent">
-          Начать бесплатно
-        </button>
+        <button className="action-button action-button--accent" onClick={onFreeTrialClick}>
+        Начать бесплатно
+      </button>
         <div
           className="nav-link language-dropdown"
           onMouseEnter={() => setIsLanguageDropdownOpen(true)}
