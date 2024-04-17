@@ -15,7 +15,7 @@ function Footer() {
       <div className="footer-brand">
         <div className="logo">
           <img src={Logo} alt="Logo" className="logo-image" />
-          <h2 className="logo-text">Fresh From Farm</h2>
+          <h2 className="logo-text">kook</h2>
         </div>
 
         <p class="paragraph-style">
