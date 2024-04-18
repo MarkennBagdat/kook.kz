@@ -27,8 +27,14 @@ const MainPage = () => {
         {isModalOpen && <FormSection toggleModal={toggleModal} />}
       </div>
       <Testimonials />
-      <ServiceSection />
-      <AccessSection />
+      <div>
+      <ServiceSection openFormModal={toggleModal} />
+      {isModalOpen && <FormSection toggleModal={toggleModal} />}
+      </div>
+      <div>
+      <AccessSection openFormModal={toggleModal} />
+      {isModalOpen && <FormSection toggleModal={toggleModal} />}
+      </div>
       <FAQ />
       {showQR ? (
         <div className="qr-section qr-container">

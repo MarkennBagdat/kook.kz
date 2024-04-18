@@ -4,7 +4,7 @@ import Visual from "./Picture/Visual.svg"; // The phone and sun graphic
 import StarAccess from "./Picture/StarAccess.svg"; // Star icon
 import Ellipse from "./Picture/Ellipse.svg"; // Ellipse icon
 
-const AccessSection = () => {
+const AccessSection = ({ openFormModal }) => {
   return (
     <section className="access-section">
       <div className="access-content">
@@ -24,7 +24,7 @@ const AccessSection = () => {
           eiusmod tempor incididunt
         </p>
         <div class="access-buttons">
-          <button class="access-button access-button-solid">
+          <button class="access-button access-button-solid" onClick={openFormModal}>
             Подать заявку
           </button>
           <button class="access-button access-button-outlined">

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./MainPage.css";
 import Spot1 from "./Picture/Spot1.svg"; // Photo for the "Restaurants" section
 import Spot2 from "./Picture/Spot2.svg"; // Photo for the "Suppliers" section
@@ -6,7 +7,17 @@ import StarIcon1 from "./Picture/Star1.svg"; // Icon for the "Restaurants" secti
 import StarIcon2 from "./Picture/Star2.svg"; // Icon for the "Suppliers" section
 import ArrowUp from "./Picture/arrow-up-right.svg";
 
-const ServiceSection = () => {
+const ServiceSection = ({ openFormModal }) => {
+  let navigate = useNavigate();
+
+  const navigateToRestaurants = () => {
+    navigate("/restaurants"); // The route should match the one defined for RestaurantsPage
+  };
+
+  const navigateToSuppliers = () => {
+    navigate("/suppliers");
+  };
+
   return (
     <section className="service-section">
       <div className="service">
@@ -32,11 +43,14 @@ const ServiceSection = () => {
             </li>
           </ul>
           <div className="buttons-container">
-          <button className="service-button-in">Начать бесплатно</button>
-          <button className="service-button-out">
-            Узнать больше
-            <img src={ArrowUp} alt="ArrowUp" className="button-image-out" />
-          </button>
+            <button className="service-button-in" onClick={openFormModal}>Начать бесплатно</button>
+            <button
+              className="service-button-out"
+              onClick={navigateToRestaurants}
+            >
+              Узнать больше
+              <img src={ArrowUp} alt="Arrow up" className="button-image-out" />
+            </button>
           </div>
         </div>
       </div>
@@ -64,11 +78,15 @@ const ServiceSection = () => {
             </li>
           </ul>
           <div className="buttons-container">
-          <button className="service-button-in">Записаться на демо</button>
-          <button className="service-button-out">
-            Узнать больше{" "}
-            <img src={ArrowUp} alt="ArrowUp" className="button-image-out" />
-          </button></div>
+            <button className="service-button-in">Записаться на демо</button>
+            <button
+              className="service-button-out"
+              onClick={navigateToSuppliers}
+            >
+              Узнать больше
+              <img src={ArrowUp} alt="Arrow up" className="button-image-out" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

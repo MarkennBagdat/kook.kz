@@ -1,38 +1,48 @@
 /* FormSection.css */
 
 .modal {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center;
-    z-index: 1000; /* High z-index to be on top of other content */
-  }
-  
-  .modal-content {
-    background: #FFF;
-    padding: 24px; /* Ваши значения отступов */
-    border-radius: 32px; /* Ваше скругление углов */
-    width: 600px; /* Фиксированная ширина */
-    height: 860px;
-    overflow-y: auto;
-    z-index: 1001;
-    position: relative; /* Для позиционирования крестика и других элементов внутри */
-    display: flex;
-    flex-direction: column; /* Для вертикального выравнивания содержимого */
-    justify-content: space-between; /* Распределяет контент с начальными и конечными отступами */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для контента, если нужно */
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* High z-index to be on top of other content */
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none; /* For WebKit browsers like Chrome and Safari */
+}
+
+/* Internet Explorer and Edge */
+.modal-content {
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.modal-content {
+  background: #fff;
+  padding: 24px; /* Ваши значения отступов */
+  border-radius: 32px; /* Ваше скругление углов */
+  width: 30%; /* Фиксированная ширина */
+  height: 860px;
+  overflow-y: auto;
+  z-index: 1001;
+  position: relative; /* Для позиционирования крестика и других элементов внутри */
+  display: flex;
+  flex-direction: column; /* Для вертикального выравнивания содержимого */
+  justify-content: space-between; /* Распределяет контент с начальными и конечными отступами */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  scrollbar-width: none;
 }
 
 .modal-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   margin-bottom: 32px;
 }
 
@@ -48,7 +58,7 @@
 .close-btn {
   cursor: pointer;
   border: none;
-  background: transparent; 
+  background: transparent;
   width: 40px; /* Fixed width */
   height: 40px; /* Fixed height */
   display: flex; /* Use flexbox to center content */
@@ -59,14 +69,13 @@
   background-color: rgba(238, 238, 238, 1); /* Light grey background */
 }
 
-
 .close-btn {
-    position: absolute;
-    right: 24px; /* Правый отступ, как в вашем примере */
-    font-size: 1.5rem;
-    cursor: pointer;
+  position: absolute;
+  right: 24px; /* Правый отступ, как в вашем примере */
+  font-size: 1.5rem;
+  cursor: pointer;
 }
-  
+
 .form-section {
   display: flex;
   margin-bottom: 16px;
@@ -86,160 +95,163 @@
 .form-tab.active {
   background-color: rgba(82, 76, 189, 1); /* Цвет фона для активной вкладки */
   color: white; /* Цвет текста для активной вкладки */
-  opacity: 1; 
+  opacity: 1;
   border-radius: 8px;
 }
 
 /* Добавьте стили для hover эффекта, если это необходимо */
 .form-tab:hover {
-  background-color: rgb(201, 199, 243); /* Цвет фона для вкладки при наведении */
+  background-color: rgb(
+    201,
+    199,
+    243
+  ); /* Цвет фона для вкладки при наведении */
   color: white; /* Цвет текста для вкладки при наведении */
   opacity: 0.8; /* Непрозрачность для вкладки при наведении */
   border-radius: 8px;
 }
 
-
-.section-title{
-  font-family: 'Inter';
+.section-title {
+  font-family: "Inter";
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: -0.25%;
   color: rgba(15, 23, 33, 1);
 }
-  
-  .input-group {
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"],
-  input[type="tel"],
-  input[type="email"],
-  textarea[type="text"],
-  select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc; /* светло-серая граница */
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* светло-серая граница */
   border-radius: 8px; /* скругление углов */
   font-size: 16px; /* размер шрифта */
-  }
+}
 
-  .textarea{
-    height: 120px;
-  }
+.textarea {
+  height: 120px;
+}
 /* Стиль полей ввода при наведении курсора */
-input:hover, textarea:hover {
+input:hover,
+textarea:hover {
   border-color: #a9a9a9; /* темно-серая граница */
 }
 
 /* Стиль полей ввода при фокусе */
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #666; /* еще более темная граница, если нужно */
-  outline: none; 
+  outline: none;
   font-size: 16px;
 }
 
-  
-  .form-actions {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .form-btn {
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .form-btn.cancel {
-    background-color: #ccc;
-  }
-  
-  .form-btn.submit {
-    background-color: #635DFF;
-    color: white;
-  }
-  
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+}
 
+.form-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
 
-  select {
-    width: 100%;
-    border: 1px solid rgba(208, 209, 210, 1); /* Тонкая серая рамка */
-    border-radius: 8px; /* Скругленные углы для рамки */
-    -webkit-appearance: none; /* Убирает стандартный стиль для Webkit-браузеров */
-    -moz-appearance: none; /* Убирает стандартный стиль для Firefox */
-    appearance: none; /* Убирает стандартный стиль для остальных браузеров */
-    background-color: #fff; /* Белый фон для выпадающего списка */
-    background-repeat: no-repeat; /* Предотвращает повторение иконки */
-    background-position: right 10px center; /* Позиционирование иконки справа и по центру по вертикали */
-    background-size: 12px; /* Размер иконки стрелки */
-    cursor: pointer; /* Изменяет курсор, указывая на возможность клика */
-    color: rgba(128, 128, 128, 1);
-  }
-  
-  select:focus {
-    outline: none; /* Убирает стандартный контур при фокусе */
-  }
-  
+.form-btn.cancel {
+  background-color: #ccc;
+}
 
-  .form-actions {
-    display: flex; /* Для горизонтального выравнивания кнопок */
-    gap: 8px; /* Отступ между кнопками */
-  }
-  
-  .form-btn {
-    width: 50%; /* Ширина кнопки */
-    height: 56px; /* Высота кнопки */
-    border-radius: 16px; /* Скругление углов */
-    font-family: 'Inter', sans-serif; /* Семейство шрифтов */
-    font-size: 14px; /* Размер шрифта */
-    font-weight: 600; /* Жирность шрифта */
-    line-height: 20px; /* Высота строки */
-    letter-spacing: -0.1px; /* Межбуквенный интервал */
-    text-align: center; /* Выравнивание текста по центру */
-    border: none; /* Убрать границу */
-    cursor: pointer; /* Курсор в виде руки при наведении */
-    transition: 0.3s; /* Плавное изменение фона при наведении */
-  }
-  
-  .form-btn.cancel {
-    background-color: rgba(238, 238, 238, 1); /* Светло-серый фон */
-    color: rgba(15, 23, 33, 1); /* Цвет текста */
-    border-radius: 16px; /* Скругление только левых углов */
-  }
-  
-  .form-btn.submit {
-    background-color: rgba(82, 76, 189, 1); /* Фиолетовый фон */
-    color: rgba(255, 255, 255, 1); /* Белый текст */
-    border-radius: 16px; /* Скругление всех углов */
-  }
-  
-  .form-btn.cancel:hover,
-  .form-btn.submit:hover {
-    background-color: darken(rgba(238, 238, 238, 1), 10%); /* Затемнение фона при наведении */
-  }
-  
-  .form-btn.cancel:active,
-  .form-btn.submit:active {
-    transform: translateY(2px); /* Смещение кнопки вниз при клике */
-  }
-  
-  .consent-text {
-    color: #000;
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    font-weight: 400; /* Makes the text bold */
-    line-height: 16px;
-    letter-spacing: -0.1px;
-    text-align: left;
-    margin-top: 16px;
-  }
-  
-  .highlight {
-    font-weight: 400; /* Makes the text bold */
-    text-decoration: underline; /* Underlines the text if needed */
-    color: rgba(26, 106, 206, 1);
-  }
-  
+.form-btn.submit {
+  background-color: #635dff;
+  color: white;
+}
+
+select {
+  width: 100%;
+  border: 1px solid rgba(208, 209, 210, 1); /* Тонкая серая рамка */
+  border-radius: 8px; /* Скругленные углы для рамки */
+  -webkit-appearance: none; /* Убирает стандартный стиль для Webkit-браузеров */
+  -moz-appearance: none; /* Убирает стандартный стиль для Firefox */
+  appearance: none; /* Убирает стандартный стиль для остальных браузеров */
+  background-color: #fff; /* Белый фон для выпадающего списка */
+  background-repeat: no-repeat; /* Предотвращает повторение иконки */
+  background-position: right 10px center; /* Позиционирование иконки справа и по центру по вертикали */
+  background-size: 12px; /* Размер иконки стрелки */
+  cursor: pointer; /* Изменяет курсор, указывая на возможность клика */
+  color: rgba(128, 128, 128, 1);
+}
+
+select:focus {
+  outline: none; /* Убирает стандартный контур при фокусе */
+}
+
+.form-actions {
+  display: flex; /* Для горизонтального выравнивания кнопок */
+  gap: 8px; /* Отступ между кнопками */
+}
+
+.form-btn {
+  width: 50%; /* Ширина кнопки */
+  height: 56px; /* Высота кнопки */
+  border-radius: 16px; /* Скругление углов */
+  font-family: "Inter", sans-serif; /* Семейство шрифтов */
+  font-size: 14px; /* Размер шрифта */
+  font-weight: 600; /* Жирность шрифта */
+  line-height: 20px; /* Высота строки */
+  letter-spacing: -0.1px; /* Межбуквенный интервал */
+  text-align: center; /* Выравнивание текста по центру */
+  border: none; /* Убрать границу */
+  cursor: pointer; /* Курсор в виде руки при наведении */
+  transition: 0.3s; /* Плавное изменение фона при наведении */
+}
+
+.form-btn.cancel {
+  background-color: rgba(238, 238, 238, 1); /* Светло-серый фон */
+  color: rgba(15, 23, 33, 1); /* Цвет текста */
+  border-radius: 16px; /* Скругление только левых углов */
+}
+
+.form-btn.submit {
+  background-color: rgba(82, 76, 189, 1); /* Фиолетовый фон */
+  color: rgba(255, 255, 255, 1); /* Белый текст */
+  border-radius: 16px; /* Скругление всех углов */
+}
+
+.form-btn.cancel:hover,
+.form-btn.submit:hover {
+  background-color: darken(
+    rgba(238, 238, 238, 1),
+    10%
+  ); /* Затемнение фона при наведении */
+}
+
+.form-btn.cancel:active,
+.form-btn.submit:active {
+  transform: translateY(2px); /* Смещение кнопки вниз при клике */
+}
+
+.consent-text {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400; /* Makes the text bold */
+  line-height: 16px;
+  letter-spacing: -0.1px;
+  text-align: left;
+  margin-top: 16px;
+}
+
+.highlight {
+  font-weight: 400; /* Makes the text bold */
+  text-decoration: underline; /* Underlines the text if needed */
+  color: rgba(26, 106, 206, 1);
+}
