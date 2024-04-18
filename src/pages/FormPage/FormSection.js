@@ -142,21 +142,21 @@ const FormSection = ({ toggleModal }) => {
       <div>
         <h3 className="section-title">Дополнительно</h3>
         <div className="input-group">
-        <div className="select-wrapper">
-          <select name="additionalInfo" onChange={handleInputChange}>
-            <option value="" disabled>
-              Откуда узнали о нас?
-            </option>
-            <option value="Интернет">Интернет</option>
-            <option value="Социальные сети">Социальные сети</option>
-            <option value="Рекомендация друзей">Рекомендация друзей</option>
-            <option value="Реклама">Реклама</option>
-            <option value="Участие в мероприятиях">
-              Участие в мероприятиях
-            </option>
-            <option value="Другое">Другое</option>
-          </select>{" "}
-        </div>
+          <div className="select-wrapper">
+            <select name="additionalInfo" onChange={handleInputChange}>
+              <option value="" disabled>
+                Откуда узнали о нас?
+              </option>
+              <option value="Интернет">Интернет</option>
+              <option value="Социальные сети">Социальные сети</option>
+              <option value="Рекомендация друзей">Рекомендация друзей</option>
+              <option value="Реклама">Реклама</option>
+              <option value="Участие в мероприятиях">
+                Участие в мероприятиях
+              </option>
+              <option value="Другое">Другое</option>
+            </select>{" "}
+          </div>
           <input
             type="text"
             name="promoCode"
@@ -227,14 +227,22 @@ const FormSection = ({ toggleModal }) => {
             name="productCategory"
             required
             onChange={handleInputChange}
-            value={formData.productCategory} // Значение управляется состоянием formData
+            value={formData.productCategory}
           >
             <option value="" disabled selected>
               Категория товаров *
             </option>
-            <option value="food">Продовольственные товары</option>
-            <option value="tech">Техника</option>
-            <option value="service">Услуги</option>
+            <option value="food">Овощи и фрукты</option>
+            <option value="service">Зелень</option>
+            <option value="service">Рыба</option>
+            <option value="grains">Зерновые продукты</option>
+            <option value="dairy">Молочные продукты</option>
+            <option value="meat">Мясо и мясные изделия</option>
+            <option value="bakery">Хлебобулочные изделия</option>
+            <option value="sweets">Сладости и кондитерские изделия</option>
+            <option value="condiments">Соусы и приправы</option>
+            <option value="snacks">Закуски и снеки</option>
+            <option value="beverages">Напитки</option>
           </select>
         </div>
         <div className="select-wrapper">

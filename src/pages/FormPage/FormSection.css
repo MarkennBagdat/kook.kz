@@ -215,8 +215,7 @@ select:focus {
 }
 
 .select-wrapper select:focus,
-.select-wrapper select:hover,
-.select-wrapper select:{
+.select-wrapper select:hover{
   outline: none;
   color: #000; /* Darker border on hover/focus */
 }
