@@ -18,7 +18,7 @@ const FormSection = ({ toggleModal }) => {
     promoCode: "",
     companyName: "",
     businessDescription: "",
-    bin: "", // Для БИН
+    bin: "",
     productCategory: "",
     businessType: "",
     town: "",
