@@ -5,6 +5,7 @@ import "./FormSection.css";
 const FormSection = ({ toggleModal }) => {
   const [activeTab, setActiveTab] = useState("HoReCa");
   const [selectedCity, setSelectedCity] = useState("Алматы");
+  const [selectedTown, setSelectedTown] = useState("Алматы");
   const [formData, setFormData] = useState({
     type: "HoReCa",
     name: "",
@@ -15,15 +16,21 @@ const FormSection = ({ toggleModal }) => {
     establishmentName: "",
     additionalInfo: "",
     promoCode: "",
+    companyName: "",
+    businessDescription: "",
+    bin: "", // Для БИН
+    productCategory: "",
+    businessType: "",
+    town: "",
   });
 
   const SERVICE_ID = "service_mq77pnl";
-  const TEMPLATE_ID = "template_5ffrl9y";
   const PUBLIC_KEY = "_q4XeMKBIQqaDeivq";
 
-  const handleSubmit = (e) => {
+  const handleSubmitForHoReCa = (e) => {
     e.preventDefault();
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
+    const TEMPLATE_ID_HORECA = "template_5ffrl9y";
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID_HORECA, e.target, PUBLIC_KEY).then(
       (result) => {
         alert("Заявка успешно отправлена!");
       },
@@ -33,6 +40,22 @@ const FormSection = ({ toggleModal }) => {
       }
     );
     e.target.reset();
+  };
+
+  const handleSubmitForSupplier = (e) => {
+    e.preventDefault();
+    const TEMPLATE_ID_SUPPLIER = "template_wwlg2jr";
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID_SUPPLIER, e.target, PUBLIC_KEY)
+      .then(
+        (result) => {
+          alert("Заявка успешно отправлена!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Ошибка при отправке заявки: " + error.text);
+        }
+      );
   };
 
   const handleInputChange = (event) => {
@@ -48,6 +71,12 @@ const FormSection = ({ toggleModal }) => {
   const handleCityChange = (city) => {
     setSelectedCity(city);
     setFormData({ ...formData, city });
+  };
+
+  const handleTownSelect = (event) => {
+    const town = event.target.value;
+    setSelectedTown(town); // Устанавливаем выбранный город в соответствующий state
+    setFormData({ ...formData, town: town }); // Обновляем formData новым городом
   };
 
   const fieldsForHoReCa = (
@@ -78,7 +107,7 @@ const FormSection = ({ toggleModal }) => {
         <input
           type="email"
           name="email"
-          placeholder="Почта"
+          placeholder="Почта *"
           onChange={handleInputChange}
         />
       </div>
@@ -121,7 +150,9 @@ const FormSection = ({ toggleModal }) => {
             <option value="Социальные сети">Социальные сети</option>
             <option value="Рекомендация друзей">Рекомендация друзей</option>
             <option value="Реклама">Реклама</option>
-            <option value="Участие в мероприятиях">Участие в мероприятиях</option>
+            <option value="Участие в мероприятиях">
+              Участие в мероприятиях
+            </option>
             <option value="Другое">Другое</option>
           </select>
           <input
@@ -139,69 +170,133 @@ const FormSection = ({ toggleModal }) => {
     <div>
       <h3 className="section-title">Контактная информация</h3>
       <div className="input-group">
-        <input type="text" placeholder="Имя *" required />
-        <input type="text" placeholder="Фамилия *" required />
-        <input type="email" placeholder="Почта *" required />
-        <input type="tel" placeholder="Номер телефона *" required />
+        <input
+          type="text"
+          name="name"
+          placeholder="Имя *"
+          required
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="surname"
+          placeholder="Фамилия *"
+          required
+          onChange={handleInputChange}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Почта *"
+          onChange={handleInputChange}
+        />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Номер телефона *"
+          required
+          onChange={handleInputChange}
+        />
       </div>
       <h3 className="section-title">О компании</h3>
       <div className="input-group">
-        <input type="text" placeholder="Название компании *" required />
+        <input
+          type="text"
+          name="companyName"
+          placeholder="Название компании *"
+          required
+          onChange={handleInputChange}
+        />
         <textarea
           type="text"
+          name="businessDescription"
           placeholder="Описание деятельности"
           className="textarea"
+          onChange={handleInputChange}
         ></textarea>
-        <input type="text" placeholder="БИН" />
+        <input
+          type="text"
+          name="bin"
+          placeholder="БИН"
+          onChange={handleInputChange}
+        />
       </div>
       <h3 className="section-title">ЕЩЁ</h3>
       <div className="input-group">
-        <select required>
-          <option disabled selected>
+        <select
+          name="productCategory"
+          required
+          onChange={handleInputChange}
+          value={formData.productCategory} // Значение управляется состоянием formData
+        >
+          <option value="" disabled selected>
             Категория товаров *
           </option>
-          {/* Предполагаемые опции */}
           <option value="food">Продовольственные товары</option>
           <option value="tech">Техника</option>
           <option value="service">Услуги</option>
         </select>
-        <select required>
-          <option disabled selected>
+        <select
+          name="businessType"
+          required
+          onChange={handleInputChange}
+          value={formData.businessType} // Значение управляется состоянием formData
+        >
+          <option value="" disabled selected>
             Тип деятельности компании *
           </option>
-          {/* Предполагаемые опции */}
           <option value="manufacturer">Производитель</option>
           <option value="wholesaler">Оптовик</option>
           <option value="retailer">Ритейлер</option>
         </select>
-        <select required>
-          <option disabled selected>
+        <select
+          name="town"
+          required
+          value={selectedTown}
+          onChange={handleTownSelect}
+        >
+          <option value="" disabled selected>
             Город *
           </option>
-          {/* Предполагаемые опции */}
           <option value="almaty">Алматы</option>
           <option value="astana">Астана</option>
           <option value="shymkent">Шымкент</option>
+          {/* Добавьте дополнительные города по необходимости */}
         </select>
       </div>
       <h3 className="section-title">Дополнительно</h3>
       <div className="input-group">
-        <select>
-          <option disabled selected>
+        <select name="additionalInfo" onChange={handleInputChange}>
+          <option value="" disabled selected>
             Откуда узнали о нас?
           </option>
-          {/* Предполагаемые опции */}
-          <option value="internet">Интернет</option>
-          <option value="partner">Партнёры</option>
+          <option value="Интернет">Интернет</option>
+          <option value="Социальные сети">Социальные сети</option>
+          <option value="Рекомендация друзей">Рекомендация друзей</option>
+          <option value="Реклама">Реклама</option>
+          <option value="Участие в мероприятиях">Участие в мероприятиях</option>
+          <option value="Другое">Другое</option>
         </select>
-        <input type="text" placeholder="Промокод" />
+        <input
+          type="text"
+          name="promoCode"
+          placeholder="Промокод"
+          onChange={handleInputChange}
+        />
       </div>
     </div>
   );
 
   return (
     <div className="modal">
-      <form className="modal-content" onSubmit={handleSubmit}>
+      <form
+        className="modal-content"
+        onSubmit={
+          activeTab === "HoReCa"
+            ? handleSubmitForHoReCa
+            : handleSubmitForSupplier
+        }
+      >
         <div className="modal-header">
           <h2 className="modal-title">Заявка</h2>
           <span onClick={toggleModal} className="close-btn">
@@ -210,22 +305,18 @@ const FormSection = ({ toggleModal }) => {
         </div>
         <div className="form-section">
           <button
-            name="type"
             className={`form-tab ${activeTab === "HoReCa" ? "active" : ""}`}
             onClick={() => handleTabChange("HoReCa")}
           >
             HoReCa
           </button>
           <button
-            name="type"
             className={`form-tab ${activeTab === "Supplier" ? "active" : ""}`}
             onClick={() => handleTabChange("Supplier")}
           >
             Поставщик
           </button>
         </div>
-        <input type="hidden" name="type" value={activeTab} />
-
 
         {/* Условный рендеринг полей формы в зависимости от активной вкладки */}
         {activeTab === "HoReCa" ? fieldsForHoReCa : fieldsForSupplier}
