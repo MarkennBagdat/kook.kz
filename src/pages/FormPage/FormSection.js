@@ -9,7 +9,7 @@ const FormSection = ({ toggleModal }) => {
     surname: '',
     phone: '',
     email: '',
-    city: 'Алматы', // Для HoReCa по умолчанию Алматы, для Поставщика выберите соответствующий
+    city: 'Алматы',
     establishmentName: '',
     companyType: '',
     categoryName: '',
