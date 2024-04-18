@@ -10,7 +10,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* High z-index to be on top of other content */
+  z-index: 1000;
 }
 
 .modal-content::-webkit-scrollbar {
@@ -83,7 +83,7 @@
 }
 
 .form-tab {
-  width: 272px; /* Ширина каждой вкладки */
+  width: 50%; /* Ширина каждой вкладки */
   height: 32px; /* Высота каждой вкладки */
   padding: 0 12px; /* Внутренние отступы вокруг текста */
   border: none; /* Убрать границу */
@@ -130,7 +130,7 @@ input[type="email"],
 textarea[type="text"],
 select {
   width: 100%;
-  padding: 10px;
+  padding: 16px;
   margin-bottom: 10px;
   border: 1px solid #ccc; /* светло-серая граница */
   border-radius: 8px; /* скругление углов */
@@ -175,24 +175,52 @@ textarea:focus {
   color: white;
 }
 
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper::after {
+  content: url('./chevron-down.svg');
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  pointer-events: none; /* Ensures the dropdown arrow doesn't interfere with click events */
+}
+
 select {
   width: 100%;
   border: 1px solid rgba(208, 209, 210, 1); /* Тонкая серая рамка */
   border-radius: 8px; /* Скругленные углы для рамки */
-  -webkit-appearance: none; /* Убирает стандартный стиль для Webkit-браузеров */
-  -moz-appearance: none; /* Убирает стандартный стиль для Firefox */
-  appearance: none; /* Убирает стандартный стиль для остальных браузеров */
   background-color: #fff; /* Белый фон для выпадающего списка */
   background-repeat: no-repeat; /* Предотвращает повторение иконки */
   background-position: right 10px center; /* Позиционирование иконки справа и по центру по вертикали */
-  background-size: 12px; /* Размер иконки стрелки */
+  background-size: 12px; 
+  -webkit-appearance: none; /* Removes default style of select in WebKit browsers */
+  -moz-appearance: none; /* Removes default style of select in Firefox */
+  appearance: none;
   cursor: pointer; /* Изменяет курсор, указывая на возможность клика */
   color: rgba(128, 128, 128, 1);
 }
 
-select:focus {
-  outline: none; /* Убирает стандартный контур при фокусе */
+select {
+  height: calc(24px + 32px); /* Height of chevron + padding top and bottom */
 }
+
+select:focus {
+  outline: none;
+}
+
+.select-wrapper select:focus,
+.select-wrapper select:hover,
+.select-wrapper select:{
+  outline: none;
+  color: #000; /* Darker border on hover/focus */
+}
+
 
 .form-actions {
   display: flex; /* Для горизонтального выравнивания кнопок */

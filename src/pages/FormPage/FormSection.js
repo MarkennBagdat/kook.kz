@@ -142,8 +142,9 @@ const FormSection = ({ toggleModal }) => {
       <div>
         <h3 className="section-title">Дополнительно</h3>
         <div className="input-group">
+        <div className="select-wrapper">
           <select name="additionalInfo" onChange={handleInputChange}>
-            <option value="" disabled selected>
+            <option value="" disabled>
               Откуда узнали о нас?
             </option>
             <option value="Интернет">Интернет</option>
@@ -154,7 +155,8 @@ const FormSection = ({ toggleModal }) => {
               Участие в мероприятиях
             </option>
             <option value="Другое">Другое</option>
-          </select>
+          </select>{" "}
+        </div>
           <input
             type="text"
             name="promoCode"
@@ -220,63 +222,70 @@ const FormSection = ({ toggleModal }) => {
           placeholder="БИН"
           onChange={handleInputChange}
         />
-      </div>
-      <h3 className="section-title">ЕЩЁ</h3>
-      <div className="input-group">
-        <select
-          name="productCategory"
-          required
-          onChange={handleInputChange}
-          value={formData.productCategory} // Значение управляется состоянием formData
-        >
-          <option value="" disabled selected>
-            Категория товаров *
-          </option>
-          <option value="food">Продовольственные товары</option>
-          <option value="tech">Техника</option>
-          <option value="service">Услуги</option>
-        </select>
-        <select
-          name="businessType"
-          required
-          onChange={handleInputChange}
-          value={formData.businessType} // Значение управляется состоянием formData
-        >
-          <option value="" disabled selected>
-            Тип деятельности компании *
-          </option>
-          <option value="manufacturer">Производитель</option>
-          <option value="wholesaler">Оптовик</option>
-          <option value="retailer">Ритейлер</option>
-        </select>
-        <select
-          name="town"
-          required
-          value={selectedTown}
-          onChange={handleTownSelect}
-        >
-          <option value="" disabled selected>
-            Город *
-          </option>
-          <option value="almaty">Алматы</option>
-          <option value="astana">Астана</option>
-          <option value="shymkent">Шымкент</option>
-          {/* Добавьте дополнительные города по необходимости */}
-        </select>
+        <div className="select-wrapper">
+          <select
+            name="productCategory"
+            required
+            onChange={handleInputChange}
+            value={formData.productCategory} // Значение управляется состоянием formData
+          >
+            <option value="" disabled selected>
+              Категория товаров *
+            </option>
+            <option value="food">Продовольственные товары</option>
+            <option value="tech">Техника</option>
+            <option value="service">Услуги</option>
+          </select>
+        </div>
+        <div className="select-wrapper">
+          <select
+            name="businessType"
+            required
+            onChange={handleInputChange}
+            value={formData.businessType} // Значение управляется состоянием formData
+          >
+            <option value="" disabled selected>
+              Тип деятельности компании *
+            </option>
+            <option value="manufacturer">Производитель</option>
+            <option value="wholesaler">Оптовик</option>
+            <option value="retailer">Ритейлер</option>
+          </select>
+        </div>
+        <div className="select-wrapper">
+          <select
+            name="town"
+            required
+            value={selectedTown}
+            onChange={handleTownSelect}
+          >
+            <option value="" disabled selected>
+              Город *
+            </option>
+            <option value="almaty">Алматы</option>
+            <option value="astana">Астана</option>
+            <option value="shymkent">Шымкент</option>
+            {/* Добавьте дополнительные города по необходимости */}
+          </select>
+        </div>
       </div>
       <h3 className="section-title">Дополнительно</h3>
       <div className="input-group">
-        <select name="additionalInfo" onChange={handleInputChange}>
-          <option value="" disabled selected>
-            Откуда узнали о нас?
-          </option>
-          <option value="Интернет">Интернет</option>
-          <option value="Социальные сети">Социальные сети</option>
-          <option value="Рекомендация друзей">Рекомендация друзей</option>
-          <option value="Реклама">Реклама</option>
-          <option value="Участие в мероприятиях">Участие в мероприятиях</option>
-          <option value="Другое">Другое</option>
-        </select>
+        <div className="select-wrapper">
+          <select name="additionalInfo" onChange={handleInputChange}>
+            <option value="" disabled selected>
+              Откуда узнали о нас?
+            </option>
+            <option value="Интернет">Интернет</option>
+            <option value="Социальные сети">Социальные сети</option>
+            <option value="Рекомендация друзей">Рекомендация друзей</option>
+            <option value="Реклама">Реклама</option>
+            <option value="Участие в мероприятиях">
+              Участие в мероприятиях
+            </option>
+            <option value="Другое">Другое</option>
+          </select>{" "}
+        </div>
         <input
           type="text"
           name="promoCode"
