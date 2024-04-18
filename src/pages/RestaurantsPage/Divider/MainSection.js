@@ -1,6 +1,6 @@
 import React from "react";
 import "./restaurantsPage.css"; // Make sure the CSS file path is correct
-import BannerImage from "./Picture/Banner.png"; // Update the import path if necessary
+import BannerImage from "../../../Picture/Banner-1.png"; // Update the import path if necessary
 
 const MainSection = () => {
   return (

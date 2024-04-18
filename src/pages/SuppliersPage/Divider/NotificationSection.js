@@ -1,8 +1,7 @@
 import React from "react";
 import "./suppliersPage.css";
-import Visual from "./Picture/Visual (8).svg"; // Path to your visual image
-import StarIcon from "./Picture/Star 2.svg";
-import Points from './Picture/Points.svg';
+import Visual from "../../../Picture/Visual (8).svg"; // Path to your visual image
+import Points from '../../../Picture/Points.svg';
 
 const NotificationSection = () => {
     return (

@@ -1,13 +1,12 @@
 import React from "react";
 import "./Footer.css";
-import AppStoreBadge from "./Apple.svg"; // Adjust with the path to your image
-import GooglePlayBadge from "./Google.svg"; // Adjust with the path to your image
-import LinkedinIcon from "./brand-linkedin.svg"; // Adjust with the path to your image
-import InstagramIcon from "./brand-instagram.svg"; // Adjust with the path to your image
-import WhatsappIcon from "./brand-whatsapp.svg";
-import Logo from "./Logo.svg";
-import ChevronDown from "./chevronDown.svg";
-import Star from "./Star 1.svg";
+import AppStoreBadge from "../../Picture/LogoF1.svg";
+import GooglePlayBadge from "../../Picture/LogoF2.svg";
+import LinkedinIcon from "../../Picture/brand-linkedin2.svg";
+import WhatsappIcon from "../../Picture/brand-whatsapp2.svg";
+import Logo from "../../Picture/Logo2.svg";
+import ChevronDown from "../../Picture/chevronDown.svg";
+import Star from "../../Picture/Star1.svg";
 
 function Footer() {
   return (
@@ -73,13 +72,6 @@ function Footer() {
               rel="noopener noreferrer"
             >
               <img src={LinkedinIcon} alt="LinkedIn" />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={InstagramIcon} alt="Instagram" />
             </a>
             <a
               href="https://whatsapp.com"

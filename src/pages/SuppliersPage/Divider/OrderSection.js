@@ -1,8 +1,8 @@
 import React from "react";
 import "./suppliersPage.css";
-import Visual from "./Picture/Visual (7).svg"; // Update the import if your image is in a different directory
-import Star from "./Picture/Star 2.svg";
-import Statuses from "./Picture/Statuses.svg";
+import Visual from "../../../Picture/Visual (7).svg"; // Update the import if your image is in a different directory
+import Star from "../../../Picture/Star2.svg";
+import Statuses from "../../../Picture/Statuses.svg";
 
 const OrderSection = () => {
   return (

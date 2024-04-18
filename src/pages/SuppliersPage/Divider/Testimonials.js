@@ -1,8 +1,8 @@
 import React from "react";
 import "./suppliersPage.css";
-import Avatar1 from "./Picture/Avatar1.svg";
-import Avatar2 from "./Picture/Avatar2.svg";
-import Avatar3 from "./Picture/Avatar3.svg";
+import Avatar1 from "../../../Picture/Avatar1.svg";
+import Avatar2 from "../../../Picture/Avatar2.svg";
+import Avatar3 from "../../../Picture/Avatar3.svg";
 
 const Testimonials = () => {
   return (

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./MainPage.css";
-import MailForward from "./Picture/mail-forward.svg";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);

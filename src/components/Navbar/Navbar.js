@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import "./navbar.css"; // Make sure this path is correct
-import Logo from "./Photo/Logo.svg";
-import Phone from "./Photo/phone-call.svg";
-import Graphic from "./Photo/Graphic.svg";
-import Chevron from "./Photo/chevron-down.svg";
-import Whatsapp from "./Photo/brand-whatsapp.svg";
-import Linkedin from "./Photo/brand-linkedin.svg";
-import Instagram from "./Photo/brand-instagram.svg";
-import Action from "./Photo/Actions.svg";
-import World from "./Photo/world.svg";
-import ChevronUp from "./Photo/chevron-up.svg";
-import RestIcon from "./Photo/Rest.svg";
-import PostIcon from "./Photo/Post.svg";
+import "./navbar.css";
+import Logo from "../../Picture/Long logo.svg";
+import Phone from "../../Picture/phone-call.svg";
+import Graphic from "../../Picture/Graphic.svg";
+import Chevron from "../../Picture/chevron-down.svg";
+import Whatsapp from "../../Picture/brand-whatsapp.svg";
+import Linkedin from "../../Picture/brand-linkedin.svg";
+import Action from "../../Picture/Actions.svg";
+import World from "../../Picture/world.svg";
+import ChevronUp from "../../Picture/chevron-up.svg";
+import RestIcon from "../../Picture/Rest.svg";
+import PostIcon from "../../Picture/Post.svg";
 
 function Navbar({ onFreeTrialClick }) {
   const [isContactDropdownOpen, setIsContactDropdownOpen] = useState(false);
@@ -97,11 +96,6 @@ function Navbar({ onFreeTrialClick }) {
                     </span>
                   </a>
                   <a href="#" className="social-link">
-                    <span className="icon instagram-icon">
-                      <img src={Instagram} alt="Instagram" />
-                    </span>
-                  </a>
-                  <a href="#" className="social-link">
                     <span className="icon whatsapp-icon">
                       <img src={Whatsapp} alt="Whatsapp" />
                     </span>
@@ -145,9 +139,12 @@ function Navbar({ onFreeTrialClick }) {
             </div>
           )}
         </div>
-        <button className="action-button action-button--accent" onClick={onFreeTrialClick}>
-        Начать бесплатно
-      </button>
+        <button
+          className="action-button action-button--accent"
+          onClick={onFreeTrialClick}
+        >
+          Начать бесплатно
+        </button>
         <div
           className="nav-link language-dropdown"
           onMouseEnter={() => setIsLanguageDropdownOpen(true)}

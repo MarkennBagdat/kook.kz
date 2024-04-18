@@ -1,0 +1,147 @@
+.link-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-content {
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.about-logo {
+  height: 64px; /* Adjust if needed */
+}
+
+.about-text-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: center;
+}
+
+.about-link {
+  display: inline-flex;
+  gap: 8px; /* Space between text and icon */
+  align-items: center;
+  background-color: rgba(234, 234, 247, 1);
+  border-radius: 8px;
+  padding: 0px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.10000000149011612px;
+  text-align: center;
+  width: 110px; /* Hug width */
+  height: 32px; /* Fixed height */
+  color: rgba(82, 76, 189, 1); /* Link text color */
+  text-decoration: none;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+  margin-left: 8px;
+  opacity: 1;
+}
+
+.external-link-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Описание */
+
+.description-section {
+  margin: 60px 142px;
+  width: 50%;
+}
+.description-section p {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: rgba(102, 108, 116, 1);
+  margin-bottom: 8px; /* Add spacing between paragraphs */
+}
+
+.description-bold-text {
+  font-weight: 600; /* Bold font weight */
+  font-size: 18px; /* Match the font size from your requirements */
+  line-height: 24px; /* Match the line height from your requirements */
+  letter-spacing: -0.25px; /* Match the letter spacing from your requirements */
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 3 часть */
+
+.values-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+
+.value-card {
+  background: rgba(245, 245, 245, 1);
+  border-radius: 32px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  width: 26%; /* Adjust width as necessary */
+  text-align: start;
+  margin-right: 2%;
+}
+
+.icon-wrapper {
+  border-radius: 16px;
+  opacity: 0px;
+  margin-bottom: 32px;
+}
+
+.value-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.value-title {
+    font-family: 'Body Grotesque Fit Trial', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.0025em;
+    text-align: left;
+    color: #333;
+    margin: 0;
+  }
+  
+
+.value-description {
+  color: #666;
+  font-size: 16px; /* Adjust font-size as necessary */
+}
+
+
+@media (max-width: 768px) {
+    .values-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .value-card {
+      width: 80%; /* Cards take more width on mobile */
+      margin-right: 0; /* Remove the right margin */
+      margin-bottom: 30px; /* Add some space between the cards */
+    }
+  }

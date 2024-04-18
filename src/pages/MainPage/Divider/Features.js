@@ -1,7 +1,7 @@
 import React from "react";
 import "./MainPage.css";
-import CheckFilled from "./Picture/check_filled.svg";
-import Banner from "./Picture/Banner.svg";
+import CheckFilled from "../../../Picture/check_filled.svg";
+import Banner from "../../../Picture/Banner.svg";
 
 // Accept `openFormModal` as a prop
 const Features = ({ openFormModal }) => {

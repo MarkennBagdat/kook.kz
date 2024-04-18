@@ -1,8 +1,8 @@
 import React from "react";
 import "./suppliersPage.css";
-import Visual from "./Picture/Visual.svg"; // The phone and sun graphic
-import StarAccess from "./Picture/StarAccess.svg"; // Star icon
-import Ellipse from "./Picture/Ellipse.svg"; // Ellipse icon
+import Visual from "../../../Picture/Visual.svg"; // The phone and sun graphic
+import StarAccess from "../../../Picture/StarAccess.svg"; // Star icon
+import Ellipse from "../../../Picture/Ellipse.svg"; // Ellipse icon
 
 const AccessSection = () => {
   return (

@@ -7,8 +7,8 @@ import Testimonials from "./Divider/Testimonials";
 import AccessSection from "./Divider/AccessSection";
 import FAQ from "./Divider/FAQ";
 import ServiceSection from "./Divider/ServiceSection";
-import QRCodeImage from "./QRCode.svg";
-import DeviceMobile from "./device-mobile.svg";
+import QRCodeImage from "../../Picture/QRCode.svg";
+import DeviceMobile from "../../Picture/device-mobile.svg";
 import FormSection from "../../pages/FormPage/FormSection";
 
 const MainPage = () => {
