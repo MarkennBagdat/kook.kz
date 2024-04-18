@@ -3,6 +3,30 @@ import "./FormSection.css";
 
 const FormSection = ({ toggleModal }) => {
   const [activeTab, setActiveTab] = useState("HoReCa");
+  const [selectedCity, setSelectedCity] = useState("Алматы");
+  const [formData, setFormData] = useState({
+    name: '',
+    surname: '',
+    phone: '',
+    email: '',
+    city: 'Алматы', // Для HoReCa по умолчанию Алматы, для Поставщика выберите соответствующий
+    establishmentName: '',
+    companyType: '',
+    categoryName: '',
+    additionalInfo: '',
+    promoCode: ''
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData);
+    // Здесь код для отправки данных на ваш бэкенд или сервер
+  };
 
   const fieldsForHoReCa = (
     <div>
@@ -15,8 +39,18 @@ const FormSection = ({ toggleModal }) => {
       </div>
       <h3 className="section-title">О заведении</h3>
       <div className="form-section">
-        <button className="form-tab active">Алматы</button>
-        <button className="form-tab">Астана</button>
+      <button
+        className={`form-tab ${selectedCity === "Алматы" ? "active" : ""}`}
+        onClick={() => setSelectedCity("Алматы")}
+      >
+        Алматы
+      </button>
+      <button
+        className={`form-tab ${selectedCity === "Астана" ? "active" : ""}`}
+        onClick={() => setSelectedCity("Астана")}
+      >
+        Астана
+      </button>
       </div>
       <input type="text" placeholder="Название заведения *" required />
 
@@ -96,7 +130,7 @@ const FormSection = ({ toggleModal }) => {
 
   return (
     <div className="modal">
-      <div className="modal-content">
+      <form className="modal-content" onSubmit={handleSubmit}>
         <div className="modal-header">
           <h2 className="modal-title">Заявка</h2>
           <span onClick={toggleModal} className="close-btn">
@@ -131,7 +165,7 @@ const FormSection = ({ toggleModal }) => {
           Оставляя заявку, вы соглашаетесь на{" "}
           <span className="highlight">обработку персональных данных</span> и <span className="highlight">пользовательское соглашение</span>
         </p>
-      </div>
+      </form>
     </div>
   );
 };
