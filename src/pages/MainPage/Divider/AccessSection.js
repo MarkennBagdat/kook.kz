@@ -9,7 +9,7 @@ const AccessSection = ({ openFormModal }) => {
     <section className="access-section">
       <div className="access-content">
         <h2 className="access-title">
-          Получите доступ к платформе{" "}
+          Получите доступ к платформе
           <span className="highlight">
             бесплатно
             <img
