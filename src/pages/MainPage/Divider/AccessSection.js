@@ -19,9 +19,7 @@ const AccessSection = ({ openFormModal }) => {
             />
           </span>
         </h2>
-        <p className="access-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt
+        <p className="access-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt
         </p>
         <div class="access-buttons">
           <button class="access-button access-button-solid" onClick={openFormModal}>
