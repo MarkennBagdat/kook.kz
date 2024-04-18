@@ -1,4 +1,3 @@
-// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./Layout/Layout";
@@ -11,10 +10,38 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout><MainPage /></Layout>} />
-        <Route path="/restaurants" element={<Layout><RestaurantsPage /></Layout>} />
-        <Route path="/suppliers" element={<Layout><SuppliersPage /></Layout>} />
-        <Route path="/about" element={<Layout><AboutPage /></Layout>} />
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <MainPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/restaurants"
+          element={
+            <Layout>
+              <RestaurantsPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/suppliers"
+          element={
+            <Layout>
+              <SuppliersPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Layout>
+              <AboutPage />
+            </Layout>
+          }
+        />
       </Routes>
     </Router>
   );
