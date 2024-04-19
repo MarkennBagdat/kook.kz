@@ -9,7 +9,7 @@ import OrderSection from "./Divider/OrderSection";
 import NotificationSection from "./Divider/NotificationSection";
 import AccessSection from "../SamePages/AccessSection";
 import FAQ from "../SamePages/FAQ";
-import Testimonials from "../SamePages/Testimonials";
+// import Testimonials from "../SamePages/Testimonials";
 import QRCode from "../SamePages/QRCode";
 
 
@@ -21,7 +21,7 @@ const SuppliersPage = () => {
       <IntegrationSection />
       <OrderSection />
       <NotificationSection />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <AccessSection />
       <FAQ />
       <QRCode/>

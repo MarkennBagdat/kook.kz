@@ -802,7 +802,7 @@
   flex-direction: column;
   justify-content: center; /* Center content vertically */
   align-items: center;
-  width: 18%; /* Width as a percentage of the screen width */
+  width: 15%; /* Width as a percentage of the screen width */
   min-width: 250px; /* Minimum width to ensure readability */
   height: auto; /* Height adjusted to content */
   bottom: 30px; /* Position from the bottom */

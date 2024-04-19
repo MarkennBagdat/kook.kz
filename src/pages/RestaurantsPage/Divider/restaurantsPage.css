@@ -1,25 +1,6 @@
-/* MAIN */
-.main-section {
-  width: 97%;
-  margin: 24px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  opacity: 1;
-  color: rgba(255, 255, 255, 1);
-  font-family: "Body Grotesque Fit Trial", sans-serif;
-}
-
-.main-content {
-  max-width: 40%; /* Fixed width */
-  height: 368px;
-  text-align: left;
-  margin-left: 80px;
-  margin-top: 64px;
-  margin-bottom: 80px;
+body{
+  margin-top: 0;
+  margin-left: 0;
 }
 
 .main-content h1 {

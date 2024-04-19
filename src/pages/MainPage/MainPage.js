@@ -3,7 +3,7 @@ import { useState } from "react";
 import React from "react";
 import "./Divider/MainPage.css";
 import Features from "./Divider/Features";
-import Testimonials from "../SamePages/Testimonials";
+// import Testimonials from "../SamePages/Testimonials";
 import AccessSection from "../SamePages/AccessSection";
 import FAQ from "../SamePages/FAQ";
 import ServiceSection from "./Divider/ServiceSection";
@@ -23,7 +23,7 @@ const MainPage = () => {
         <Features openFormModal={toggleModal} />
         {isModalOpen && <FormSection toggleModal={toggleModal} />}
       </div>
-      <Testimonials />
+      {/* <Testimonials /> */}
       <div>
         <ServiceSection openFormModal={toggleModal} />
         {isModalOpen && <FormSection toggleModal={toggleModal} />}

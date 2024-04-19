@@ -13,21 +13,19 @@
   z-index: 1000;
 }
 
+/* Скрытие скроллбара для WebKit браузеров */
 .modal-content::-webkit-scrollbar {
-  display: none; /* For WebKit browsers like Chrome and Safari */
+  display: none;
 }
 
-/* Internet Explorer and Edge */
+/* Скрытие скроллбара для Firefox и IE */
 .modal-content {
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  -ms-overflow-style: none; /* IE + Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .modal-content {
   background: #fff;
-  padding: 24px; /* Ваши значения отступов */
-  border-radius: 32px; /* Ваше скругление углов */
-  width: 30%; /* Фиксированная ширина */
-  height: 860px;
   overflow-y: auto;
   z-index: 1001;
   position: relative; /* Для позиционирования крестика и других элементов внутри */
@@ -44,6 +42,7 @@
   align-items: center;
   font-family: "Inter", sans-serif;
   margin-bottom: 32px;
+  margin-top: 15px;
 }
 
 .modal-title {
@@ -181,7 +180,7 @@ textarea:focus {
 }
 
 .select-wrapper::after {
-  content: url('./chevron-down.png');
+  content: url("./chevron-down.png");
   position: absolute;
   top: 50%;
   right: 16px;
@@ -198,7 +197,7 @@ select {
   background-color: #fff; /* Белый фон для выпадающего списка */
   background-repeat: no-repeat; /* Предотвращает повторение иконки */
   background-position: right 10px center; /* Позиционирование иконки справа и по центру по вертикали */
-  background-size: 12px; 
+  background-size: 12px;
   -webkit-appearance: none; /* Removes default style of select in WebKit browsers */
   -moz-appearance: none; /* Removes default style of select in Firefox */
   appearance: none;
@@ -215,11 +214,10 @@ select:focus {
 }
 
 .select-wrapper select:focus,
-.select-wrapper select:hover{
+.select-wrapper select:hover {
   outline: none;
   color: #000; /* Darker border on hover/focus */
 }
-
 
 .form-actions {
   display: flex; /* Для горизонтального выравнивания кнопок */
@@ -281,4 +279,52 @@ select:focus {
   font-weight: 400; /* Makes the text bold */
   text-decoration: underline; /* Underlines the text if needed */
   color: rgba(26, 106, 206, 1);
+}
+
+/* Медиа-запрос для планшетов */
+@media (min-width: 1300px) {
+  .modal-content {
+    width: 30%;
+    max-height: 90%;
+    border-radius: 32px; /* Меньше скругление для планшетов */
+    height: 860px;
+    padding: 24px;
+  }
+}
+
+/* Медиа-запрос для мобильных телефонов */
+/* Медиа-запрос для планшетов */
+@media (min-width: 768px) and (max-width: 1300px) {
+  .modal-content {
+    width: 60%;
+    max-height: 70%;
+    padding: 24px;
+    border-radius: 24px; /* Скругление углов под планшеты */
+    overflow-y: auto; /* Включаем прокрутку, если содержимое больше высоты окна */
+  }
+}
+
+
+/* Медиа-запрос для мобильных телефонов */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+    max-height: 80%; /* Максимальная высота, чтобы оставить немного места сверху и снизу */
+    overflow-y: auto; /* Позволит скроллить содержимое внутри модального окна */
+    padding: 24px; /* Поддерживаем отступы */
+    border-radius: 16px; /* Скругление углов для мобильных устройств */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для подчеркивания модального окна */
+    position: relative; /* Если вам нужно позиционировать элементы внутри модального окна */
+  }
+
+  /* Скрытие скроллбара для WebKit браузеров */
+  .modal-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Скрытие скроллбара для Firefox и IE */
+  .modal-content {
+    -ms-overflow-style: none; /* IE + Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }

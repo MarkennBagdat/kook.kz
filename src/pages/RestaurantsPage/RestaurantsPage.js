@@ -9,7 +9,7 @@ import EnsureTransparencySection from "./Divider/EnsureTransparencySection";
 import BeSureSection from "./Divider/BeSureSection";
 import AccessSection from "../SamePages/AccessSection";
 import FAQ from "../SamePages/FAQ";
-import Testimonials from "../SamePages/Testimonials";
+// import Testimonials from "../SamePages/Testimonials";
 import QRCode from "../SamePages/QRCode";
 import "../MainPage/Divider/MainPage.css";
 
@@ -21,7 +21,7 @@ const RestaurantsPage = () => {
       <FindProductsSection />
       <EnsureTransparencySection />
       <BeSureSection />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <AccessSection />
       <FAQ />
       <QRCode/>

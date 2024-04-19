@@ -1,8 +1,12 @@
+body{
+  margin-top: 0;
+  margin-left: 0;
+}
+
 /* 1ST SECTION */
 /* MAIN */
 .main-section {
-  width: 97%;
-  margin: 24px;
+  width: 100%;
   background-size: cover;
   background-position: center;
   border-radius: 32px;

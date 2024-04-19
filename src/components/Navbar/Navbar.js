@@ -11,10 +11,12 @@ import Action from "../../Picture/chevron-right.png";
 import ChevronUp from "../../Picture/chevron-up.png";
 import RestIcon from "../../Picture/Graphic.png";
 import PostIcon from "../../Picture/Graphic (1).png";
+import Burger from "./Burger.png";
 
 function Navbar({ onFreeTrialClick }) {
   const [isContactDropdownOpen, setIsContactDropdownOpen] = useState(false);
   const [isLoginDropdownOpen, setIsLoginDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleContactDropdown = () => {
     setIsContactDropdownOpen(!isContactDropdownOpen);
@@ -24,13 +26,21 @@ function Navbar({ onFreeTrialClick }) {
     setIsLoginDropdownOpen(!isLoginDropdownOpen);
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  
+
   return (
     <nav className="navbar">
       <div className="navbar-section left">
+        <div className="hamburger-menu" onClick={toggleMobileMenu}>
+          <img src={Burger} alt="Menu" />
+        </div>
         <Link to="/" className="navbar-logo">
           <img src={Logo} alt="Logo" />
         </Link>
-        <div className="navbar-links">
+        <div className={`navbar-links ${isMobileMenuOpen ? "show" : ""}`}>
           <NavLink
             to="/"
             className="nav-link"
@@ -63,8 +73,7 @@ function Navbar({ onFreeTrialClick }) {
             <button
               onClick={toggleContactDropdown}
               className={`dropbtn ${isContactDropdownOpen ? "active" : ""}`}
-            >
-              Контакты
+            >Контакты
               {isContactDropdownOpen ? (
                 <img src={ChevronUp} alt="Chevron Up" />
               ) : (
