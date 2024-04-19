@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./restaurantsPage.css";
+import "../MainPage/Divider/MainPage.css";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);

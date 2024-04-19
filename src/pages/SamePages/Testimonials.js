@@ -1,8 +1,8 @@
 import React from "react";
-import "./MainPage.css";
-import Avatar1 from "../../../Picture/Avatar1.png";
-import Avatar2 from "../../../Picture/Avatar2.png";
-import Avatar3 from "../../../Picture/Avatar3.png";
+import "../MainPage/Divider/MainPage.css";
+import Avatar1 from "../../Picture/Avatar1.png";
+import Avatar2 from "../../Picture/Avatar2.png";
+import Avatar3 from "../../Picture/Avatar3.png";
 
 const Testimonials = () => {
   return (

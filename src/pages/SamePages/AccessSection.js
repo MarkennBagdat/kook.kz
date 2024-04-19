@@ -1,8 +1,8 @@
 import React from "react";
-import "./MainPage.css";
-import Visual from "../../../Picture/Visual.png"; // The phone and sun graphic
-import StarAccess from "../../../Picture/StarAccess.png"; // Star icon
-import Ellipse from "../../../Picture/Ellipse.png";
+import "../MainPage/Divider/MainPage.css";
+import Visual from "../../Picture/Visual.png"; // The phone and sun graphic
+import StarAccess from "../../Picture/StarAccess.png"; // Star icon
+import Ellipse from "../../Picture/Ellipse.png";
 
 const AccessSection = ({ openFormModal }) => {
   return (
