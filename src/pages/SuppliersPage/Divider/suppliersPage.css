@@ -26,7 +26,7 @@ body{
 }
 
 .main-content h1 {
-  font-family: "Body Grotesque Large Trial", sans-serif;
+  font-family: "BodyGrotesque", sans-serif;
   font-size: 56px;
   font-weight: 700;
   line-height: 64px;
@@ -111,7 +111,7 @@ body{
 }
 
 .save-time-title {
-  font-family: "Body Grotesque Fit Trial", sans-serif;
+  font-family: "BodyGrotesque", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 40px;
@@ -219,7 +219,7 @@ body{
   }
 
 .find-products-title {
-  font-family: "Body Grotesque Fit Trial", sans-serif;
+  font-family: "BodyGrotesque", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 40px;

@@ -1,6 +1,5 @@
 // MainPage.js
 import React from "react";
-import { useState } from "react";
 import "./Divider/restaurantsPage.css";
 import MainSection from "./Divider/MainSection";
 import SaveTimeSection from "./Divider/SaveTimeSection";

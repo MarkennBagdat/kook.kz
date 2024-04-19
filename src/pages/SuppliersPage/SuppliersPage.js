@@ -1,6 +1,5 @@
 // src/pages/HomePage/HomePage.js
 import React from "react";
-import { useState } from "react";
 import "./Divider/suppliersPage.css";
 import SuplierSection from "./Divider/SuplierSection";
 import ConditionsSection from "./Divider/ConditionsSection";

@@ -3,6 +3,8 @@ import emailjs from "emailjs-com";
 import "./FormSection.css";
 
 const FormSection = ({ toggleModal }) => {
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
   const [activeTab, setActiveTab] = useState("HoReCa");
   const [selectedCity, setSelectedCity] = useState("Алматы");
   const [selectedTown, setSelectedTown] = useState("Алматы");
@@ -22,6 +24,13 @@ const FormSection = ({ toggleModal }) => {
     productCategory: "",
     businessType: "",
     town: "",
+  });
+
+  const [touched, setTouched] = useState({
+    name: false,
+    surname: false,
+    phone: false,
+    email: false,
   });
 
   const SERVICE_ID = "service_mq77pnl";
@@ -61,6 +70,11 @@ const FormSection = ({ toggleModal }) => {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
+
+    if (name === "email") {
+      setEmail(value);
+      validateEmail(value);
+    }
   };
 
   const handleTabChange = (newType) => {
@@ -79,6 +93,19 @@ const FormSection = ({ toggleModal }) => {
     setFormData({ ...formData, town: town }); // Обновляем formData новым городом
   };
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setEmailError("Введите корректный email");
+    } else {
+      setEmailError("");
+    }
+  };
+
+  const handleBlur = (field) => {
+    setTouched({ ...touched, [field]: true });
+  };
+
   const fieldsForHoReCa = (
     <div>
       <h3 className="section-title">Контактная информация</h3>
@@ -89,27 +116,51 @@ const FormSection = ({ toggleModal }) => {
           placeholder="Имя *"
           required
           onChange={handleInputChange}
+          onBlur={() => handleBlur("name")}
+          className={touched.name && !formData.name ? "error" : ""}
         />
+        {touched.name && !formData.name && (
+          <span className="error-message">Заполните это поле.</span>
+        )}
         <input
           type="text"
           name="surname"
           placeholder="Фамилия *"
           required
           onChange={handleInputChange}
+          onBlur={() => handleBlur("surname")}
+          className={touched.surname && !formData.surname ? "error" : ""}
         />
+        {touched.surname && !formData.surname && (
+          <span className="error-message">Заполните это поле!</span>
+        )}
         <input
           type="tel"
           name="phone"
           placeholder="Номер телефона *"
           required
           onChange={handleInputChange}
+          onBlur={() => handleBlur("phone")}
+          className={touched.phone && !formData.phone ? "error" : ""}
         />
+        {touched.phone && !formData.phone && (
+          <span className="error-message">Заполните это поле.</span>
+        )}
         <input
           type="email"
           name="email"
           placeholder="Почта *"
+          value={email}
           onChange={handleInputChange}
+          onBlur={() => handleBlur("email")}
+          className={
+            emailError || (touched.email && !formData.email) ? "error" : ""
+          }
         />
+        {emailError && <div className="error-message">{emailError}</div>}
+        {touched.email && !formData.email && !emailError && (
+          <span className="error-message">Заполните это поле.</span>
+        )}{" "}
       </div>
       <h3 className="section-title">О заведении</h3>
       <div className="form-section">
@@ -178,27 +229,45 @@ const FormSection = ({ toggleModal }) => {
           placeholder="Имя *"
           required
           onChange={handleInputChange}
+          onBlur={() => handleBlur("name")}
+          className={touched.name && !formData.name ? "error" : ""}
         />
+        {touched.name && !formData.name && (
+          <span className="error-message">Заполните это поле.</span>
+        )}
         <input
           type="text"
           name="surname"
           placeholder="Фамилия *"
           required
           onChange={handleInputChange}
+          onBlur={() => handleBlur("surname")}
+          className={touched.surname && !formData.surname ? "error" : ""}
         />
+        {touched.surname && !formData.surname && (
+          <span className="error-message">Заполните это поле!</span>
+        )}
         <input
           type="email"
           name="email"
           placeholder="Почта *"
+          value={email}
           onChange={handleInputChange}
+          className={emailError ? "error" : ""}
         />
+        {emailError && <div className="error-message">{emailError}</div>}
         <input
           type="tel"
           name="phone"
           placeholder="Номер телефона *"
           required
           onChange={handleInputChange}
+          onBlur={() => handleBlur("phone")}
+          className={touched.phone && !formData.phone ? "error" : ""}
         />
+        {touched.phone && !formData.phone && (
+          <span className="error-message">Заполните это поле.</span>
+        )}
       </div>
       <h3 className="section-title">О компании</h3>
       <div className="input-group">
@@ -232,17 +301,31 @@ const FormSection = ({ toggleModal }) => {
             <option value="" disabled selected>
               Категория товаров *
             </option>
-            <option value="food">Овощи и фрукты</option>
-            <option value="service">Зелень</option>
-            <option value="service">Рыба</option>
-            <option value="grains">Зерновые продукты</option>
-            <option value="dairy">Молочные продукты</option>
-            <option value="meat">Мясо и мясные изделия</option>
-            <option value="bakery">Хлебобулочные изделия</option>
-            <option value="sweets">Сладости и кондитерские изделия</option>
-            <option value="condiments">Соусы и приправы</option>
-            <option value="snacks">Закуски и снеки</option>
-            <option value="beverages">Напитки</option>
+            <option value="fresh-vegetables-fruits">
+              Свежие овощи и фрукты
+            </option>
+            <option value="baked-goods-desserts">
+              Выпечка, кондитерские изделия и десерты
+            </option>
+            <option value="meat-poultry-sausages">Мясо, птица, колбасы</option>
+            <option value="frozen-products">Замороженные продукты</option>
+            <option value="dairy-eggs">Молочная гастрономия и яйца</option>
+            <option value="fish-seafood">Рыба и морепродукты</option>
+            <option value="groceries">Бакалея</option>
+            <option value="pasta-grains">Макаронные изделия и крупы</option>
+            <option value="seasonings-spices">Приправы и специи</option>
+            <option value="drinks">Напитки</option>
+            <option value="coffee-tea">Кофе и чай</option>
+            <option value="snacks">Снэки</option>
+            <option value="baking-goods">Товары для выпечки</option>
+            <option value="cleaning-chemicals">
+              Профессиональная бытовая химия
+            </option>
+            <option value="dishes">Посуда</option>
+            <option value="packaging">Упаковка</option>
+            <option value="equipment-accessories">
+              Оборудование и аксессуары
+            </option>
           </select>
         </div>
         <div className="select-wrapper">
@@ -255,9 +338,10 @@ const FormSection = ({ toggleModal }) => {
             <option value="" disabled selected>
               Тип деятельности компании *
             </option>
+            <option value="distributor">Дистрибьютор</option>
             <option value="manufacturer">Производитель</option>
-            <option value="wholesaler">Оптовик</option>
-            <option value="retailer">Ритейлер</option>
+            <option value="IIP">ИП</option>
+            <option value="other">Другое</option>
           </select>
         </div>
         <div className="select-wrapper">
@@ -272,7 +356,7 @@ const FormSection = ({ toggleModal }) => {
             </option>
             <option value="almaty">Алматы</option>
             <option value="astana">Астана</option>
-            <option value="shymkent">Шымкент</option>
+            <option value="shymkent">Другой город</option>
             {/* Добавьте дополнительные города по необходимости */}
           </select>
         </div>

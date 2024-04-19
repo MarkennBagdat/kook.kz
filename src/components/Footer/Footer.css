@@ -29,7 +29,7 @@
 
 .logo-text {
   margin: 0; /* Removes default margin */
-  font-family: "Body Grotesque Fit Trial", sans-serif; /* Replace with your font or web-safe alternative */
+  font-family: "BodyGrotesque", sans-serif;
   font-size: 20px; /* Sets the font size */
   font-weight: 700; /* Sets the weight to bold */
   line-height: 24px; /* Sets the line height */
@@ -162,7 +162,7 @@
   margin-right: 280px;
 }
 .footer-sitemap h3 {
-  font-family: "Body Grotesque Fit Trial", sans-serif; /* Adjust if needed */
+  font-family: "BodyGrotesque", sans-serif; /* Adjust if needed */
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -208,7 +208,7 @@
 }
 
 .footer-contacts h3 {
-  font-family: "Body Grotesque Fit Trial", sans-serif; /* Adjust if needed */
+  font-family: "BodyGrotesque", sans-serif; /* Adjust if needed */
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;

@@ -27,7 +27,7 @@
 }
 
 .features-title {
-  font-family: "Body Grotesque Large Trial", sans-serif;
+  font-family: "BodyGrotesque", sans-serif;
   font-size: 56px;
   font-weight: 700;
   line-height: 64px;
@@ -41,7 +41,7 @@
 
 /* MainPage.css */
 .main-description {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
@@ -159,7 +159,7 @@
 }
 
 .testimonials-title {
-  font-family: "Body Grotesque Fit Trial", sans-serif;
+  font-family: "BodyGrotesque", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 48px;
@@ -319,7 +319,7 @@
 }
 
 .service-title {
-  font-family: "Body Grotesque Fit Trial", sans-serif; /* Assuming you have this font available */
+  font-family: "BodyGrotesque", sans-serif; /* Assuming you have this font available */
   font-size: 32px;
   font-weight: 700;
   line-height: 40px;
@@ -492,7 +492,7 @@
 
 .access-title {
   position: relative;
-  font-family: "Body Grotesque Fit Trial", sans-serif;
+  font-family: "BodyGrotesque", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 48px;
@@ -504,7 +504,7 @@
 
 .access-title .highlight {
   position: relative;
-  font-family: "Body Grotesque Fit Trial", sans-serif; /* If 'бесплатно' should have the same font */
+  font-family: "BodyGrotesque", sans-serif; /* If 'бесплатно' should have the same font */
   font-size: 40px; /* Assuming 'бесплатно' should be the same size as the rest of the title */
   font-weight: 700; /* Assuming 'бесплатно' should have the same weight as the rest of the title */
   line-height: 48px; /* Assuming 'бесплатно' should have the same line-height as the rest of the title */
@@ -705,7 +705,7 @@
   align-items: center;
   text-align: center;
   margin-bottom: 20px;
-  font-family: "Body Grotesque Fit Trial", sans-serif; /* Replace with the correct font-family if it is different */
+  font-family: "BodyGrotesque", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 48px;
@@ -735,7 +735,7 @@
 }
 
 .faq-question {
-  font-family: "Inter", sans-serif; /* Use Inter font-family */
+  font-family: "Inter", sans-serif;
   font-size: 18px; /* Set the font size */
   font-weight: 600; /* Bold font weight as specified */
   line-height: 24px; /* Line height for readability */
@@ -832,7 +832,7 @@
 }
 
 .qr-code-text {
-  font-family: "Body Grotesque Fit Trial", sans-serif; /* Replace with the correct font-family if it is different */
+  font-family: "BodyGrotesque", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
