@@ -14,7 +14,7 @@
 }
 
 .main-content {
-  max-width: 97%; /* Fixed width */
+  max-width: 40%; /* Fixed width */
   height: 368px;
   text-align: left;
   margin-left: 80px;
@@ -34,7 +34,6 @@
 
 .main-content p {
   font-size: 18px;
-  font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.25px;
   color: rgba(255, 255, 255, 1);

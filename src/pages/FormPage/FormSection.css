@@ -181,7 +181,7 @@ textarea:focus {
 }
 
 .select-wrapper::after {
-  content: url('./chevron-down.svg');
+  content: url('./chevron-down.png');
   position: absolute;
   top: 50%;
   right: 16px;

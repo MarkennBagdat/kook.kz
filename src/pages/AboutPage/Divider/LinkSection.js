@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutPage.css'; 
-import LongLogo from "../../../Picture/Long logo.svg";
-import ExternalLinkIcon from "../../../Picture/external-link.svg";
+import LongLogo from "../../../Picture/Long logo.png";
+import ExternalLinkIcon from "../../../Picture/external-link.png";
 
 const LinkSection = () => {
   return (

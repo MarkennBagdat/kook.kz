@@ -9,8 +9,11 @@ const MainSection = () => {
       style={{ backgroundImage: `url(${BannerImage})` }}
     >
       <div className="main-content">
-        <h1>Not so long title</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <h1>Лучший помощник
+на вашей кухне</h1>
+        <p>Отправляйте заказы всем вашим поставщикам за пять минут.
+Больше не нужно задерживаться на работе, печатая списки закупа
+в WhatsApp</p>
         <div className="main-buttons">
           <button className="btn btn-primary">Начать бесплатно</button>
           <button className="btn btn-secondary">Скачать приложение</button>

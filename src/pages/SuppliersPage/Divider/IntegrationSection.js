@@ -1,7 +1,7 @@
 import React from "react";
 import "./suppliersPage.css";
-import Visual from "../../../Picture/Visual (6).svg"; // Path to your visual image
-import StarIcon from "../../../Picture/Star2.svg"; // Path to your star icon image
+import Visual from "../../../Picture/Visual (6).png"; // Path to your visual image
+import StarIcon from "../../../Picture/Star2.png"; // Path to your star icon image
 
 const IntegrationSection = () => {
   return (

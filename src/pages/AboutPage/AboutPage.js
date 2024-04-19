@@ -5,8 +5,8 @@ import './Divider/AboutPage.css'
 import LinkSection from "./Divider/LinkSection";
 import DescriptionSection from "./Divider/DescriptionSection";
 import TitleSection from "./Divider/TitleSection";
-import QRCodeImage from "../../Picture/QRCode.svg";
-import DeviceMobile from "../../Picture/device-mobile.svg";
+import QRCodeImage from "../../Picture/QRCode.png";
+import DeviceMobile from "../../Picture/device-mobile.png";
 
 
 const AboutPage = () => {

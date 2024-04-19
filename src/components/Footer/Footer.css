@@ -50,15 +50,12 @@
   color: rgba(202, 203, 205, 1);
 }
 
-
-
 .store-badges {
   display: flex;
-  justify-content: start; /* or space-between, depending on layout */
+  justify-content: start;
   align-items: center;
-  gap: 12px; /* space between buttons */
+  gap: 12px;
 }
-
 
 .store-badge {
   display: flex;
@@ -74,6 +71,7 @@
   cursor: pointer; /* Changes cursor to pointer on hover */
   transition: all 0.3s ease;
 }
+
 .store-badge a {
   display: flex;
 }

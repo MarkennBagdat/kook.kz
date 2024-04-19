@@ -1,8 +1,8 @@
 // BeSureSection.js
 import React from "react";
 import "./restaurantsPage.css";
-import Visual from "../../../Picture/Visual (4).svg";
-import StarIcon from "../../../Picture/Star1.svg";
+import Visual from "../../../Picture/Visual (4).png";
+import StarIcon from "../../../Picture/Star1.png";
 
 const BeSureSection = () => {
   return (

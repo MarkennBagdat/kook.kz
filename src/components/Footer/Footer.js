@@ -1,12 +1,12 @@
 import React from "react";
 import "./Footer.css";
-import AppStoreBadge from "../../Picture/LogoF1.svg";
-import GooglePlayBadge from "../../Picture/LogoF2.svg";
-import LinkedinIcon from "../../Picture/brand-linkedin2.svg";
-import WhatsappIcon from "../../Picture/brand-whatsapp2.svg";
-import Logo from "../../Picture/Logo2.svg";
-import ChevronDown from "../../Picture/chevronDown.svg";
-import Star from "../../Picture/Star1.svg";
+import AppStoreBadge from "../../Picture/Logos.png";
+import GooglePlayBadge from "../../Picture/Logos (1).png";
+import LinkedinIcon from "../../Picture/brand-linkedin (1).png";
+import WhatsappIcon from "../../Picture/brand-whatsapp (1).png";
+import Logo from "../../Picture/Logo2.png";
+import ChevronDown from "../../Picture/chevron-down (2).png";
+import Star from "../../Picture/Star1.png";
 
 function Footer() {
   return (

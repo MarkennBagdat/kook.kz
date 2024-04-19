@@ -1,15 +1,16 @@
 import React from "react";
 import "./restaurantsPage.css";
-import Visual from "../../../Picture/Visual.svg"; // The phone and sun graphic
-import StarAccess from "../../../Picture/StarAccess.svg"; // Star icon
-import Ellipse from "../../../Picture/Ellipse.svg";
+import Visual from "../../../Picture/Visual.png"; // The phone and sun graphic
+import StarAccess from "../../../Picture/StarAccess.png"; // Star icon
+import Ellipse from "../../../Picture/Ellipse.png";
 
-const AccessSection = () => {
+const AccessSection = ({ openFormModal }) => {
   return (
     <section className="access-section">
       <div className="access-content">
-        <h2 className="access-title">
-          Получите доступ к платформе{" "}
+      <h2 className="access-title">
+          Получите доступ к платформе {" "}
+          
           <span className="highlight">
             бесплатно
             <img
@@ -20,11 +21,14 @@ const AccessSection = () => {
           </span>
         </h2>
         <p className="access-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt
+          Онлайн маркетплейс, в котором вы найдете поставщиков и товары по всем
+          категориям
         </p>
         <div class="access-buttons">
-          <button class="access-button access-button-solid">
+          <button
+            class="access-button access-button-solid"
+            onClick={openFormModal}
+          >
             Подать заявку
           </button>
           <button class="access-button access-button-outlined">
@@ -33,7 +37,11 @@ const AccessSection = () => {
         </div>
       </div>
       <div className="access-visual">
-        <img src={Visual} alt="Phone with sun graphic" className="Visualphone"/>
+        <img
+          src={Visual}
+          alt="Phone with sun graphic"
+          className="Visualphone"
+        />
         <img src={StarAccess} alt="Star" className="star" />
       </div>
     </section>

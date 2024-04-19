@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./MainPage.css";
-import Spot1 from "../../../Picture/Spot1.svg"; // Photo for the "Restaurants" section
-import Spot2 from "../../../Picture/Spot2.svg"; // Photo for the "Suppliers" section
-import StarIcon1 from "../../../Picture/Star1.svg"; // Icon for the "Restaurants" section
-import StarIcon2 from "../../../Picture/Star2.svg"; // Icon for the "Suppliers" section
-import ArrowUp from "../../../Picture/arrow-up-right.svg";
+import Spot1 from "../../../Picture/Spot1.png"; // Photo for the "Restaurants" section
+import Spot2 from "../../../Picture/Spot2.png"; // Photo for the "Suppliers" section
+import StarIcon1 from "../../../Picture/Star1.png"; // Icon for the "Restaurants" section
+import StarIcon2 from "../../../Picture/Star2.png"; // Icon for the "Suppliers" section
+import ArrowUp from "../../../Picture/arrow-up-right.png";
 
 const ServiceSection = ({ openFormModal }) => {
   let navigate = useNavigate();
@@ -25,8 +25,8 @@ const ServiceSection = ({ openFormModal }) => {
         <div className="service-content">
           <h3 className="service-title">Рестораны</h3>
           <p className="service-title-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt
+            Более 3,000 товаров в 15 категориях и более 50 поставщиков уже на
+            платформе и ждут ваших заказов
           </p>
           <ul className="service-list">
             <li>
@@ -43,7 +43,9 @@ const ServiceSection = ({ openFormModal }) => {
             </li>
           </ul>
           <div className="buttons-container">
-            <button className="service-button-in" onClick={openFormModal}>Начать бесплатно</button>
+            <button className="service-button-in" onClick={openFormModal}>
+              Начать бесплатно
+            </button>
             <button
               className="service-button-out"
               onClick={navigateToRestaurants}
@@ -60,8 +62,7 @@ const ServiceSection = ({ openFormModal }) => {
         <div className="service-content">
           <h3 className="service-title">Поставщики</h3>
           <p className="service-title-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt
+            Занимайтесь развитием бизнеса, а не перебиванием заказовв систему
           </p>
           <ul className="service-list">
             <li>

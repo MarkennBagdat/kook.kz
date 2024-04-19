@@ -1,8 +1,8 @@
 // EnsureTransparencySection.js
 import React from "react";
 import "./restaurantsPage.css";
-import Visual from "../../../Picture/Visual (3).svg";
-import Star from "../../../Picture/Star1.svg";
+import Visual from "../../../Picture/Visual (3).png";
+import Star from "../../../Picture/Star1.png";
 
 const EnsureTransparencySection = () => {
   return (

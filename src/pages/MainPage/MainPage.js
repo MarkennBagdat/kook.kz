@@ -4,11 +4,11 @@ import React from "react";
 import "./Divider/MainPage.css";
 import Features from "./Divider/Features";
 import Testimonials from "./Divider/Testimonials";
-import AccessSection from "./Divider/AccessSection";
+import AccessSection from "../SuppliersPage/Divider/AccessSection";
 import FAQ from "./Divider/FAQ";
 import ServiceSection from "./Divider/ServiceSection";
-import QRCodeImage from "../../Picture/QRCode.svg";
-import DeviceMobile from "../../Picture/device-mobile.svg";
+import QRCodeImage from "../../Picture/QRCode.png";
+import DeviceMobile from "../../Picture/device-mobile.png";
 import FormSection from "../../pages/FormPage/FormSection";
 
 const MainPage = () => {
@@ -28,12 +28,12 @@ const MainPage = () => {
       </div>
       <Testimonials />
       <div>
-      <ServiceSection openFormModal={toggleModal} />
-      {isModalOpen && <FormSection toggleModal={toggleModal} />}
+        <ServiceSection openFormModal={toggleModal} />
+        {isModalOpen && <FormSection toggleModal={toggleModal} />}
       </div>
       <div>
-      <AccessSection openFormModal={toggleModal} />
-      {isModalOpen && <FormSection toggleModal={toggleModal} />}
+        <AccessSection openFormModal={toggleModal} />
+        {isModalOpen && <FormSection toggleModal={toggleModal} />}
       </div>
       <FAQ />
       {showQR ? (

@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
-import Logo from "../../Picture/Long logo.svg";
-import Phone from "../../Picture/phone-call.svg";
-import Graphic from "../../Picture/Graphic.svg";
-import Chevron from "../../Picture/chevron-down.svg";
-import Whatsapp from "../../Picture/brand-whatsapp.svg";
-import Linkedin from "../../Picture/brand-linkedin.svg";
-import Action from "../../Picture/Actions.svg";
-import World from "../../Picture/world.svg";
-import ChevronUp from "../../Picture/chevron-up.svg";
-import RestIcon from "../../Picture/Rest.svg";
-import PostIcon from "../../Picture/Post.svg";
+import Logo from "../../Picture/Long logo.png";
+import Phone from "../../Picture/phone-call.png";
+import Graphic from "../../Picture/mail-opened.png";
+import Chevron from "../../Picture/chevron-down (1).png";
+import Whatsapp from "../../Picture/brand-whatsapp.png";
+import Linkedin from "../../Picture/brand-linkedin.png";
+import Action from "../../Picture/chevron-right.png";
+import ChevronUp from "../../Picture/chevron-up.png";
+import RestIcon from "../../Picture/Graphic.png";
+import PostIcon from "../../Picture/Graphic (1).png";
 
 function Navbar({ onFreeTrialClick }) {
   const [isContactDropdownOpen, setIsContactDropdownOpen] = useState(false);
   const [isLoginDropdownOpen, setIsLoginDropdownOpen] = useState(false);
-  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
 
   const toggleContactDropdown = () => {
     setIsContactDropdownOpen(!isContactDropdownOpen);
@@ -145,31 +143,6 @@ function Navbar({ onFreeTrialClick }) {
         >
           Начать бесплатно
         </button>
-        <div
-          className="nav-link language-dropdown"
-          onMouseEnter={() => setIsLanguageDropdownOpen(true)}
-          onMouseLeave={() => setIsLanguageDropdownOpen(false)}
-          style={{ position: "relative" }}
-        >
-          <img
-            src={World}
-            alt="World"
-            className={`world-icon ${isLanguageDropdownOpen ? "hover" : ""}`}
-          />
-          {isLanguageDropdownOpen && (
-            <div className="dropdown-content-language">
-              <a href="/ru" className="dropdown-item-language">
-                Русский
-              </a>
-              <a href="/kk" className="dropdown-item-language">
-                Қазақ тілі
-              </a>
-              <a href="/en" className="dropdown-item-language">
-                English
-              </a>
-            </div>
-          )}
-        </div>
       </div>
     </nav>
   );

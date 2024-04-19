@@ -6,7 +6,7 @@ import SaveTimeSection from "./Divider/SaveTimeSection";
 import FindProductsSection from "./Divider/FindProductsSection"; // Placeholder for finding products section
 import EnsureTransparencySection from "./Divider/EnsureTransparencySection";
 import BeSureSection from "./Divider/BeSureSection";
-import AccessSection from "./Divider/AccessSection";
+import AccessSection from "../SuppliersPage/Divider/AccessSection";
 import FAQ from "./Divider/FAQ";
 import Testimonials from "./Divider/Testimonials";
 
