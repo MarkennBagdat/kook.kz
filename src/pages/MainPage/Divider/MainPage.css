@@ -1,7 +1,320 @@
-
 @media (max-width: 768px) {
-  .main-page{
+  .main-page {
     width: 768px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .main-page {
+    min-width: 1200px;
+  }
+
+  .features{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .features-content {
+    width: 30%;
+  }
+
+  /* Ensure that images take full width and adjust the margin */
+  .features-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features-images img{
+    width: 100%;
+  }
+
+  /* Adjust the title and description for mobile screens */
+  .features-title {
+  font-family: "BodyGrotesqueLarge", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0.001em;
+    text-align: start;
+    margin-bottom: 16px;
+  }
+
+  /* MainPage.css */
+  .main-description {
+    width: 490px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.25px;
+    color: rgba(102, 108, 116, 1);
+    margin-bottom: 30px;
+    text-align: start;
+  }
+
+  /* Adjust the button layout */
+  .features-buttons {
+    flex-direction: row; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    width: 100%;
+  }
+
+  .button-free,
+  .button-demo {
+  width: 218px;
+  }
+
+  /* Style for list items */
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+  }
+
+  .feature-item {
+    display: flex;
+    justify-content: left;
+    font-size: 16px;
+    width: 100%; /* Full width for each item */
+    margin-bottom: 10px; /* Space between items */
+  }
+}
+
+@media (min-width: 1330px)  and (max-width: 2000px) {
+  .main-page {
+    min-width: 1200px;
+  }
+
+  .features{
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 10%;
+  }
+
+  .features-content {
+    width: 30%;
+  }
+
+  /* Ensure that images take full width and adjust the margin */
+  .features-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features-images img{
+    width: 100%;
+  }
+
+  /* Adjust the title and description for mobile screens */
+  .features-title {
+  font-family: "BodyGrotesqueLarge", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0.001em;
+    text-align: start;
+    margin-bottom: 16px;
+  }
+
+  /* MainPage.css */
+  .main-description {
+    width: 430px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.25px;
+    color: rgba(102, 108, 116, 1);
+    margin-bottom: 30px;
+    text-align: start;
+  }
+
+  /* Adjust the button layout */
+  .features-buttons {
+    flex-direction: row; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    width: 100%;
+  }
+
+  .button-free,
+  .button-demo {
+  width: 218px;
+  }
+
+  /* Style for list items */
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+  }
+
+  .feature-item {
+    display: flex;
+    justify-content: left;
+    font-size: 13px;
+    width: 100%; /* Full width for each item */
+    margin-bottom: 10px; /* Space between items */
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1330px){
+  .main-page {
+    min-width: 1200px;
+  }
+
+  .features{
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 10%;
+  }
+
+  .features-content {
+    width: 60%;
+  }
+
+  /* Ensure that images take full width and adjust the margin */
+  .features-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features-images img{
+    width: 100%;
+  }
+
+  /* Adjust the title and description for mobile screens */
+  .features-title {
+  font-family: "BodyGrotesqueLarge", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0.001em;
+    text-align: start;
+    margin-bottom: 16px;
+  }
+
+  /* MainPage.css */
+  .main-description {
+    width: 430px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.25px;
+    color: rgba(102, 108, 116, 1);
+    margin-bottom: 30px;
+    text-align: start;
+  }
+
+  /* Adjust the button layout */
+  .features-buttons {
+    flex-direction: row; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    width: 100%;
+  }
+
+  .button-free,
+  .button-demo {
+  width: 218px;
+  }
+
+  /* Style for list items */
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+  }
+
+  .feature-item {
+    display: flex;
+    justify-content: left;
+    font-size: 13px;
+    width: 100%; /* Full width for each item */
+    margin-bottom: 10px; /* Space between items */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .main-page {
+    width: 1200px;
+  }
+
+  .features{
+    margin-left: 40px;
+    margin-right: 40px;
+    gap: 5%;
+  }
+
+  .features-content {
+    width: 50%;
+  }
+
+  /* Ensure that images take full width and adjust the margin */
+  .features-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features-images img{
+    width: 100%;
+  }
+
+  /* Adjust the title and description for mobile screens */
+  .features-title {
+  font-family: "BodyGrotesqueLarge", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: -0.0025em;
+    text-align: start;
+    margin-bottom: 16px;
+  }
+
+  /* MainPage.css */
+  .main-description {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.25px;
+    color: rgba(102, 108, 116, 1);
+    margin-bottom: 30px;
+    text-align: start;
+  }
+
+  /* Adjust the button layout */
+  .features-buttons {
+    flex-direction: row; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    width: 100%;
+  }
+
+  .button-free,
+  .button-demo {
+  width: 218px;
+  }
+
+  /* Style for list items */
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+  }
+
+  .feature-item {
+    display: flex;
+    justify-content: left;
+    font-size: 16px;
+    width: 100%; /* Full width for each item */
+    margin-bottom: 10px; /* Space between items */
   }
 }
 
@@ -9,45 +322,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0; /* Add padding */
+  padding-top: 90px;
 }
 
 .features-content {
-  width: 100%; /* Full width on mobile */
-  max-width: 550px; /* Max width on larger screens */
   text-align: center;
-  margin-right: 180px;
 }
 
 .features-images {
-  width: 100%; /* Full width on mobile */
-  max-width: 550px; /* Max width on larger screens */
   text-align: center;
-  margin-bottom: 20px;
-}
-
-.features-title {
-  font-family: "BodyGrotesque", sans-serif;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 64px;
-  letter-spacing: -0.25px;
-  text-align: start;
-  color: rgba(15, 23, 33, 1);
-  margin-top: 24px;
-  margin-bottom: 16px;
-  height: 192px;
 }
 
 /* MainPage.css */
 .main-description {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 24px;
+  font-family: "Inter", sans-serif;
   letter-spacing: -0.25px;
   color: rgba(102, 108, 116, 1);
-  margin-bottom: 50px;
   text-align: start;
 }
 
@@ -58,7 +348,8 @@
   margin-bottom: 32px; /* space below the buttons */
 }
 
-.button-free, .button-demo {
+.button-free,
+.button-demo {
   /* Общие стили */
   border-radius: 16px; /* rounded corners */
   font-family: "Inter", sans-serif; /* font family */
@@ -78,17 +369,14 @@
 }
 
 .button-demo {
-  background-color: rgba(255, 255, 255, 1); /* button background color - white */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    1
+  ); /* button background color - white */
   color: rgba(82, 76, 189, 1); /* button text color */
   border: 2px solid rgba(82, 76, 189, 1); /* border color and size */
-}
-
-@media (max-width: 768px) {
-  .button-free, .button-demo {
-    width: auto; /* buttons take up the width of their content + padding */
-    font-size: 0.9rem; /* smaller font size */
-    padding: 0.8rem 1.2rem; /* smaller padding */
-  }
 }
 
 /* MainPage.css */
@@ -102,7 +390,6 @@
   align-items: center; /* Aligns items vertically */
   gap: 8px; /* Space between icon and text */
   font-family: "Inter", sans-serif;
-  font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.25px;
@@ -116,38 +403,77 @@
 }
 
 @media (max-width: 768px) {
+  /* Stack the sections vertically and adjust alignment */
   .features {
-    flex-direction: column; /* Side by side for larger screens */
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
-  .features-content,
+  .features-content {
+    width: 90%; /* Full width on mobile */
+    text-align: center;
+  }
+
+  /* Ensure that images take full width and adjust the margin */
   .features-images {
-    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 30px 0 0 0; /* add margin to the bottom */
   }
 
-  .features-images {
-    width: 99%;
-  }
-
+  /* Adjust the title and description for mobile screens */
   .features-title {
-    font-size: 56px; /* Adjust font size for larger screens */
-    text-align: center; /* Align text to the left */
+  font-family: "BodyGrotesqueLarge", sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.0025em;
+    text-align: start;
+    margin-bottom: 16px;
   }
 
+  /* MainPage.css */
   .main-description {
-    font-size: 18px; /* Adjust font size for larger screens */
-    text-align: center; /* Align text to the left */
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.25px;
+    color: rgba(102, 108, 116, 1);
+    margin-bottom: 30px;
+    text-align: start;
   }
 
+  /* Adjust the button layout */
   .features-buttons {
-    flex-direction: row; /* Side by side buttons on larger screens */
-    justify-content: flex-start; /* Align to the left */
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    width: 100%;
   }
 
   .button-free,
   .button-demo {
-    width: auto; /* Auto width for buttons */
+    height: 60px;
+    width: 100%; /* Full width buttons */
+    margin-bottom: 5px; /* Space between buttons */
+  }
+
+  /* Style for list items */
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+  }
+
+  .feature-item {
+    display: flex;
+    justify-content: left;
+    font-size: 16px;
+    width: 100%; /* Full width for each item */
+    margin-bottom: 10px; /* Space between items */
   }
 }
 
@@ -231,10 +557,9 @@
 }
 
 @media (min-width: 768px) {
-  .testimonials-title{
-    
-  height: 48px;
-  margin-bottom: 70px;
+  .testimonials-title {
+    height: 48px;
+    margin-bottom: 70px;
   }
   .testimonials-container {
     flex-direction: row;
@@ -243,7 +568,7 @@
   }
   .testimonial {
     width: calc(50% - 24px);
-    padding: 24px; 
+    padding: 24px;
   }
 }
 
@@ -255,7 +580,6 @@
 }
 
 @media (max-width: 768px) {
-
   .testimonials-container {
     flex-direction: column;
     justify-content: center;
@@ -265,20 +589,18 @@
 
   .testimonial {
     width: 500px;
-    margin: 0 auto; 
+    margin: 0 auto;
     margin-bottom: 24px;
     padding: 24px;
     box-sizing: border-box;
   }
 
-  .access-buttons{
+  .access-buttons {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 }
-
-
 
 /* Service */
 .service-section {
@@ -296,6 +618,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
   width: 100%; /* Full width on small screens */
   max-width: 700px; /* Maximum width to control size on larger screens */
+  height: auto;
   padding: 16px;
   padding-bottom: 32px;
   margin: 12px; /* Space between services */
@@ -312,6 +635,7 @@
   justify-content: center;
   padding: 0 6.25%; /* Padding instead of margin for better control */
   width: auto;
+  height: auto;
 }
 
 * {
@@ -362,7 +686,8 @@
   margin-right: 8px; /* Space after the icon */
 }
 
-.service-button-in, .service-button-out {
+.service-button-in,
+.service-button-out {
   padding: 16px 32px;
   width: 87.5%;
   height: 56px;
@@ -401,12 +726,10 @@
 }
 
 @media (min-width: 768px) {
-
   .service {
     width: 100%; /* Set width for larger screens */
     margin-right: 24px; /* Only add right margin for spacing between items */
   }
-
 
   .button-image-out {
     width: 1rem; /* Keep original size on larger screens */
@@ -426,7 +749,8 @@
     margin-right: 0; /* Remove right margin since items will stack */
   }
 
-  .service-button-in, .service-button-out {
+  .service-button-in,
+  .service-button-out {
     font-size: 0.9rem;
     padding: 0.8rem 1.2rem;
     margin: 8px 0; /* Reduce margin for a tighter layout */
@@ -479,15 +803,6 @@
   align-items: center; /* Centers items vertically */
   justify-content: center; /* Centers items horizontally */
   text-align: center; /* Centers text */
-  margin-left: 250px;
-  padding: 20px 0;
-}
-
-.access-content {
-  width: 100%; /* Full width on mobile */
-  max-width: 550px; /* Adjust to the max-width as needed */
-  text-align: center; /* Center the text and content */
-  margin-bottom: 20px;
 }
 
 .access-title {
@@ -529,7 +844,7 @@
 /* Adjust the size of the ellipse on smaller screens */
 @media (max-width: 768px) {
   .ellipse-behind {
-    width: 60vw; /* Smaller size for smaller screens */
+    width: 120%; /* Smaller size for smaller screens */
   }
 }
 
@@ -550,39 +865,17 @@
   color: rgba(102, 108, 116, 1); /* Light gray color */
 }
 
-/* Responsive design adjustments, if needed */
-@media (max-width: 768px) {
-  .access-title,
-  .access-title .highlight {
-    font-size: 32px; /* Smaller font size on mobile devices */
-    line-height: 40px; /* Adjust line-height accordingly */
-  }
 
-  .access-description {
-    font-size: 16px; /* Smaller font size on mobile devices */
-    line-height: 22px; /* Adjust line-height accordingly */
-  }
-}
-
-/* CSS styling */
-.access-buttons {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 12px;
-  margin-top: 45px;
-}
 
 .access-button {
-  width: 50%;
-  padding: 16px 51px; /* Adjust the padding to fit your design */
+  font-family: "Inter", sans-serif;
+  padding: 16px 51px; 
   font-size: 16px; /* Adjust font-size as needed */
   font-weight: 500; /* Font weight for better readability */
   border-radius: 16px;
   cursor: pointer;
   outline: none;
   transition: background-color 0.3s, color 0.3s;
-  flex: none;
 }
 
 .access-button-solid {
@@ -603,11 +896,11 @@
 
 .access-visual {
   position: relative;
-  width: 40%; /* Adjust width as necessary */
-}
+  width: 20%;
+} 
 
 .access-visual img.Visualphone {
-  width: 80%; /* Make the phone image responsive within the container */
+  width: 100%; 
 }
 
 .access-visual img.star {
@@ -619,75 +912,207 @@
   z-index: 10; /* Ensures the star is above other elements */
 }
 
-/* Example media query for smaller screens */
-@media (max-width: 768px) {
-  .access-visual img.star {
-    width: 10%; /* Reduce size on smaller screens */
-    top: 5%; /* Adjust the top position for smaller screens */
-    right: 5%; /* Adjust the right position for smaller screens */
-    transform: translate(
-      50%,
-      -50%
-    ); /* Adjust if necessary for smaller screens */
-  }
-}
-
-
-
-@media (max-width: 768px) {
+@media (min-width: 1200px) {
   .access-section {
-    flex-direction: column-reverse; /* Текст будет над изображением */
-    text-align: center; /* Центрирование текста */
-    margin-left: 0; /* Сброс дополнительных отступов */
+    display: flex;
+    justify-content: center;
+    flex-direction: row; /* Текст будет над изображением */
+    margin-left: 40px;
+    margin-right: 40px;
+    gap: 10%;
   }
 
-  .access-title, .access-title .highlight, .access-description {
+  .access-content{
+    width: 50%;
+  }
+
+.access-title,
+  .access-title .highlight {
+    
+    font-size: 32px; /* Smaller font size on mobile devices */
+    line-height: 40px; /* Adjust line-height accordingly */
+  }
+
+  .access-description {
+    font-size: 16px; /* Smaller font size on mobile devices */
+    line-height: 22px; /* Adjust line-height accordingly */
+  }
+  .access-title,
+  .access-title .highlight,
+  .access-description {
     width: 100%; /* Полная ширина контейнера */
     text-align: center; /* Центрирование текста */
   }
 
-  .access-content, .access-visual {
+  .access-content,
+  .access-visual {
     text-align: center;
   }
 
-  .access-visual img.Visualphone {
-    width: 100%; /* Ширина изображения телефона на всю ширину блока на мобильных устройствах */
+  .access-visual img{
+    width: 100%; 
   }
 
   .access-visual img.star {
-    width: 30px; /* Уменьшаем размер звезды на мобильных устройствах */
-    top: -15px; /* Смещаем звезду чуть выше изображения телефона */
-    left: 50%; /* Центрируем звезду относительно ширины экрана */
-    transform: translate(-50%, 0); /* Смещение для точного центрирования звезды */
+    width: 30px;
+    height: auto;
+    top: -20px; /* Смещаем звезду чуть выше изображения телефона */
+    right: -8%; /* Центрируем звезду относительно ширины экрана */
+    transform: translate(
+      -50%,
+      0
+    ); /* Смещение для точного центрирования звезды */
   }
 
   /* Уменьшаем размер и интервал кнопок для мобильных устройств */
   .access-buttons {
     display: flex;
-  flex-direction: row; /* Располагаем кнопки вертикально */
-  align-items: center; /* Выравниваем кнопки по центру по горизонтали */
-  gap: 16px; /* Расстояние между кнопками */
-  width: 60%; /* Заставляем контейнер занимать всю ширину родителя */
-  margin-top: 45px;
+    justify-content: center;
+    flex-direction: row; /* Располагаем кнопки вертикально */
+    align-items: center; /* Выравниваем кнопки по центру по горизонтали */
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .access-button {
+    width: 280px; /* Расширяем кнопки на всю ширину доступного пространства */
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .access-section {
+    flex-direction: column-reverse; /* Текст будет над изображением */
+    text-align: center; /* Центрирование текста */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .access-content{
+    width: 60%;
+  }
+
+.access-title,
+  .access-title .highlight {
+    font-size: 32px; /* Smaller font size on mobile devices */
+    line-height: 40px; /* Adjust line-height accordingly */
+  }
+
+  .access-description {
+    font-size: 16px; /* Smaller font size on mobile devices */
+    line-height: 22px; /* Adjust line-height accordingly */
+  }
+  .access-title,
+  .access-title .highlight,
+  .access-description {
+    width: 100%; /* Полная ширина контейнера */
+    text-align: center; /* Центрирование текста */
+  }
+
+  .access-content,
+  .access-visual {
+    text-align: center;
+  }
+
+  .access-visual img{
+    width: 100%; 
+  }
+
+  .access-visual img.star {
+    width: 30px;
+    height: auto;
+    top: -20px; /* Смещаем звезду чуть выше изображения телефона */
+    right: -8%; /* Центрируем звезду относительно ширины экрана */
+    transform: translate(
+      -50%,
+      0
+    ); /* Смещение для точного центрирования звезды */
+  }
+
+  /* Уменьшаем размер и интервал кнопок для мобильных устройств */
+  .access-buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Располагаем кнопки вертикально */
+    align-items: center; /* Выравниваем кнопки по центру по горизонтали */
+    gap: 15px; /* Расстояние между кнопками */
+    width: 60%; /* Заставляем контейнер занимать всю ширину родителя */
+    margin-top: 30px;
+    margin-left: 90px;
   }
 
   .access-button {
     width: 100%; /* Расширяем кнопки на всю ширину доступного пространства */
-  padding: 10px 20px; /* Уменьшаем внутренние отступы */
-  box-sizing: border-box; /* Учитываем padding и border в общей ширине */
-  margin: 0; /* Уменьшение padding для мобильных устройств */
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+  }
+}
+
+@media (max-width: 768px) {
+  .access-section {
+    flex-direction: column-reverse; /* Текст будет над изображением */
+    text-align: center; /* Центрирование текста */
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
-  /* Правки заголовка для мобильных устройств */
-  .access-title, .access-title .highlight {
-   
-    line-height: 32px; /* Подстройка межстрочного интервала */
+  .access-content{
+    width: 60%;
   }
 
-  /* Правки описания для мобильных устройств */
+.access-title,
+  .access-title .highlight {
+    font-size: 32px; /* Smaller font size on mobile devices */
+    line-height: 40px; /* Adjust line-height accordingly */
+  }
+
   .access-description {
-    font-size: 16px; /* Уменьшение размера шрифта описания */
-    line-height: 22px; /* Подстройка межстрочного интервала */
+    font-size: 16px; /* Smaller font size on mobile devices */
+    line-height: 22px; /* Adjust line-height accordingly */
+  }
+  .access-title,
+  .access-title .highlight,
+  .access-description {
+    width: 100%; /* Полная ширина контейнера */
+    text-align: center; /* Центрирование текста */
+  }
+
+  .access-content,
+  .access-visual {
+    text-align: center;
+  }
+
+  .access-visual img{
+    width: 100%; 
+  }
+
+  .access-visual img.star {
+    width: 30px;
+    height: auto;
+    top: -20px; /* Смещаем звезду чуть выше изображения телефона */
+    right: -8%; /* Центрируем звезду относительно ширины экрана */
+    transform: translate(
+      -50%,
+      0
+    ); /* Смещение для точного центрирования звезды */
+  }
+
+  /* Уменьшаем размер и интервал кнопок для мобильных устройств */
+  .access-buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Располагаем кнопки вертикально */
+    align-items: center; /* Выравниваем кнопки по центру по горизонтали */
+    gap: 15px; /* Расстояние между кнопками */
+    width: 60%; /* Заставляем контейнер занимать всю ширину родителя */
+    margin-top: 30px;
+    margin-left: 90px;
+  }
+
+  .access-button {
+    width: 100%; /* Расширяем кнопки на всю ширину доступного пространства */
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
   }
 }
 
@@ -755,11 +1180,11 @@
 
 .faq-answer {
   font-family: "Inter", sans-serif;
-font-size: 16px;
-font-weight: 500;
-line-height: 24px;
-letter-spacing: -0.25px;
-text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out, padding 0.3s ease-out,
@@ -777,7 +1202,6 @@ text-align: left;
   line-height: 24px;
   letter-spacing: -0.25px;
   text-align: left;
-  
 }
 
 /* Content styles */
@@ -789,7 +1213,6 @@ text-align: left;
   line-height: 24px;
   letter-spacing: -0.25px;
   text-align: left;
-  
 }
 
 /* MainPage.css */
@@ -876,7 +1299,7 @@ text-align: left;
 }
 
 .qrcode-text {
-  font-family: "Inter", sans-serif;  
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;

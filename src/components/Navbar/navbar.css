@@ -18,8 +18,6 @@ body{
     align-items: center;
     background-color: #ffffff; /* Background color */
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   .nav-link {
@@ -32,7 +30,6 @@ body{
   }
 
   .contact-dropdown {
-    width: 243px; /* 'Hug' implies the width should fit content up to this max width */
     position: relative;
   }
 
@@ -51,19 +48,21 @@ body{
   }
 }
 
-@media (min-width: 768px) and (max-width: 1200px){
+@media (min-width: 769px) and (max-width: 1200px){
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff; /* Background color */
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  }
+
+  .navbar-logo{
+    margin-right: 20px;
   }
 
   .nav-link {
-    margin-right: 30px; /* Space between links */
+    margin-right: 20px; /* Space between links */
     padding: 20px 0; /* Padding top and bottom */
   }
 
@@ -72,8 +71,11 @@ body{
   }
 
   .contact-dropdown {
-    width: 243px; /* 'Hug' implies the width should fit content up to this max width */
     position: relative;
+  }
+
+  .dropdown-content{
+    left: -50%;
   }
 
   .dropdown-content-login {
@@ -83,7 +85,6 @@ body{
   .navbar-links {
     display: flex;
     align-items: center;
-    margin-left: 30px;
   }
 }
 
@@ -91,7 +92,7 @@ body{
 .navbar-section.left {
   display: flex;
   align-items: center;
-  padding-left: 48px; /* Left padding as per design */
+  margin-left: 48px;
 }
 
 .navbar-logo img {
@@ -389,11 +390,12 @@ body{
 }
 
 /* Медиа запрос для мобильных устройств */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .navbar{
     width: 100%;
     height: 80px;
     margin-top: 0;
+    padding-top: 30px;
   }
 
   .navbar-logo{
