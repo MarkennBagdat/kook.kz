@@ -754,24 +754,30 @@
 }
 
 .faq-answer {
+  font-family: "Inter", sans-serif;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: -0.25px;
+text-align: left;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out, padding 0.3s ease-out,
     box-shadow 0.3s ease-out;
-  background-color: transparent;
 }
 
 .faq-answer.show {
   max-height: 1000px; /* Maximum height when expanded */
   overflow: visible;
   padding-top: 24px;
-  color: rgba(102, 108, 116, 1); /* Text color for the answer */
+  color: rgba(102, 108, 116, 1);
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.25px;
   text-align: left;
+  
 }
 
 /* Content styles */
@@ -783,6 +789,7 @@
   line-height: 24px;
   letter-spacing: -0.25px;
   text-align: left;
+  
 }
 
 /* MainPage.css */
