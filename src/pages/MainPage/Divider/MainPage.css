@@ -826,6 +826,7 @@
   letter-spacing: -0.0025em; /* Assuming 'бесплатно' should have the same letter spacing */
   color: rgba(250, 166, 19, 1); /* Replace with the actual color if different */
   text-align: left;
+  text-decoration: none;
 }
 
 .ellipse-behind {
