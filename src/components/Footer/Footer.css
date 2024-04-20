@@ -355,7 +355,6 @@ body{
 @media (min-width: 768px) {
   .footer {
     margin: 20px;
-    width: 110%;
     height: 50%;
   }
 
@@ -392,7 +391,6 @@ body{
 @media (min-width: 481px) and (max-width: 768px) {
   .footer {
     margin: 20px;
-    width: 125%;
     height: 50%;
   }
 
