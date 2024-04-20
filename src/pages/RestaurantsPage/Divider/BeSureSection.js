@@ -4,7 +4,7 @@ import "./restaurantsPage.css";
 import Visual from "../../../Picture/Visual (4).png";
 import StarIcon from "../../../Picture/Star1.png";
 
-const BeSureSection = () => {
+const BeSureSection = ({ openFormModal }) => {
   return (
     <section className="be-sure-section">
       <div className="find-products-visual">
@@ -29,7 +29,7 @@ const BeSureSection = () => {
               </span>
           </div>
         </div>
-        <button className="find-products-button">Начать бесплатно</button>
+        <button className="find-products-button" onClick={openFormModal}>Начать бесплатно</button>
       </div>
     </section>
   );

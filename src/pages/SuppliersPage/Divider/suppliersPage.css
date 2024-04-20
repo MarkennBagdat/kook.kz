@@ -5,24 +5,106 @@ body{
 
 /* 1ST SECTION */
 /* MAIN */
-.main-section {
-  width: 100%;
+
+.suppliers-pages {
+  padding-top: 100px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 80px;
+  height: 690px;
+}
+
+.suppliers-pages-rest {
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 32px;
+  height: 690px;
+}
+
+.hero-section {
   background-size: cover;
   background-position: center;
-  border-radius: 32px;
+  color: white;
+  text-align: left;
+  padding: 80px; /* Adjust the padding as needed */
   display: flex;
-  justify-content: space-between;
+  align-items: center; /* This centers the content vertically */
+  justify-content: start; 
+  border-radius: 32px;
+}
+
+
+.hero-content{
+  width: 35%;
+}
+
+.hero-content .hero-title {
+  font-family: 'BodyGrotesqueLarge', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: white; /* Or whatever color your design requires */
+  margin: 0; /* Adjust as needed */
+  padding: 0; /* Adjust as needed */
+}
+
+.custom-paragraph {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  margin: 0; /* Adjust as needed */
+  padding: 0; /* Adjust as needed */
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent; /* Transparent or a secondary color */
+  color: white;
+  border: 1px solid white;
+}
+
+.main-section {
+  background-size: cover;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  opacity: 1;
+  text-align: center;
+  padding: 50px 20px;
+  color: #fff;
 }
 
 .main-content {
-  max-width: 97%; /* Fixed width */
-  height: 368px;
+  max-width: 800px; /* Fixed width */
+  height: auto;
   text-align: left;
-  margin-left: 80px;
-  margin-top: 65px;
-  margin-bottom: 80px;
+  margin-top: 200px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .main-content h1 {

@@ -1,13 +1,24 @@
+body{
+  margin-top: 0;
+  margin-left: 0;
+}
+
+
 .footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   position: relative;
   padding: 48px;
+  margin: 20px;
   background-color: rgba(31, 31, 31, 1); /* Change as needed */
   color: #fff;
   border-radius: 32px;
   height: 300px;
+}
+
+.footer-brand{
+  width: 100%;
+  /* margin: 48px; */
 }
 
 .logo {
@@ -45,35 +56,38 @@
   line-height: 20px;
   letter-spacing: -0.25px;
   text-align: left;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  /* padding-top: 32px;
+  padding-bottom: 32px; */
   color: rgba(202, 203, 205, 1);
 }
 
 .store-badges {
   display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 12px;
+  justify-content: start; /* Center horizontally */
+  align-items: start;
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 12px; /* Space between badges */
 }
 
 .store-badge {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
-  border-radius: 20px; /* Rounded corners */
+  padding: 15px;
+  border-radius: 15px; /* Rounded corners */
   background-color: rgba(31, 31, 31, 1); /* Background color */
   border: 2px solid #FFF; /* White border */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
   text-decoration: none;
-  width: 33%; /* Fixed width */
+  width: 194px;
+  height: 56px;
   cursor: pointer; /* Changes cursor to pointer on hover */
   transition: all 0.3s ease;
 }
 
-.store-badge a {
+.store-badges a {
   display: flex;
+  justify-content: start;
 }
 
 .store-badge:hover {
@@ -82,19 +96,12 @@
 }
 
 .store-badge img {
-  height: auto;
-  width: auto; /* To keep the aspect ratio */
-  margin-right: 8px; /* Space between the image and the text */
-}
-
-/* Assuming you have a light theme, you might want to invert the colors to white */
-.store-badge img {
-  filter: invert(100%);
+  height: 24px;
+  width: 24px;
 }
 
 /* Text next to the store badge */
 .store-badge-text {
-  display: inline-flex;
   font-weight: bold;
   font-family: 'Inter', sans-serif; /* Specify the font-family */
   font-size: 16px; /* Set the font-size */
@@ -103,12 +110,7 @@
   letter-spacing: -0.1px; /* Set the letter-spacing */
   text-align: center; /* Center the text */
   color: rgba(255, 255, 255, 1);
-  margin: 0; /* Remove default margins */
-  padding: 0; /* Remove default padding */
-  flex: 1; /* Allow text to fill the space after the icon */
-  text-align: left;
-  margin-left: 8px; /* Adjust as needed */
-  white-space: nowrap;
+  margin-left: 8px; 
 }
 
 
@@ -141,11 +143,6 @@
   margin-right: 10px;
 }
 
-.store-badges a {
-  display: inline-block;
-  margin-right: 10px;
-}
-
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -158,9 +155,9 @@
   flex-direction: column;
 }
 
-.footer-sitemap {
+/* .footer-sitemap {
   margin-right: 280px;
-}
+} */
 .footer-sitemap h3 {
   font-family: "BodyGrotesque", sans-serif; /* Adjust if needed */
   font-size: 20px;
@@ -347,4 +344,118 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .footer {
+    margin: 40px;
+    width: auto;
+    height: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    margin: 20px;
+    width: 110%;
+    height: 50%;
+  }
+
+
+  .store-badges {
+    flex-direction: row;
+  }
+
+  .paragraph-style{
+   width: 70%;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: left;
+    gap: 100px;
+  }
+
+  .footer-sitemap{
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .footer-sitemap ul{
+    padding-top: 15px;
+  }
+
+  .footer-sitemap h3{
+    width: 120px;
+  }
+}
 /* Add more media queries as needed for different breakpoints */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .footer {
+    margin: 20px;
+    width: 125%;
+    height: 50%;
+  }
+
+  .footer-brand{
+    flex-direction: row;
+  }
+
+  .store-badges {
+    flex-direction: row;
+  }
+  .paragraph-style{
+   padding: 10px;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: left;
+    gap: 50px;
+  }
+
+  .footer-sitemap{
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .footer-sitemap ul{
+    padding-top: 15px;
+  }
+
+  .footer-sitemap ul,
+  .footer-contacts .social-links {
+    flex-direction: row;
+  }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .store-badges {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer-sitemap ul,
+  .footer-contacts .social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-language button {
+    margin-top: 10px;
+  }
+
+  .footer-star {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+}

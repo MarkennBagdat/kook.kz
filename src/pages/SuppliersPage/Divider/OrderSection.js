@@ -4,7 +4,7 @@ import Visual from "../../../Picture/Visual (7).png"; // Update the import if yo
 import Star from "../../../Picture/Star2.png";
 import Statuses from "../../../Picture/Statuses.png";
 
-const OrderSection = () => {
+const OrderSection = ({ openFormModal }) => {
   return (
     <section className="order-section">
       <div className="save-time-content">
@@ -34,7 +34,7 @@ const OrderSection = () => {
             </div>
           </div>
         </div>
-        <button className="save-time-button">Начать бесплатно</button>
+        <button className="save-time-button" onClick={openFormModal}>Начать бесплатно</button>
       </div>
       <div className="save-time-visual">
         <img src={Visual} alt="Phone visual" className="phone-image" />

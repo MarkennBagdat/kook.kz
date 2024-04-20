@@ -3,7 +3,7 @@ import "./suppliersPage.css";
 import Visual from "../../../Picture/Visual (8).png"; // Path to your visual image
 import Points from '../../../Picture/Points.png';
 
-const NotificationSection = () => {
+const NotificationSection = ({ openFormModal }) => {
     return (
         <section className="notification-section">
           <div className="find-products-visual">
@@ -16,7 +16,7 @@ const NotificationSection = () => {
             <div className="find-products-list">
               <img src={Points} alt="Points" className="Points-notification" />
             </div>
-            <button className="find-products-button">Начать бесплатно</button>
+            <button className="find-products-button" onClick={openFormModal}>Начать бесплатно</button>
           </div>
         </section>
       );

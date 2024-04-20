@@ -4,7 +4,7 @@ import "./restaurantsPage.css"; // Path to your CSS file
 import Visual from "../../../Picture/Visual (2).png"; // Path to your visual image
 import StarIcon from "../../../Picture/Star1.png";
 
-const FindProductsSection = () => {
+const FindProductsSection = ({ openFormModal }) => {
   return (
     <section className="find-products-section">
       <div className="find-products-visual">
@@ -40,7 +40,7 @@ const FindProductsSection = () => {
               </span>
           </div>
         </div>
-        <button className="find-products-button">Начать бесплатно</button>
+        <button className="find-products-button" onClick={openFormModal}>Начать бесплатно</button>
       </div>
     </section>
   );

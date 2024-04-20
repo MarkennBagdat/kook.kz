@@ -3,7 +3,7 @@ import "./suppliersPage.css"; // Update the path according to your file structur
 import Visual from "../../../Picture/Visual (5).png"; // Update the import if your image is in a different directory
 import Star from "../../../Picture/Star2.png"; // Update the import if your image is in a different directory
 
-const ConditionsSection = () => {
+const ConditionsSection = ({ openFormModal }) => {
   return (
     <section className="conditions-section">
       <div className="save-time-content">
@@ -28,7 +28,7 @@ const ConditionsSection = () => {
             </span>
           </div>
         </div>
-        <button className="save-time-button">Начать бесплатно</button>
+        <button className="save-time-button" onClick={openFormModal}>Начать бесплатно</button>
       </div>
       <div className="save-time-visual">
         <img src={Visual} alt="Phone visual" className="phone-image" />

@@ -4,7 +4,7 @@ import "./restaurantsPage.css";
 import Visual from "../../../Picture/Visual (3).png";
 import Star from "../../../Picture/Star1.png";
 
-const EnsureTransparencySection = () => {
+const EnsureTransparencySection = ({ openFormModal }) => {
   return (
     <section className="ensure-transparency-section">
       <div className="save-time-content">
@@ -33,7 +33,7 @@ const EnsureTransparencySection = () => {
           </div>
         </div>
 
-        <button className="save-time-button">Начать бесплатно</button>
+        <button className="save-time-button" onClick={openFormModal}>Начать бесплатно</button>
       </div>
       <div className="save-time-visual">
         <img src={Visual} alt="Phone visual" className="phone-image" />

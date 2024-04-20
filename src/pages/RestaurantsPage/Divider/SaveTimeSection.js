@@ -3,7 +3,7 @@ import "./restaurantsPage.css"; // Update the path according to your file struct
 import Visual from "../../../Picture/Visual (1).png"; // Update the import if your image is in a different directory
 import Star from "../../../Picture/Star1.png"; // Update the import if your image is in a different directory
 
-const SaveTimeSection = () => {
+const SaveTimeSection = ({ openFormModal }) => {
   return (
     <section className="save-time-section">
       <div className="save-time-content">

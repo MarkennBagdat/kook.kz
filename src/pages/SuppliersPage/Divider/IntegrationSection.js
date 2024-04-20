@@ -3,7 +3,7 @@ import "./suppliersPage.css";
 import Visual from "../../../Picture/Visual (6).png"; // Path to your visual image
 import StarIcon from "../../../Picture/Star2.png"; // Path to your star icon image
 
-const IntegrationSection = () => {
+const IntegrationSection = ({ openFormModal }) => {
   return (
     <section className="integration-section">
       <div className="find-products-visual">
@@ -39,7 +39,7 @@ const IntegrationSection = () => {
             </span>
           </div>
         </div>
-        <button className="find-products-button">Начать бесплатно</button>
+        <button className="find-products-button" onClick={openFormModal}>Начать бесплатно</button>
       </div>
     </section>
   );

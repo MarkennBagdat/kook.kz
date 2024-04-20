@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import AppStoreBadge from "../../Picture/Logos.png";
 import GooglePlayBadge from "../../Picture/Logos (1).png";
@@ -18,8 +19,8 @@ function Footer() {
         </div>
 
         <p class="paragraph-style">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt
+          Лучшая система управления заказами в HoReCa для упрощения оформления и
+          приема заказов и развития вашего бизнеса
         </p>
 
         <div class="store-badges">
@@ -49,16 +50,16 @@ function Footer() {
           <h3>Карта сайта</h3>
           <ul>
             <li>
-              <a href="/">Главная</a>
+              <Link to="/">Главная</Link> {/* Use Link component */}
             </li>
             <li>
-              <a href="/restaurants">Рестораны</a>
+              <Link to="/restaurants">Рестораны</Link>
             </li>
             <li>
-              <a href="/suppliers">Поставщики</a>
+              <Link to="/suppliers">Поставщики</Link>
             </li>
             <li>
-              <a href="/about">О нас</a>
+              <Link to="/about">О нас</Link>
             </li>
           </ul>
         </div>
@@ -82,12 +83,7 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div className="footer-language">
-          <button>
-            Русский <img src={ChevronDown} alt="ChevronDown" />
-          </button>
-          {/* Dropdown for language selection if needed */}
-        </div>
+        
       </div>
       <div className="footer-star">
         <img src={Star} alt="Star" />

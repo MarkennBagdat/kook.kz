@@ -1,5 +1,6 @@
 // MainPage.js
 import React from "react";
+import { useState } from "react";
 import "./Divider/restaurantsPage.css";
 import MainSection from "./Divider/MainSection";
 import SaveTimeSection from "./Divider/SaveTimeSection";
@@ -11,19 +12,32 @@ import FAQ from "../SamePages/FAQ";
 // import Testimonials from "../SamePages/Testimonials";
 import QRCode from "../SamePages/QRCode";
 import "../MainPage/Divider/MainPage.css";
+import FormSection from "../../pages/FormPage/FormSection";
 
 const RestaurantsPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <main className="restaurants-page">
-      <MainSection />
-      <SaveTimeSection />
-      <FindProductsSection />
-      <EnsureTransparencySection />
-      <BeSureSection />
+      <MainSection openFormModal={toggleModal} />
+      {isModalOpen && <FormSection toggleModal={toggleModal} />}
+      <SaveTimeSection openFormModal={toggleModal} />
+      {isModalOpen && <FormSection toggleModal={toggleModal} />}
+      <FindProductsSection openFormModal={toggleModal} />
+      {isModalOpen && <FormSection toggleModal={toggleModal} />}
+      <EnsureTransparencySection openFormModal={toggleModal} />
+      {isModalOpen && <FormSection toggleModal={toggleModal} />}
+      <BeSureSection openFormModal={toggleModal} />
+      {isModalOpen && <FormSection toggleModal={toggleModal} />}
       {/* <Testimonials /> */}
-      <AccessSection />
+      <AccessSection openFormModal={toggleModal} />
+      {isModalOpen && <FormSection toggleModal={toggleModal} />}
       <FAQ />
-      <QRCode/>
+      <QRCode />
     </main>
   );
 };
