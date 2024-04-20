@@ -146,3 +146,10 @@
       margin-bottom: 30px; /* Add some space between the cards */
     }
   }
+
+  .value-description .highlighted {
+    padding-bottom: 2px;
+    font-weight: bold; /* Makes the text bold */
+    display: block; /* Display as block to add space below */
+    color: black;
+  }
