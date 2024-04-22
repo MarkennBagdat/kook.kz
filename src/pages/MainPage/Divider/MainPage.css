@@ -56,8 +56,9 @@
 
   .button-free,
   .button-demo {
-  width: 218px;
+    height: 56px;
   }
+
 
   /* Style for list items */
   .features-list {
@@ -129,13 +130,12 @@
   /* Adjust the button layout */
   .features-buttons {
     flex-direction: row; /* Stack buttons vertically */
-    align-items: center; /* Center buttons horizontally */
-    width: 100%;
+    align-items: center;
   }
 
   .button-free,
   .button-demo {
-  width: 218px;
+    height: 56px;
   }
 
   /* Style for list items */
@@ -156,10 +156,6 @@
 }
 
 @media (min-width: 1200px) and (max-width: 1330px){
-  .main-page {
-    min-width: 1200px;
-  }
-
   .features{
     margin-left: 50px;
     margin-right: 50px;
@@ -208,13 +204,12 @@
   /* Adjust the button layout */
   .features-buttons {
     flex-direction: row; /* Stack buttons vertically */
-    align-items: center; /* Center buttons horizontally */
-    width: 100%;
+    align-items: center;
   }
 
   .button-free,
   .button-demo {
-  width: 218px;
+    height: 56px;
   }
 
   /* Style for list items */
@@ -235,10 +230,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
-  .main-page {
-    width: 1200px;
-  }
-
   .features{
     margin-left: 40px;
     margin-right: 40px;
@@ -287,13 +278,12 @@
   .features-buttons {
     flex-direction: row; /* Stack buttons vertically */
     align-items: center; /* Center buttons horizontally */
-    width: 100%;
   }
 
   .button-free,
-  .button-demo {
-  width: 218px;
-  }
+.button-demo {
+  height: 56px;
+}
 
   /* Style for list items */
   .features-list {
@@ -338,22 +328,25 @@
 /* MainPage.css */
 .features-buttons {
   display: flex;
-  gap: 12px; /* space between buttons */
-  margin-bottom: 32px; /* space below the buttons */
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
 }
 
 .button-free,
 .button-demo {
-  /* Общие стили */
+  flex: 1; /* Each button takes equal space in the container */
+  min-width: 218px; /* Minimum width */
+  padding: 10px 20px;
+  cursor: pointer;
   border-radius: 16px; /* rounded corners */
   font-family: "Inter", sans-serif; /* font family */
-  font-size: 1rem; /* font size */
+  font-size: 16px; /* font size */
   font-weight: 600; /* font weight */
   line-height: 1.5rem; /* line height */
   letter-spacing: -0.1px; /* letter spacing */
   text-align: center; /* text alignment */
   cursor: pointer; /* cursor shape when hovering */
-  padding: 1rem 1.5rem; /* padding instead of fixed width/height for better scaling */
   border: none; /* no border by default */
 }
 
@@ -443,16 +436,14 @@
   /* Adjust the button layout */
   .features-buttons {
     flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center buttons horizontally */
-    width: 100%;
+    align-items: center;
   }
 
-  .button-free,
+ .button-free,
   .button-demo {
     height: 60px;
-    width: 100%; /* Full width buttons */
-    margin-bottom: 5px; /* Space between buttons */
-  }
+    width: 100%;
+  } 
 
   /* Style for list items */
   .features-list {

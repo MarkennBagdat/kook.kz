@@ -1,98 +1,19 @@
-body{
-  margin-top: 0;
-  margin-left: 0;
-}
-
 .navbar {
   position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff; /* Background color */
-}
-
-@media (min-width: 1200px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff; /* Background color */
-    width: 100%;
-  }
-
-  .nav-link {
-    margin-right: 48px; /* Space between links */
-    padding: 20px 0; /* Padding top and bottom */
-  }
-
-  .navbar-actions{
-    padding-right: 48px;
-  }
-
-  .contact-dropdown {
-    position: relative;
-  }
-
-  .dropdown-content-login {
-    position: absolute;
-    top: 55px;
-    transform: translateX(
-    -50%
-  ); /* Shift to the left by half of its own width to center it */
-  }
-
-  .navbar-links {
-    display: flex;
-    align-items: center;
-    margin-left: 49px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1200px){
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff; /* Background color */
-    width: 100%;
-  }
-
-  .navbar-logo{
-    margin-right: 20px;
-  }
-
-  .nav-link {
-    margin-right: 20px; /* Space between links */
-    padding: 20px 0; /* Padding top and bottom */
-  }
-
-  .navbar-actions{
-    padding-right: 48px;
-  }
-
-  .contact-dropdown {
-    position: relative;
-  }
-
-  .dropdown-content{
-    left: -50%;
-  }
-
-  .dropdown-content-login {
-    position: relative;
-    top: 75px;
-  }
-  .navbar-links {
-    display: flex;
-    align-items: center;
-  }
+  width: 100%; /* Ensure the navbar spans the entire width */
+  top: 0; /* Fixed positioning should be explicitly defined */
+  z-index: 100; 
+  padding: 10px 40px;
 }
 
 
 .navbar-section.left {
   display: flex;
   align-items: center;
-  margin-left: 48px;
 }
 
 .navbar-logo img {
@@ -114,7 +35,6 @@ body{
   text-decoration: none;
   display: flex;
   align-items: center;
-  /* height: 48px; Adjust as per design, ensures vertical centering */
   padding: 20px 0; /* Padding top and bottom */
   position: relative;
   cursor: pointer;
@@ -168,7 +88,7 @@ body{
   padding: 14px;
   overflow: hidden; /* For rounded corners */
   position: absolute;
-  top: 60px; /* Dropdown appears 48px below the button */
+  top: 60px;
   width: 280px; /* Width of the dropdown */
   height: auto; /* Height of the dropdown */
   background-color: #ffffff;
@@ -389,15 +309,149 @@ body{
   display: none;
 }
 
-/* Медиа запрос для мобильных устройств */
-@media (max-width: 769px) {
-  .navbar{
+.navbar-links.show {
+  display: block;
+  position: absolute;
+  top: 100%; /* Positioned right below the navbar */
+  left: 0; /* Aligned to the left edge of the parent */
+  width: 100%; /* Default to full width of the parent container */
+  background-color: #ffffff; /* Background color */
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); /* Drop shadow for depth */
+  z-index: 20;
+  padding: 0px 20px 15px;
+  border-radius: 8px;
+}
+
+
+@media (min-width: 1200px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Background color */
     width: 100%;
-    height: 80px;
-    margin-top: 0;
-    padding-top: 30px;
   }
 
+  .nav-link {
+    margin-right: 48px; /* Space between links */
+    padding: 20px 0; /* Padding top and bottom */
+  }
+
+
+  .contact-dropdown {
+    position: relative;
+  }
+
+  .dropdown-content-login {
+    position: absolute;
+    top: 55px;
+    transform: translateX(
+    -50%
+  ); /* Shift to the left by half of its own width to center it */
+  }
+
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    margin-left: 49px;
+  }
+}
+
+@media (min-width: 1015px) and (max-width: 1200px){
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Background color */
+    width: 100%;
+  }
+
+  .navbar-logo{
+    margin-right: 20px;
+  }
+
+  .nav-link {
+    margin-right: 20px; /* Space between links */
+    padding: 20px 0; /* Padding top and bottom */
+  }
+
+
+  .contact-dropdown {
+    position: relative;
+  }
+
+  .dropdown-content{
+    left: -50%;
+  }
+
+  .dropdown-content-login {
+    position: relative;
+    top: 75px;
+  }
+  .navbar-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-links.show {
+    display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1015px){
+  .navbar-logo{
+    margin-right: 50px;
+  }
+
+  .navbar-section.left {
+    justify-content: space-between; /* Распределить логотип и гамбургер меню по краям */
+    width: 100%; /* на мобильных занимаем всю ширину */
+    flex-wrap: wrap; /* Перенос элементов если не хватает места */
+  }
+
+
+  .navbar-links {
+    display: none;
+  }
+
+  .nav-link {
+    padding-bottom: 5px;
+  }
+  
+
+  .contact-dropdown {
+    position: relative;
+  }
+
+  .dropdown-content{
+    left: -50%;
+  }
+
+  .dropdown-content-login {
+    position: relative;
+    top: 75px;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  /* Стиль для иконки гамбургер-меню */
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+  
+  /* Стиль для активного состояния гамбургер-меню, когда меню открыто */
+  .navbar-links.show {
+    width: 50%; /* Slightly less than full width for some margin around */
+    left: 5%; /* Centering it by setting equal left and right margins */
+    transition: width 0.3s ease-in-out; /* Smooth transition for width adjustment */
+  }
+}
+
+/* Медиа запрос для мобильных устройств */
+@media (min-width: 600px) and (max-width: 769px) {
   .navbar-logo{
     margin-right: 50px;
   }
@@ -423,39 +477,112 @@ body{
 
 
   .navbar-links.show {
+    width: 50%; /* Slightly less than full width for some margin around */
+    left: 5%; /* Centering it by setting equal left and right margins */
+    transition: width 0.3s ease-in-out; /* Smooth transition for width adjustment */
+  }
+
+  .nav-link{
+    padding-bottom: 5px;
+  }
+ 
+  .dropdown-content {
+    position: static;
+  }
+
+  /* Скрытие активного состояния дропдаунов, так как они будут открыты по умолчанию */
+  .dropdown-content,
+  .dropdown-content-login {
     display: block;
-    position: absolute;
-    top: 100%; /* Позиционируем меню сразу под навбаром */
-    left: 45px;
-    width: 20%; /* Меню должно занимать всю ширину */
-    background-color: #ffffff; /* Фон для меню */
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); /* Тень для меню */
-    z-index: 20; 
-    padding: 0px 20px 15px;
-    border-radius: 8px;
+    position: static;
+    box-shadow: none;
+    width: auto;
+    transform: none;
+  }
+
+  /* Стили для ссылок, чтобы они занимали всю ширину навбара */
+  .dropdown-item,
+  .dropdown-item-login {
+    width: 100%;
+    text-align: left;
+  }
+
+  .contact-dropdown {
+    position: static; 
+    width: 350px;
+  }
+
+  .dropbtn {
+    width: 100%; /* Растягиваем кнопку на всю ширину */
+    text-align: left;
+    
+  }
+
+  .dropdown-content {
+    position: static; /* Убираем абсолютное позиционирование */
+    box-shadow: none; /* Убираем тень (если не нужна) */
+  }
+
+  .dropdown-item {
+    width: 500px;
+    justify-content: space-between; /* Распределяем пространство между текстом и иконкой */
+    padding: 10px 0; /* Добавляем немного отступа для лучшего визуального восприятия */
+  }
+
+  .social-icons {
+    justify-content: start; /* Выравниваем иконки социальных сетей по началу контейнера */
+  }
+
+  .social-link {
+    padding: 8px 0; /* Увеличиваем отступы для удобства нажатия пальцем */
+  }
+
+  .dropdown-content-login{
+    position:fixed;
+    margin-top: 20px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); 
+  }
+
+}
+
+@media (max-width: 600px) {
+  .navbar-logo{
+    display: none;
+  }
+
+  .navbar-section.left {
+    justify-content: space-between; /* Распределить логотип и гамбургер меню по краям */
+    width: 100%; /* на мобильных занимаем всю ширину */
+    flex-wrap: wrap; /* Перенос элементов если не хватает места */
+  }
+
+  /* Скрываем навигационные ссылки для мобильных устройств */
+  .navbar-links {
+    display: none;
+  }
+  
+  /* Стиль для иконки гамбургер-меню */
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+  
+  /* Стиль для активного состояния гамбургер-меню, когда меню открыто */
+
+
+  .navbar-links.show {
+    width: 50%; /* Full width on smaller devices */
+    left: 20px; /* Aligned to the edge */
+    padding: 20px; /* More padding to account for smaller screen */
   }
 
   .nav-link{
     padding-bottom: 5px;
 
   }
-  
-  /* Адаптируем стиль левой части навбара */
-  /* .navbar-section.left {
-    width: 70%;
-    justify-content: space-between;
-  } */
-  
-
-  /* Стилизуем dropdown для мобильного вида */
+ 
   .dropdown-content {
     position: static;
-  }
-
-  /* Адаптация правой части навбара */
-  .navbar-actions {
-    width: 40%;
-    margin-right: 24px;
   }
 
   /* Скрытие активного состояния дропдаунов, так как они будут открыты по умолчанию */
@@ -516,9 +643,7 @@ body{
     margin-top: 20px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); 
   }
-
 }
-
 
 /* Отображение гамбургер-меню на мобильных устройствах */
 @media (max-width: 768px) {

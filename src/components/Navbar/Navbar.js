@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 import Logo from "../../Picture/Long logo.png";
@@ -13,24 +13,17 @@ import RestIcon from "../../Picture/Graphic.png";
 import PostIcon from "../../Picture/Graphic (1).png";
 import Burger from "./Burger.png";
 
-function Navbar({ onFreeTrialClick }) {
-  const [isContactDropdownOpen, setIsContactDropdownOpen] = useState(false);
-  const [isLoginDropdownOpen, setIsLoginDropdownOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleContactDropdown = () => {
-    setIsContactDropdownOpen(!isContactDropdownOpen);
-  };
-
-  const toggleLoginDropdown = () => {
-    setIsLoginDropdownOpen(!isLoginDropdownOpen);
-  };
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+function Navbar({
+  isContactDropdownOpen,
+  isLoginDropdownOpen,
+  isMobileMenuOpen,
+  toggleContactDropdown,
+  toggleLoginDropdown,
+  toggleMobileMenu,
+  openFormModal
+})
+ {
   
-
   return (
     <nav className="navbar">
       <div className="navbar-section left">
@@ -148,7 +141,7 @@ function Navbar({ onFreeTrialClick }) {
         </div>
         <button
           className="action-button action-button--accent"
-          onClick={onFreeTrialClick}
+          onClick={openFormModal}
         >
           Начать бесплатно
         </button>
