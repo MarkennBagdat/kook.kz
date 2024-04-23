@@ -409,27 +409,52 @@
     flex-wrap: wrap; /* Перенос элементов если не хватает места */
   }
 
-
   .navbar-links {
     display: none;
   }
 
   .nav-link {
-    padding-bottom: 5px;
-  }
-  
-
-  .contact-dropdown {
-    position: relative;
-  }
-
-  .dropdown-content{
-    left: -50%;
+    background-color:rgba(245, 245, 245, 1); /* Remove any background color */
+    color: #000; /* Text color for the items */
+    border-bottom: 1px solid #eaeaea; /* Separator between items */
+    padding: 15px 20px; /* Spacing around items */
+    text-align: left; /* Align text to the left */
   }
 
-  .dropdown-content-login {
-    position: relative;
-    top: 75px;
+  .dropbtn {
+    display: none;
+  }
+
+  .dropdown-content {
+    display: block; /* Или используйте 'flex', 'grid' или другой тип отображения, в зависимости от вашего дизайна */
+  }
+
+  .contact-dropdown .active + .dropdown-content {
+    display: none;
+  }
+
+  .contact-dropdown .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Match width with the navbar */
+    box-shadow: none; /* No shadow */
+    position: relative; /* Reset position */
+    border-top: 1px solid #e6e6e6; 
+  }
+
+  .contact-dropdown .dropdown-content .dropdown-item {
+    display: flex;
+    align-items: center; /* Align items in the center vertically */
+    justify-content: space-between; /* Spread out the phone/email and icon */
+    width: 100%; /* Full width of its container */
+    padding: 15px 20px; /* Padding inside each item */
+    border-bottom: 1px solid #e6e6e6; /* Border at the bottom of each item */
+  }
+
+  .contact-dropdown .dropdown-content .social-icons {
+    display: flex;
+    justify-content: center; /* Center the social icons */
+    padding: 15px 0; /* Padding above and below the social icons */
   }
 
   .navbar-links {
@@ -444,8 +469,7 @@
   
   /* Стиль для активного состояния гамбургер-меню, когда меню открыто */
   .navbar-links.show {
-    width: 50%; /* Slightly less than full width for some margin around */
-    left: 5%; /* Centering it by setting equal left and right margins */
+    width: 100%;
     transition: width 0.3s ease-in-out; /* Smooth transition for width adjustment */
   }
 }
@@ -546,57 +570,62 @@
 }
 
 @media (max-width: 600px) {
-  .navbar-logo{
-    display: none;
+  .navbar {
+    justify-content: center; /* Centers all content in the navbar */
+  }
+
+  .navbar-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
   }
 
   .navbar-section.left {
-    justify-content: space-between; /* Распределить логотип и гамбургер меню по краям */
-    width: 100%; /* на мобильных занимаем всю ширину */
-    flex-wrap: wrap; /* Перенос элементов если не хватает места */
+    justify-content: space-between;
+    width: 100%;
+    padding: 0; /* Remove padding to use the full width */
   }
 
   /* Скрываем навигационные ссылки для мобильных устройств */
   .navbar-links {
     display: none;
   }
-  
-  /* Стиль для иконки гамбургер-меню */
   .hamburger-menu {
     display: block;
     cursor: pointer;
   }
   
   /* Стиль для активного состояния гамбургер-меню, когда меню открыто */
-
-
   .navbar-links.show {
-    width: 50%; /* Full width on smaller devices */
-    left: 20px; /* Aligned to the edge */
+    width: 100%;
     padding: 20px; /* More padding to account for smaller screen */
   }
 
-  .nav-link{
-    padding-bottom: 5px;
-
+  .contact-dropdown .dropbtn {
+    display: none;
   }
- 
-  .dropdown-content {
-    position: static;
+
+  .contact-dropdown .dropdown-content,
+  .contact-dropdown .social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 20px; /* Align with other menu items */
   }
 
   /* Скрытие активного состояния дропдаунов, так как они будут открыты по умолчанию */
-  .dropdown-content,
+  /* .dropdown-content,
   .dropdown-content-login {
     display: block;
     position: static;
     box-shadow: none;
     width: auto;
     transform: none;
-  }
+  } */
 
   /* Стили для ссылок, чтобы они занимали всю ширину навбара */
-  .dropdown-item,
+  /* .dropdown-item,
   .dropdown-item-login {
     width: 100%;
     text-align: left;
@@ -605,37 +634,56 @@
   .contact-dropdown {
     position: static; 
     width: 350px;
-  }
+  } */
 
-  .dropbtn {
-    width: 100%; /* Растягиваем кнопку на всю ширину */
+  /* .dropbtn {
+    width: 100%;
     text-align: left;
-    
-  }
+  } */
 
-  .dropdown-content {
-    position: static; /* Убираем абсолютное позиционирование */
-    box-shadow: none; /* Убираем тень (если не нужна) */
-  }
+    .dropdown-content {
+      display: flex;
+      position: static; 
+      box-shadow: none; 
+    }
 
-  .dropdown-item {
+  /* .dropdown-item {
     width: 500px;
-    justify-content: space-between; /* Распределяем пространство между текстом и иконкой */
-    padding: 10px 0; /* Добавляем немного отступа для лучшего визуального восприятия */
-  }
+    justify-content: space-between; 
+    padding: 10px 0;
+  } */
 
-  .social-icons {
-    justify-content: start; /* Выравниваем иконки социальных сетей по началу контейнера */
-  }
+  /* .social-icons {
+    justify-content: start;
+  } */
 
   .social-link {
-    padding: 8px 0; /* Увеличиваем отступы для удобства нажатия пальцем */
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-links .nav-link,
+  .contact-dropdown .dropdown-item {
+    background-color:rgba(245, 245, 245, 1); /* Remove any background color */
+    color: #000; /* Text color for the items */
+    border-bottom: 1px solid #eaeaea; /* Separator between items */
+    padding: 15px 20px; /* Spacing around items */
+    text-align: left; /* Align text to the left */
   }
 
   .icon {
-    /* Уменьшаем размер иконок, если они слишком большие */
-    width: 20px; /* Пример нового размера */
-    height: 20px; /* Пример нового размера */
+    width: 24px; 
+    height: 24px; 
+    margin-right: 10px;
+  }
+
+  .chevron-right {
+    display: none;
+  }
+
+  .action-button--accent{
+    display: none;
   }
 
   .dropdown-content-login{

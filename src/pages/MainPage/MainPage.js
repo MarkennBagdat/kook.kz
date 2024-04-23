@@ -5,6 +5,7 @@ import "./Divider/MainPage.css";
 import Features from "./Divider/Features";
 // import Testimonials from "../SamePages/Testimonials";
 import AccessSection from "../SamePages/AccessSection";
+import MediaSection from "./Divider/MediaSection";
 import FAQ from "../SamePages/FAQ";
 import ServiceSection from "./Divider/ServiceSection";
 import QRCode from "../SamePages/QRCode";
@@ -32,6 +33,7 @@ const MainPage = () => {
         <AccessSection openFormModal={toggleModal} />
         {isModalOpen && <FormSection toggleModal={toggleModal} />}
       </div>
+      <MediaSection />
       <FAQ />
       <QRCode/>
     </main>

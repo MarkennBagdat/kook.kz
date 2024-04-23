@@ -1,7 +1,7 @@
 // MainPage.js
 import React from "react";
 import { useState } from "react";
-import "./Divider/restaurantsPage.css";
+import "../SuppliersPage/Divider/suppliersPage.css";
 import MainSection from "./Divider/MainSection";
 import SaveTimeSection from "./Divider/SaveTimeSection";
 import FindProductsSection from "./Divider/FindProductsSection"; // Placeholder for finding products section

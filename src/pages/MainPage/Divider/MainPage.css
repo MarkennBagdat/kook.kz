@@ -3,7 +3,7 @@
     min-width: 1200px;
   }
 
-  .features{
+  .features {
     margin-left: 50px;
     margin-right: 50px;
   }
@@ -19,13 +19,13 @@
     align-items: center;
   }
 
-  .features-images img{
+  .features-images img {
     width: 100%;
   }
 
   /* Adjust the title and description for mobile screens */
   .features-title {
-  font-family: "BodyGrotesqueLarge", sans-serif;
+    font-family: "BodyGrotesqueLarge", sans-serif;
     font-size: 56px;
     font-weight: 700;
     line-height: 45px;
@@ -59,7 +59,6 @@
     height: 56px;
   }
 
-
   /* Style for list items */
   .features-list {
     display: flex;
@@ -77,12 +76,12 @@
   }
 }
 
-@media (min-width: 1330px)  and (max-width: 2000px) {
+@media (min-width: 1330px) and (max-width: 2000px) {
   .main-page {
     min-width: 1200px;
   }
 
-  .features{
+  .features {
     margin-left: 50px;
     margin-right: 50px;
     gap: 10%;
@@ -99,13 +98,13 @@
     align-items: center;
   }
 
-  .features-images img{
+  .features-images img {
     width: 100%;
   }
 
   /* Adjust the title and description for mobile screens */
   .features-title {
-  font-family: "BodyGrotesqueLarge", sans-serif;
+    font-family: "BodyGrotesqueLarge", sans-serif;
     font-size: 56px;
     font-weight: 700;
     line-height: 45px;
@@ -155,8 +154,8 @@
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1330px){
-  .features{
+@media (min-width: 1200px) and (max-width: 1330px) {
+  .features {
     margin-left: 50px;
     margin-right: 50px;
     gap: 10%;
@@ -173,13 +172,13 @@
     align-items: center;
   }
 
-  .features-images img{
+  .features-images img {
     width: 100%;
   }
 
   /* Adjust the title and description for mobile screens */
   .features-title {
-  font-family: "BodyGrotesqueLarge", sans-serif;
+    font-family: "BodyGrotesqueLarge", sans-serif;
     font-size: 56px;
     font-weight: 700;
     line-height: 45px;
@@ -230,7 +229,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
-  .features{
+  .features {
     margin-left: 40px;
     margin-right: 40px;
     gap: 5%;
@@ -247,13 +246,13 @@
     align-items: center;
   }
 
-  .features-images img{
+  .features-images img {
     width: 100%;
   }
 
   /* Adjust the title and description for mobile screens */
   .features-title {
-  font-family: "BodyGrotesqueLarge", sans-serif;
+    font-family: "BodyGrotesqueLarge", sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 45px;
@@ -281,9 +280,9 @@
   }
 
   .button-free,
-.button-demo {
-  height: 56px;
-}
+  .button-demo {
+    height: 56px;
+  }
 
   /* Style for list items */
   .features-list {
@@ -390,10 +389,10 @@
 }
 
 @media (max-width: 768px) {
-  /* Stack the sections vertically and adjust alignment */
   .features {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
+    padding: 40px 0px 20px;
   }
 
   .features-content {
@@ -401,18 +400,9 @@
     text-align: center;
   }
 
-  /* Ensure that images take full width and adjust the margin */
-  .features-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 30px 0 0 0; /* add margin to the bottom */
-  }
-
   /* Adjust the title and description for mobile screens */
   .features-title {
-  font-family: "BodyGrotesqueLarge", sans-serif;
+    font-family: "BodyGrotesqueLarge", sans-serif;
     font-size: 70px;
     font-weight: 700;
     line-height: 60px;
@@ -437,20 +427,29 @@
   .features-buttons {
     flex-direction: column; /* Stack buttons vertically */
     align-items: center;
+    width: 100%;
   }
 
- .button-free,
+  .button-free,
   .button-demo {
-    height: 60px;
-    width: 100%;
-  } 
+    width: 100%; /* Full width for buttons */
+    margin-bottom: 10px; /* Space between buttons */
+  }
 
   /* Style for list items */
   .features-list {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
     width: 100%;
+  }
+
+  .features-images {
+    width: 100%; /* Images take full width */
+    margin-top: 20px; /* Space above the images */
+  }
+
+  .features-images img {
+    width: 90%; /* Images should not exceed their container */
+    height: auto; /* Keep the original aspect ratio */
+    margin: 0 auto; /* Center images horizontally */
   }
 
   .feature-item {
@@ -851,11 +850,9 @@
   color: rgba(102, 108, 116, 1); /* Light gray color */
 }
 
-
-
 .access-button {
   font-family: "Inter", sans-serif;
-  padding: 16px 51px; 
+  padding: 16px 51px;
   font-size: 16px; /* Adjust font-size as needed */
   font-weight: 500; /* Font weight for better readability */
   border-radius: 16px;
@@ -880,7 +877,6 @@
   opacity: 0.8;
 }
 
-
 .access-visual img.star {
   top: 2%; /* Position from the top of the .access-visual container */
   transform: translate(-80%, -50%); /* Adjust the translation if necessary */
@@ -899,13 +895,12 @@
     gap: 10%;
   }
 
-  .access-content{
+  .access-content {
     width: 50%;
   }
 
-.access-title,
+  .access-title,
   .access-title .highlight {
-    
     font-size: 32px; /* Smaller font size on mobile devices */
     line-height: 40px; /* Adjust line-height accordingly */
   }
@@ -926,10 +921,8 @@
     text-align: center;
   }
 
- 
-
-  .access-visual img{
-    width: 100%; 
+  .access-visual img {
+    width: 100%;
   }
 
   .access-visual img.star {
@@ -959,8 +952,6 @@
   }
 }
 
-
-
 @media (min-width: 768px) and (max-width: 1200px) {
   .access-section {
     flex-direction: column-reverse; /* Текст будет над изображением */
@@ -969,11 +960,11 @@
     margin-right: 20px;
   }
 
-  .access-content{
+  .access-content {
     width: 60%;
   }
 
-.access-title,
+  .access-title,
   .access-title .highlight {
     font-size: 32px; /* Smaller font size on mobile devices */
     line-height: 40px; /* Adjust line-height accordingly */
@@ -995,8 +986,8 @@
     text-align: center;
   }
 
-  .access-visual img{
-    width: 100%; 
+  .access-visual img {
+    width: 100%;
   }
 
   .access-visual img.star {
@@ -1030,17 +1021,17 @@
 
 @media (max-width: 768px) {
   .access-section {
-    flex-direction: column-reverse; /* Текст будет над изображением */
+    flex-direction: column; /* Текст будет над изображением */
     text-align: center; /* Центрирование текста */
     margin-left: 20px;
     margin-right: 20px;
   }
 
-  .access-content{
+  .access-content {
     width: 60%;
   }
 
-.access-title,
+  .access-title,
   .access-title .highlight {
     font-size: 32px; /* Smaller font size on mobile devices */
     line-height: 40px; /* Adjust line-height accordingly */
@@ -1062,8 +1053,8 @@
     text-align: center;
   }
 
-  .access-visual img{
-    width: 100%; 
+  .access-visual img {
+    width: 100%;
   }
 
   .access-visual img.star {
@@ -1101,6 +1092,7 @@
   background: #ffffff; /* or any other color */
   padding: 20px;
   border-radius: 10px; /* Adjust as needed */
+  margin: 70px;
 }
 
 .faq-title {
@@ -1122,9 +1114,7 @@
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically, if there's extra space */
-  margin: 0 auto; /* Center the container within its parent */
-  padding: 24px; /* Padding around the entire container */
-  width: 63%;
+  width: 100%;
 }
 
 .faq-item {
@@ -1192,6 +1182,125 @@
   line-height: 24px;
   letter-spacing: -0.25px;
   text-align: left;
+}
+
+@media (min-width: 768px) {
+  .faq-container {
+    padding: 24px;
+    width: 63%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-container{
+    width: 100%;
+  }
+}
+
+
+/* MediaSection */
+
+.media-part{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px;
+}
+
+.media-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 920px; /* Fixed width */
+  height: auto;
+  padding: 24px 32px; 
+  border-radius: 32px; /* Rounded corners */
+  background-color: rgba(234, 234, 247, 1); /* Light purple background */
+  border: 2px solid rgba(234, 234, 247, 1);
+  gap: 48px;
+  box-sizing: border-box;
+}
+
+.media-info {
+  display: flex;
+  align-items: center; /* Center content vertically within the media info */
+  justify-content: space-between; /* Space out children evenly */
+  width: 100%; /* Take up full width of parent */
+  height: 100%; /* Take up full height of parent */
+}
+
+.media-article h2 {
+  font-family: "BodyGrotesque", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.0025em;
+  color: rgba(15, 23, 33, 1);
+  margin: 0px 0px 10px;
+}
+
+.media-article p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  color: rgba(102, 108, 116, 1);
+  margin: 0px 0px 40px;
+}
+
+.media-link {
+  display: inline-flex; /* Aligns the text and icon inline */
+  align-items: center; /* Vertically centers the inline content */
+  justify-content: center; /* Horizontally centers the content */
+  gap: 4px; /* Space between the text and the icon */
+  width: 180px; /* Fixed width */
+  height: 48px; /* Fixed height */
+  border-radius: 16px; /* Rounded corners */
+  background-color: rgba(82, 76, 189, 1); /* Purple background */
+  text-decoration: none;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+.media-link:hover {
+  background-color: rgba(62, 56, 169, 1); /* Slightly darker purple on hover */
+}
+
+.media-avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  margin-bottom: -18%;
+  margin-top: -8%;
+}
+
+.media-avatar img {
+  width: 100%; /* Full width of the card container */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+
+/* Add responsiveness if the section needs to stack on smaller screens */
+@media (max-width: 768px) {
+  .media-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .media-article {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .media-avatar {
+    margin-top: 1rem;
+  }
 }
 
 /* MainPage.css */
@@ -1274,7 +1383,6 @@
 .qrcode-image {
   width: 24px;
   height: 24px;
-  margin-right: 12px; /* или значение gap, которое вы хотите использовать */
 }
 
 .qrcode-text {
@@ -1285,4 +1393,21 @@
   letter-spacing: -0.1px;
   color: rgba(15, 23, 33, 1);
   margin: 0; /* Это уберет стандартные отступы у параграфа */
+}
+
+@media (min-width: 768px) {
+  .qrcode-image {
+    margin-right: 12px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .qr-collapsed{
+    border-radius: 16px;
+    box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.08);
+  }
+  .qrcode-text{
+    display: none;
+  }
 }

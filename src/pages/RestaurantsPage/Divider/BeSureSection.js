@@ -1,6 +1,6 @@
 // BeSureSection.js
 import React from "react";
-import "./restaurantsPage.css";
+import "../../SuppliersPage/Divider/suppliersPage.css"; // Path to your CSS file
 import Visual from "../../../Picture/Visual (4).png";
 import StarIcon from "../../../Picture/Star1.png";
 

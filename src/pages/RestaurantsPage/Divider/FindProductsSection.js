@@ -1,6 +1,6 @@
 // FindProductsSection.js
 import React from "react";
-import "./restaurantsPage.css"; // Path to your CSS file
+import "../../SuppliersPage/Divider/suppliersPage.css"; // Path to your CSS file
 import Visual from "../../../Picture/Visual (2).png"; // Path to your visual image
 import StarIcon from "../../../Picture/Star1.png";
 

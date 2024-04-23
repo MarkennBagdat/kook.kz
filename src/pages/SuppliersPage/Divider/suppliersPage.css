@@ -1,70 +1,51 @@
-body{
-  margin-top: 0;
-  margin-left: 0;
-}
-
 /* 1ST SECTION */
 /* MAIN */
 
 .suppliers-pages {
-  padding-top: 100px;
-  padding-bottom: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 100px 20px 0;
   margin-bottom: 80px;
-  height: 690px;
 }
 
 .suppliers-pages-rest {
-  padding-top: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 80px 20px 0;
   border-radius: 32px;
-  height: 690px;
 }
 
 .hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: start;
   background-size: cover;
   background-position: center;
   color: white;
-  text-align: left;
-  padding: 80px; /* Adjust the padding as needed */
-  display: flex;
-  align-items: center; /* This centers the content vertically */
-  justify-content: start; 
   border-radius: 32px;
 }
 
-
-.hero-content{
-  width: 35%;
+.hero-content {
+  text-align: center;
+  color: white;
+  max-width: 600px;
 }
 
 .hero-content .hero-title {
-  font-family: 'BodyGrotesqueLarge', sans-serif;
+  font-family: "BodyGrotesqueLarge", sans-serif;
   font-size: 56px;
   font-weight: 700;
   line-height: 64px;
   letter-spacing: -0.25px;
-  text-align: left;
-  color: white; /* Or whatever color your design requires */
-  margin: 0; /* Adjust as needed */
-  padding: 0; /* Adjust as needed */
+  color: white;
+  padding: 0;
 }
 
 .custom-paragraph {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.25px;
-  text-align: left;
-  margin: 0; /* Adjust as needed */
-  padding: 0; /* Adjust as needed */
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-bottom: 70px;
 }
-
 
 .hero-buttons {
   display: flex;
@@ -156,40 +137,78 @@ body{
   border: none;
 }
 
-@media (max-width: 768px) {
-  .main-buttons {
-    flex-direction: column; /* stack buttons vertically on smaller screens */
-    gap: 8px; /* smaller gap for smaller screens */
+.btn-secondary {
+  border: 2px solid rgba(255, 255, 255, 1);
+  background-color: transparent;
+  color: rgba(255, 255, 255, 1);
+}
+
+@media (min-width: 769px) {
+  .hero-section {
+    text-align: left;
+    padding: 80px;
+  }
+
+  .hero-content .hero-title {
+    text-align: left;
+  }
+
+  .custom-paragraph {
+    text-align: left;
+  }
+}
+
+@media (max-width: 769px) {
+  .hero-content {
+    background: none; /* Убираем прозрачный фон для десктопов */
+    transform: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .custom-paragraph {
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Рядовое направление для кнопок */
+    gap: 15px; /* Увеличиваем расстояние между кнопками */
+    justify-content: center; /* Выравниваем кнопки по центру */
+  }
+
+  .hero-section {
+    padding: 16px 16px 200px;
   }
 
   .btn {
-    width: 100%; /* full width buttons on smaller screens */
-    padding: 12px 24px; /* slightly smaller padding on smaller screens */
+    width: auto; /* Ширина кнопок по содержимому */
+    padding: 15px 30px; /* Увеличиваем паддинг */
+    font-size: 20px; /* Увеличиваем размер шрифта кнопок */
   }
 }
 
 /* SAVE TIME SECTION */
 
 .order-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 48px;
-    border: none;
-    margin: 24px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
 
 .conditions-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 48px;
   border: none;
-  margin: 24px;
-}
-
-.save-time-content {
-  width: 48%; /* Adjust based on your design */
 }
 
 .save-time-title {
@@ -253,7 +272,47 @@ body{
 
 .save-time-visual {
   position: relative;
-  width: 48%; /* Adjust based on your design */
+}
+
+
+/* SAVE TIME SECTION */
+
+.ensure-transparency-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+
+.save-time-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+
+.save-time-item {
+  display: flex;
+  align-items: flex-start; /* Align the items to the start of the cross axis */
+  padding-left: 8px;
+  margin-bottom: 16px;
+}
+
+.save-time-item span {
+  padding-left: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: rgba(15, 23, 33, 1); /* Assuming you want the text to be white */
+}
+
+.save-time-item .save-highlight {
+  background: rgba(53, 163, 123, 1); /* Green background for highlighted text */
+  color: #ffffff; /* White text color for highlighted text */
+  padding: 0.2em; /* Optional: if you want padding around the highlighted text */
 }
 
 .phone-image {
@@ -262,23 +321,137 @@ body{
 }
 
 .statuses-container {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Adjust the gap between the text and the image */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adjust the gap between the text and the image */
+}
+
+.statuses-text {
+  margin: 0; /* Removes default margin from the span if present */
+  font-size: 16px; /* Example font-size, adjust as needed */
+  font-weight: bold; /* Example font-weight, adjust as needed */
+  color: #333; /* Example text color, adjust as needed */
+}
+
+.statuses-icon {
+  height: auto; /* Maintain the aspect ratio */
+  width: auto; /* Adjust width as necessary to fit your design */
+}
+
+@media (min-width: 768px) {
+  .order-section {
+    padding: 48px;
+  }
+
+  .conditions-section {
+    padding: 48px;
+  }
+
+  .save-time-section {
+    padding: 48px;
+  }
+
+  .ensure-transparency-section {
+    padding: 48px;
+  }
+
+  .save-time-content {
+    width: 43%;
+  }
+
+  .save-time-visual {
+    width: 48%; 
+  }
+
+  .find-products-visual {
+    width: 48%;
+  }
+
+  .find-products-info {
+    width: 43%;
+  }
+
+  .find-products-button {
+    width: 218px;
+    height: 56px;
+  }
+
+  .be-sure-section {
+    padding: 48px;
+  }
+
+  .find-products-section {
+    padding: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .be-sure-section {
+    flex-direction: column; /* Содержание и изображение в ряд на больших экранах */
+    justify-content: space-between;
+    padding: 20px;
   }
   
-  .statuses-text {
-    margin: 0; /* Removes default margin from the span if present */
-    font-size: 16px; /* Example font-size, adjust as needed */
-    font-weight: bold; /* Example font-weight, adjust as needed */
-    color: #333; /* Example text color, adjust as needed */
+  .find-products-section {
+    flex-direction: column; /* Содержание и изображение в ряд на больших экранах */
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .save-time-section {
+    flex-direction: column-reverse; /* Содержание и изображение в ряд на больших экранах */
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .ensure-transparency-section {
+    flex-direction: column-reverse; /* Содержание и изображение в ряд на больших экранах */
+    justify-content: space-between;
+  }
+
+  .order-section {
+    flex-direction: column; /* Содержание и изображение в ряд на больших экранах */
+    justify-content: space-between;
   }
   
-  .statuses-icon {
-    height: auto; /* Maintain the aspect ratio */
-    width: auto; /* Adjust width as necessary to fit your design */
+  .conditions-section {
+    flex-direction: column; /* Содержание и изображение в ряд на больших экранах */
+    justify-content: space-between;
   }
-  
+
+  .save-time-content,
+  .save-time-visual {
+    flex: 1; /* Занимает 50% ширины родителя */
+    max-width: 100%; /* Максимальная ширина для контента и изображения */
+  }
+
+  .find-products-section,
+  .find-products-info {
+    flex: 1; /* Занимает 50% ширины родителя */
+    max-width: 100%;
+  }
+
+  .save-time-title {
+    text-align: left; /* Выравнивание текста по левому краю */
+  }
+
+  .save-time-list {
+    text-align: left; /* Выравнивание текста списка по левому краю */
+  }
+
+  .save-time-item {
+    text-align: left; /* Выравнивание текста элемента по левому краю */
+    justify-content: start; /* Выравнивание содержимого элемента списка в начало */
+  }
+
+  .save-time-button {
+    width: 100%;
+  }
+
+  .find-products-button {
+    width: 100%;
+  }
+}
 
 /* 2ND SECTION */
 
@@ -292,13 +465,13 @@ body{
 }
 
 .notification-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 48px;
-    border: none;
-    margin: 24px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px;
+  border: none;
+  margin: 24px;
+}
 
 .find-products-title {
   font-family: "BodyGrotesque", sans-serif;
@@ -316,7 +489,6 @@ body{
   margin-bottom: 16px;
 }
 
-
 .integration-item .suplier-highlight {
   background: rgba(230, 70, 70, 1); /* Green background for highlighted text */
   color: #ffffff; /* White text color for highlighted text */
@@ -332,4 +504,86 @@ body{
   letter-spacing: -0.25px;
   text-align: left;
   color: rgba(15, 23, 33, 1);
+}
+
+/* FIND PRODUCTS */
+
+.be-sure-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+
+.find-products-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+
+.find-products-title {
+  font-family: "BodyGrotesque", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.0025em;
+  text-align: left;
+  color: rgba(15, 23, 33, 1);
+}
+
+.find-products-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.find-products-star {
+  margin-right: 8px; /* Space between the star icon and the text */
+}
+
+.find-products-item .save-highlight {
+  background: rgba(53, 163, 123, 1); /* Green background for highlighted text */
+  color: #ffffff; /* White text color for highlighted text */
+  padding: 0.2em;
+}
+
+.find-products-item span {
+  margin-left: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: rgba(15, 23, 33, 1);
+}
+
+.find-products-button {
+  height: 56px;
+  border-radius: 16px;
+  border: 2px solid rgba(82, 76, 189, 1);
+  background: rgba(255, 255, 255, 1);
+  color: rgba(82, 76, 189, 1);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+.find-products-list {
+  list-style: none; /* Removes default list styling */
+  padding-left: 0;
+}
+
+.find-products-visual {
+  position: relative;
+}
+
+.phone-image {
+  width: 100%;
+  display: block;
 }

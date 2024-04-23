@@ -1,5 +1,5 @@
 import React from "react";
-import "./restaurantsPage.css";
+import "../../SuppliersPage/Divider/suppliersPage.css"; 
 import Avatar1 from "../../../Picture/Avatar1.png";
 import Avatar2 from "../../../Picture/Avatar2.png";
 import Avatar3 from "../../../Picture/Avatar3.png";

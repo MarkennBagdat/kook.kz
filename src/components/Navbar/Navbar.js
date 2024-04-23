@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 import Logo from "../../Picture/Long logo.png";
@@ -20,10 +20,25 @@ function Navbar({
   toggleContactDropdown,
   toggleLoginDropdown,
   toggleMobileMenu,
-  openFormModal
-})
- {
-  
+  openFormModal,
+}) {
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 1015) {
+        // Если ширина окна меньше или равна 1015px, мы считаем, что выпадающий список должен быть открытым
+        toggleContactDropdown(true);
+      } else {
+        toggleContactDropdown(false);
+      }
+    }
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <nav className="navbar">
       <div className="navbar-section left">
@@ -63,17 +78,20 @@ function Navbar({
             О нас
           </NavLink>
           <div className="nav-link contact-dropdown">
-            <button
-              onClick={toggleContactDropdown}
-              className={`dropbtn ${isContactDropdownOpen ? "active" : ""}`}
-            >Контакты
-              {isContactDropdownOpen ? (
-                <img src={ChevronUp} alt="Chevron Up" />
-              ) : (
-                <img src={Chevron} alt="Chevron Down" />
-              )}
-            </button>
-            {isContactDropdownOpen && (
+            {window.innerWidth > 1015 && (
+              <button
+                onClick={() => toggleContactDropdown()}
+                className={`dropbtn ${isContactDropdownOpen ? "active" : ""}`}
+              >
+                Контакты
+                {isContactDropdownOpen ? (
+                  <img src={ChevronUp} alt="Chevron Up" />
+                ) : (
+                  <img src={Chevron} alt="Chevron Down" />
+                )}
+              </button>
+            )}
+            {(isContactDropdownOpen || window.innerWidth <= 1015) && (
               <div className="dropdown-content">
                 <a href="tel:+77777777777" className="dropdown-item">
                   <img src={Phone} alt="Phone" className="icon phone-icon" />

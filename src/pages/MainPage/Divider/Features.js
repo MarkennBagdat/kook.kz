@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./MainPage.css";
 import CheckFilled from "../../../Picture/check_filled.png";
-import Banner from "../../../Picture/Banner.png";
+import BannerDesktop from "../../../Picture/Banner.png";
+import BannerMobile from "../../../Picture/Banner (3).png";
 
 // Accept `openFormModal` as a prop
 const Features = ({ openFormModal }) => {
+  const [bannerSrc, setBannerSrc] = useState(BannerDesktop);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 768) {
+        setBannerSrc(BannerMobile);
+      } else {
+        setBannerSrc(BannerDesktop);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Call once immediately
+
+    // Cleanup function
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <section className="features">
       <div className="features-content">
@@ -37,7 +55,7 @@ const Features = ({ openFormModal }) => {
         </div>
       </div>
       <div className="features-images">
-        <img src={Banner} alt="Feature banner" />
+        <img src={bannerSrc} alt="Feature banner" />
       </div>
     </section>
   );

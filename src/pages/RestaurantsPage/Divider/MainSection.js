@@ -1,13 +1,32 @@
-import React from "react";
-import "./restaurantsPage.css"; // Make sure the CSS file path is correct
+import React, { useState, useEffect } from "react";
+import "../../SuppliersPage/Divider/suppliersPage.css";
 import BannerImage from "../../../Picture/Banner-1.png"; // Update the import path if necessary
+import BannerMobile from "../../../Picture/BannerRestMobile.png";
 
 const MainSection = ({ openFormModal }) => {
+  const [bannerSrc, setBannerSrc] = useState(BannerImage);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 768) {
+        setBannerSrc(BannerMobile);
+      } else {
+        setBannerSrc(BannerImage);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call once immediately
+
+    // Cleanup function
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="suppliers-pages-rest">
       <div
         className="hero-section"
-        style={{ backgroundImage: `url(${BannerImage})` }}
+        style={{ backgroundImage: `url(${bannerSrc})` }}
       >
         <div className="hero-content">
           <h1 className="hero-title">Лучший помощник на вашей кухне</h1>
