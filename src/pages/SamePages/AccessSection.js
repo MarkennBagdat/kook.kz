@@ -7,6 +7,8 @@ import Ellipse from "../../Picture/Ellipse.png";
 const AccessSection = ({ openFormModal }) => {
   return (
     <section className="access-section">
+      <div className="container">
+      <div className="access__inner">
       <div className="access-content">
         <h2 className="access-title">
           Получите доступ к платформе {" "}
@@ -43,6 +45,8 @@ const AccessSection = ({ openFormModal }) => {
           className="Visualphone"
         />
         <img src={StarAccess} alt="Star" className="star" />
+      </div>
+      </div>
       </div>
     </section>
   );

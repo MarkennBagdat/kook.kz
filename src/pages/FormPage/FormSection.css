@@ -1,5 +1,10 @@
 /* FormSection.css */
 
+.component-form{
+  margin: 0 auto;
+  padding: 0;
+}
+
 .modal {
   display: flex;
   position: fixed;
@@ -25,15 +30,19 @@
 }
 
 .modal-content {
-  background: #fff;
-  overflow-y: auto;
-  z-index: 1001;
   position: relative; /* Для позиционирования крестика и других элементов внутри */
   display: flex;
   flex-direction: column; /* Для вертикального выравнивания содержимого */
-  justify-content: space-between; /* Распределяет контент с начальными и конечными отступами */
+  justify-content: space-between;
+  width: 600px;
+  height: 85%;
+  border-radius: 24px;
+  padding: 24px;
+  background: #fff;
+  overflow-y: auto;
+  z-index: 1001; /* Распределяет контент с начальными и конечными отступами */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  scrollbar-width: none;
+ 
 }
 
 .modal-header {
@@ -41,11 +50,11 @@
   justify-content: center;
   align-items: center;
   font-family: "Inter", sans-serif;
-  margin-bottom: 32px;
-  margin-top: 15px;
+  margin: 20px 0 16px;
 }
 
 .modal-title {
+  font-family: "Inter", sans-serif;
   font-size: 28px;
   font-weight: 700;
   line-height: 36px;
@@ -77,7 +86,8 @@
 
 .form-section {
   display: flex;
-  margin-bottom: 16px;
+  margin: 20px 0 16px;
+  padding: 0;
   background-color: rgba(238, 238, 238, 1);
 }
 
@@ -89,13 +99,14 @@
   background: transparent; /* Начальный фон для неактивной вкладки */
   cursor: pointer; /* Стиль курсора для указания на кликабельность */
   transition: background-color 0.3s;
+  border-radius: 16px;
 }
 
 .form-tab.active {
   background-color: rgba(82, 76, 189, 1); /* Цвет фона для активной вкладки */
   color: white; /* Цвет текста для активной вкладки */
   opacity: 1;
-  border-radius: 8px;
+  border-radius: 16px;
 }
 
 /* Добавьте стили для hover эффекта, если это необходимо */
@@ -107,10 +118,11 @@
   ); /* Цвет фона для вкладки при наведении */
   color: white; /* Цвет текста для вкладки при наведении */
   opacity: 0.8; /* Непрозрачность для вкладки при наведении */
-  border-radius: 8px;
+  border-radius: 16px;
 }
 
 .section-title {
+  margin-bottom: 16px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -119,30 +131,10 @@
   color: rgba(15, 23, 33, 1);
 }
 
-.input-group {
-  margin-bottom: 20px;
-}
-
-input {
-  border: 1px solid #ccc;
-}
-
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-textarea[type="text"],
-select {
-  width: 100%;
-  padding: 16px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc; /* светло-серая граница */
-  border-radius: 8px; /* скругление углов */
-  font-size: 16px; /* размер шрифта */
-}
-
 .textarea {
   height: 120px;
 }
+
 /* Стиль полей ввода при наведении курсора */
 input:hover,
 textarea:hover {
@@ -245,21 +237,22 @@ input.error + .error-message {
   pointer-events: none; /* Ensures the dropdown arrow doesn't interfere with click events */
 }
 
+input,
+textarea,
 select {
   width: 100%;
-  padding: 12px 16px;
-  border: 1px solid rgba(208, 209, 210, 1); /* Тонкая серая рамка */
-  border-radius: 8px; /* Скругленные углы для рамки */
+  padding: 16px;
   background-color: #fff; /* Белый фон для выпадающего списка */
   background-repeat: no-repeat; /* Предотвращает повторение иконки */
   background-position: right 10px center; /* Позиционирование иконки справа и по центру по вертикали */
   background-size: 12px;
+  border: 1px solid #ccc; 
+  border-radius: 16px;
+  margin-bottom: 16px;
+  font-size: 16px;
   -webkit-appearance: none; /* Removes default style of select in WebKit browsers */
   -moz-appearance: none; /* Removes default style of select in Firefox */
   appearance: none;
-  font-size: 16px; /* размер шрифта */
-  cursor: pointer;
-  color: rgba(128, 128, 128, 1);
 }
 
 select:focus {
@@ -272,8 +265,6 @@ select:focus {
   outline: none;
   color: #000; /* Darker border on hover/focus */
 }
-
-
 
 .form-actions {
   display: flex; /* Для горизонтального выравнивания кнопок */
@@ -335,51 +326,4 @@ select:focus {
   font-weight: 400; /* Makes the text bold */
   text-decoration: underline; /* Underlines the text if needed */
   color: rgba(26, 106, 206, 1);
-}
-
-/* Медиа-запрос для планшетов */
-@media (min-width: 1300px) {
-  .modal-content {
-    width: 35%;
-    max-height: 85%;
-    border-radius: 32px;
-    padding: 32px;
-  }
-}
-
-/* Медиа-запрос для мобильных телефонов */
-/* Медиа-запрос для планшетов */
-@media (min-width: 768px) and (max-width: 1300px) {
-  .modal-content {
-    width: 70%;
-    max-height: 80%;
-    padding: 20px;
-    border-radius: 24px; /* Скругление углов под планшеты */
-    overflow-y: auto; /* Включаем прокрутку, если содержимое больше высоты окна */
-  }
-}
-
-
-/* Медиа-запрос для мобильных телефонов */
-@media (max-width: 768px) {
-  .modal-content {
-    width: 80%;
-    max-height: 80%; /* Максимальная высота, чтобы оставить немного места сверху и снизу */
-    overflow-y: auto; /* Позволит скроллить содержимое внутри модального окна */
-    padding: 24px; /* Поддерживаем отступы */
-    border-radius: 16px; /* Скругление углов для мобильных устройств */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для подчеркивания модального окна */
-    position: relative; /* Если вам нужно позиционировать элементы внутри модального окна */
-  }
-
-  /* Скрытие скроллбара для WebKit браузеров */
-  .modal-content::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Скрытие скроллбара для Firefox и IE */
-  .modal-content {
-    -ms-overflow-style: none; /* IE + Edge */
-    scrollbar-width: none; /* Firefox */
-  }
 }

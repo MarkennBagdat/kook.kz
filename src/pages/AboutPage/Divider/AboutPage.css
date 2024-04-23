@@ -1,3 +1,10 @@
+.aboutme__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 90px 0 50px;
+}
+
 .link-section,
 .about-page {
   display: flex;
@@ -5,15 +12,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 50px;
 }
 
 .about-logo {
   height: 64px; /* Adjust if needed */
 }
 
-.about-text-content,
-.description-section p {
+.about-text-content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,9 +28,16 @@
   letter-spacing: -0.25px;
 }
 
+.description-section p {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+}
+
 .about-text-content {
-  font-weight: 500; 
-  text-align: center; 
+  font-weight: 500;
+  text-align: center;
 }
 
 .about-link {
@@ -55,10 +67,10 @@
 }
 
 /* Описание */
-
-.description-section {
-  margin: 60px 142px;
-  width: 50%;
+.description-section{
+  display: flex;
+  justify-content: center;
+  margin: 20px 142px;
 }
 
 .description-section p {
@@ -81,11 +93,17 @@
 
 /* 3 часть */
 
+.aboutme-title__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 90px 0;
+}
+
 .values-section {
   display: flex;
   justify-content: center;
   gap: 2%;
-  margin: 40px;
 }
 
 .value-card {
@@ -93,7 +111,7 @@
   border-radius: 32px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 24px;
-  width: 26%; /* Adjust width as necessary */
+  width: 369px; /* Adjust width as necessary */
   text-align: start;
 }
 
@@ -108,74 +126,42 @@
 }
 
 .value-title {
-  font-family: "BodyGrotesque";
+  font-family: "BodyGrotesqueFit";
   font-size: 32px;
   font-weight: 700;
   letter-spacing: -0.0025em;
   text-align: left;
   color: #333;
-  margin: 0;
+  margin: 32px 0 8px;
 }
 
 .value-description {
-  color: #666;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: rgba(102, 108, 116, 1);
   font-size: 16px; /* Adjust font-size as necessary */
 }
 
-/* @media (max-width: 768px) {
-  .values-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .value-card {
-    width: 80%; 
-    margin-right: 0;
-    margin-bottom: 30px; 
-  }
-} */
-
 .value-description .highlighted {
-  padding-bottom: 2px;
-  font-weight: bold; /* Makes the text bold */
-  display: block; /* Display as block to add space below */
-  color: black;
+  font-weight: 600;
+  color: rgba(102, 108, 116, 1);
+  text-decoration-line: underline; /* Добавляет подчеркивание */
+  text-decoration-style: solid; /* Стиль линии подчеркивания */
+  text-decoration-color: rgba(82, 76, 189, 1); /* Цвет подчеркивания */
 }
 
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .description-section {
-    margin: 30px; /* Reduced margin */
-    width: 70%; /* Increased width */
-  }
-
-  .value-card {
-    width: 60%; /* Adjust width for tablets */
-  }
-
-  .icon-wrapper {
-    margin-bottom: 32px;
-  }
-}
-
-@media (max-width: 1025px) {
-  .link-section,
-  .about-page,
-  .values-section {
-    padding-top: 30px; /* Reduced padding */
-  }
-
-  .description-section {
-    width: 90%; /* Make the description take more width */
-    margin: 20px; /* Reduce margin */
-  }
-
-  .about-logo {
-    display: none;
-  }
-
-  .about-text-content{
+@media (max-width: 1200px) {
+  .about-text-content {
     flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .description-section {
+    width: 80%;
   }
 
   .about-text-content,
@@ -184,38 +170,10 @@
     font-size: 16px; /* Smaller font size */
   }
 
-  .values-section {
+  .aboutme-title__inner{
+    margin-top: 30px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  .value-card {
-    width: 80%; /* Cards take more width on mobile */
-    margin-right: 0; /* Remove the right margin */
-    margin-bottom: 20px; /* Add some space between the cards */
-  }
-
-  .icon-wrapper {
-    margin-bottom: 10px;
-  }
-
-  /* .value-icon{
-    width: 20%;
-    height: auto;
-  } */
-
-  .about-link,
-  .about-content {
-    width: 65%; /* Full width */
-    padding: 0 20px; /* Add padding */
-  }
-}
-
-@media (max-width: 480px) {
-  .description-section p,
-  .about-text-content,
-  .value-description {
-    font-size: 14px; /* Even smaller font for very small devices */
   }
 }

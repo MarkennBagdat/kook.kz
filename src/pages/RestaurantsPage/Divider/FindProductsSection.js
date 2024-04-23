@@ -7,6 +7,8 @@ import StarIcon from "../../../Picture/Star1.png";
 const FindProductsSection = ({ openFormModal }) => {
   return (
     <section className="find-products-section">
+      <div className="container">
+        <div className="save-time__inner">
       <div className="find-products-visual">
         <img src={Visual} alt="Mobile app interface" className="phone-image" />
       </div>
@@ -41,6 +43,8 @@ const FindProductsSection = ({ openFormModal }) => {
           </div>
         </div>
         <button className="find-products-button" onClick={openFormModal}>Начать бесплатно</button>
+      </div>
+      </div>
       </div>
     </section>
   );

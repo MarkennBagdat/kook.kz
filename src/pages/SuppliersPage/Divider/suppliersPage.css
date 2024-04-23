@@ -1,14 +1,16 @@
 /* 1ST SECTION */
 /* MAIN */
 
+.suplier{
+  margin-top: 88px;
+}
+
 .suppliers-pages {
-  padding: 100px 20px 0;
   margin-bottom: 80px;
 }
 
 .suppliers-pages-rest {
-  padding: 80px 20px 0;
-  border-radius: 32px;
+  margin-bottom: 80px;
 }
 
 .hero-section {
@@ -202,6 +204,12 @@
   justify-content: space-between;
   align-items: center;
   border: none;
+}
+
+.save-time__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .conditions-section {

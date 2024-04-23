@@ -107,7 +107,7 @@ const FormSection = ({ toggleModal }) => {
   };
 
   const fieldsForHoReCa = (
-    <div>
+    <div className="component-type">
       <h3 className="section-title">Контактная информация</h3>
       <div className="input-group">
         <input
@@ -220,7 +220,7 @@ const FormSection = ({ toggleModal }) => {
   );
 
   const fieldsForSupplier = (
-    <div>
+    <div className="component-type">
       <h3 className="section-title">Контактная информация</h3>
       <div className="input-group">
         <input
@@ -389,6 +389,7 @@ const FormSection = ({ toggleModal }) => {
   );
 
   return (
+    <div className="component-form">
     <div className="modal">
       <form
         className="modal-content"
@@ -434,6 +435,7 @@ const FormSection = ({ toggleModal }) => {
           <span className="highlight">пользовательское соглашение</span>
         </p>
       </form>
+    </div>
     </div>
   );
 };

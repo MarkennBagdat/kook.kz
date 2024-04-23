@@ -7,6 +7,8 @@ import Star from "../../../Picture/Star1.png";
 const EnsureTransparencySection = ({ openFormModal }) => {
   return (
     <section className="ensure-transparency-section">
+      <div className="container">
+        <div className="save-time__inner">
       <div className="save-time-content">
         <h2 className="save-time-title">Обеспечьте прозрачность в компании</h2>
         <div className="save-time-list">
@@ -37,6 +39,8 @@ const EnsureTransparencySection = ({ openFormModal }) => {
       </div>
       <div className="save-time-visual">
         <img src={Visual} alt="Phone visual" className="phone-image" />
+      </div>
+      </div>
       </div>
     </section>
   );

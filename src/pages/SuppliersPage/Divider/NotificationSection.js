@@ -1,25 +1,35 @@
 import React from "react";
 import "./suppliersPage.css";
 import Visual from "../../../Picture/Visual (8).png"; // Path to your visual image
-import Points from '../../../Picture/Points.png';
+import Points from "../../../Picture/Points.png";
 
 const NotificationSection = ({ openFormModal }) => {
-    return (
-        <section className="notification-section">
+  return (
+    <section className="notification-section">
+      <div className="container">
+        <div className="save-time__inner">
           <div className="find-products-visual">
-            <img src={Visual} alt="Mobile app interface" className="phone-image" />
+            <img
+              src={Visual}
+              alt="Mobile app interface"
+              className="phone-image"
+            />
           </div>
           <div className="find-products-info">
             <h2 className="find-products-title">
-            Моментальные уведомления о новых заказах в Telegram:
+              Моментальные уведомления о новых заказах в Telegram:
             </h2>
             <div className="find-products-list">
               <img src={Points} alt="Points" className="Points-notification" />
             </div>
-            <button className="find-products-button" onClick={openFormModal}>Начать бесплатно</button>
+            <button className="find-products-button" onClick={openFormModal}>
+              Начать бесплатно
+            </button>
           </div>
-        </section>
-      );
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default NotificationSection;

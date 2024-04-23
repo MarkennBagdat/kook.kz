@@ -45,10 +45,10 @@ select {
     color: inherit;
     background-color: transparent;
 }
-
+/* 
 input::-ms-clear {
     display: none;
-}
+} */
 
 button,
 input[type="submit"] {

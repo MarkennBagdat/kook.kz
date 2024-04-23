@@ -7,6 +7,8 @@ import Avatar3 from "../../../Picture/Avatar3.png";
 const Testimonials = () => {
   return (
     <section className="testimonials">
+      <div className="container">
+        <div className="save-time__inner">
       <h2 className="testimonials-title">
         Почитайте, что думаю о нас наши клиенты
       </h2>
@@ -51,6 +53,8 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
+      </div>
+      </div>
       </div>
     </section>
   );

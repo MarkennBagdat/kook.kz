@@ -6,6 +6,8 @@ import Star from "../../../Picture/Star1.png"; // Update the import if your imag
 const SaveTimeSection = ({ openFormModal }) => {
   return (
     <section className="save-time-section">
+      <div className="container">
+        <div className="save-time__inner">
       <div className="save-time-content">
       <h2 className="save-time-title">Экономьте время на оформлении заказов</h2>
         <div className="save-time-list">
@@ -36,6 +38,8 @@ const SaveTimeSection = ({ openFormModal }) => {
       </div>
       <div className="save-time-visual">
         <img src={Visual} alt="Phone visual" className="phone-image" />
+      </div>
+      </div>
       </div>
     </section>
   );

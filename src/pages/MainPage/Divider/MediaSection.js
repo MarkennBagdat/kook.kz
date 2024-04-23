@@ -24,22 +24,26 @@ const MediaSection = () => {
   }, []);
   return (
     <section className="media-part">
-      <div className="media-section">
-        <div className="media-info">
-          <div className="media-article">
-            <h2>СМИ о нас</h2>
-            <p>Читайте статью о нашем сервисе на kapital.kz</p>
-            <a
-              href="https://kapital.kz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="media-link"
-            >
-              Kapital <img src={ExternalLink} alt="External link" />
-            </a>
-          </div>
-          <div className="media-avatar">
-            <img src={bannerSrc} alt="Media avatar" />
+      <div className="container">
+        <div className="features__inner">
+          <div className="media-section">
+            <div className="media-info">
+              <div className="media-article">
+                <h2>СМИ о нас</h2>
+                <p>Читайте статью о нашем сервисе на kapital.kz</p>
+                <a
+                  href="https://kapital.kz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="media-link"
+                >
+                  Kapital <img src={ExternalLink} alt="External link" />
+                </a>
+              </div>
+              <div className="media-avatar">
+                <img src={bannerSrc} alt="Media avatar" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
