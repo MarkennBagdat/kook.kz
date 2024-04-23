@@ -2,6 +2,7 @@
 import { useState } from "react";
 import React from "react";
 import "./Divider/MainPage.css";
+import "../../fonts/fontStyles.css";
 import Features from "./Divider/Features";
 // import Testimonials from "../SamePages/Testimonials";
 import AccessSection from "../SamePages/AccessSection";

@@ -25,7 +25,7 @@ function NavbarContainer() {
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
     };
-    
+
     return (
         <>
             <Navbar

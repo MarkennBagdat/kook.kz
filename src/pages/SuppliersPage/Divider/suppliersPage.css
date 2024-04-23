@@ -252,6 +252,7 @@
 
 .star-icon {
   margin-right: 8px; /* Adjust the space between the icon and the text */
+  width: 18px;
 }
 
 .save-time-button {
@@ -601,4 +602,8 @@
 .phone-image {
   width: 100%;
   display: block;
+}
+
+.Points-notification {
+    width: 100%;
 }

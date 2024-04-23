@@ -1,702 +1,475 @@
-.navbar {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff; /* Background color */
-  width: 100%; /* Ensure the navbar spans the entire width */
-  top: 0; /* Fixed positioning should be explicitly defined */
-  z-index: 100; 
-  padding: 10px 40px;
+.hidden {
+    display: none;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%; /* Fixed positioning should be explicitly defined */
+    z-index: 999;
+    background-color: #ffffff; /* Background color */
+    border-bottom: 1px solid #e6e8ea;
+    box-sizing: border-box;
+}
 
-.navbar-section.left {
-  display: flex;
-  align-items: center;
+.navbar__inner {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 40px;
+    margin-right: 48px;
 }
 
 .navbar-logo img {
-  height: 60px; /* Adjust based on your logo size*/
+    height: 100%;
 }
 
 .navbar-links {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .nav-link {
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 20px;
-  color: rgba(15, 23, 33, 1); /* Adjust the font color as per design */
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  padding: 20px 0; /* Padding top and bottom */
-  position: relative;
-  cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: rgba(15, 23, 33, 1); /* Adjust the font color as per design */
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-right: 48px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-link:last-child {
+    margin-right: 0px;
 }
 
 .navbar-actions {
-  display: flex;
-  gap: 10px;
-  
+    display: flex;
+    gap: 10px;
 }
 
 .nav-link-active {
-  color: rgba(120, 120, 120, 1); /* Dark gray color for active link */
+    color: rgba(120, 120, 120, 1); /* Dark gray color for active link */
 }
 
 /* Ensure that the active link styling overrides the default link styling */
 .nav-link.nav-link-active {
-  color: rgba(120, 120, 120, 1); /* Dark gray color for active link */
+    color: rgba(120, 120, 120, 1); /* Dark gray color for active link */
 }
 
 /* Dropdown Button */
 
 .contact-dropdown {
-  position: relative;
+    position: relative;
 }
+
 .dropbtn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  position: relative;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 20px;
-  text-align: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
 }
 
 .dropbtn.active:after {
-  transform: rotate(180deg);
-  color: rgba(168, 169, 170, 1);
+    transform: rotate(180deg);
+    color: rgba(168, 169, 170, 1);
 }
 
 /* Dropdown Content */
 /* Styles for the dropdown menu */
 .dropdown-content {
-  display: flex;
-  flex-direction: column;
-  padding: 14px;
-  overflow: hidden; /* For rounded corners */
-  position: absolute;
-  top: 60px;
-  width: 280px; /* Width of the dropdown */
-  height: auto; /* Height of the dropdown */
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 16px; /* Top left corner rounded */
-  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-  gap: 12px; /* Space between items */
-  opacity: 1; /* Ensure the dropdown is fully visible */
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    overflow: hidden; /* For rounded corners */
+    position: absolute;
+    top: 60px;
+    width: 280px; /* Width of the dropdown */
+    height: auto; /* Height of the dropdown */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 16px; /* Top left corner rounded */
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    gap: 12px; /* Space between items */
+    opacity: 1; /* Ensure the dropdown is fully visible */
 }
 
 .dropdown-item {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px; /* Space between the icon and text */
-  padding: 5px;
-  text-decoration: none;
-  color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px; /* Space between the icon and text */
+    padding: 5px;
+    text-decoration: none;
+    color: #000000;
 }
 
 .dropdown-item:hover {
-  background-color: #f7f7f7; /* Background color on hover */
+    background-color: #f7f7f7; /* Background color on hover */
 }
 
 .action-icon:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .action-icon {
-  margin-left: 12px; /* Space between the text/email and action icon */
+    margin-left: 12px; /* Space between the text/email and action icon */
 }
 
 /* Styles for the social icons container */
 .social-icons {
-  display: flex;
-  justify-content: center; /* Centers the icons in the dropdown */
-  align-items: center; /* Aligns icons vertically */
-  gap: 16px; /* Space between icons */
-  padding-top: 8px;
-  border-top: 1px solid rgba(230, 232, 234, 1);
+    display: flex;
+    justify-content: center; /* Centers the icons in the dropdown */
+    align-items: center; /* Aligns icons vertically */
+    gap: 16px; /* Space between icons */
+    padding-top: 8px;
+    border-top: 1px solid rgba(230, 232, 234, 1);
 }
 
 /* Individual social icon link */
 .social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 25px; /* Width of the icon */
-  height: 25px; /* Height of the icon */
-  margin-top: 10px;
-  padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px; /* Width of the icon */
+    height: 25px; /* Height of the icon */
+    margin-top: 10px;
+    padding: 0 24px;
 }
 
 .social-link:last-child {
-  margin-right: 0; /* Remove right margin for the last icon */
+    margin-right: 0; /* Remove right margin for the last icon */
 }
 
 .social-link:not(:last-child) {
-  border-right: 1px solid rgba(230, 232, 234, 1);
+    border-right: 1px solid rgba(230, 232, 234, 1);
 }
 
 .icon {
-  display: flex; /* Use flex to center SVG images */
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* SVG will take up the full width of the .icon container */
-  height: 100%; /* SVG will take up the full height of the .icon container */
+    display: flex; /* Use flex to center SVG images */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* SVG will take up the full width of the .icon container */
+    height: 100%; /* SVG will take up the full height of the .icon container */
 }
 
 .icon img {
-  width: 24px; /* Adjust width as needed */
-  height: auto; /* Height will scale automatically */
+    width: 24px; /* Adjust width as needed */
+    height: auto; /* Height will scale automatically */
 }
 
 /* Icon classes */
 .phone-icon {
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 24px;
-  height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
 }
 
 .email-icon {
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 24px;
-  height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
 }
 
 .linkedin-icon {
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 24px;
-  height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
 }
 
 .instagram-icon {
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 24px;
-  height: 24px;
-  margin-right: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
 }
 
 .whatsapp-icon {
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 24px;
-  height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
 }
 
 .navbar-actions {
-  display: flex;
-  align-items: center;
-  gap: 24px; /* Adjust the gap to match your design */
+    display: flex;
+    align-items: center;
+    gap: 24px; /* Adjust the gap to match your design */
+}
+
+.action-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none; /* No background for a link-like button */
+    border: none; /* No border unless specified in your design */
+    color: #000000; /* Text color - adjust as needed */
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .action-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none; /* No background for a link-like button */
-  border: none; /* No border unless specified in your design */
-  color: #000000; /* Text color - adjust as needed */
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.action-button--accent {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px; /* Space between text and any icons */
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 20px;
-  letter-spacing: -0.1px;
-  text-align: center;
-  color: #ffffff; /* Text color */
-  background-color: rgba(82, 76, 189, 1); /* Button background color */
-  border: none;
-  border-radius: 12px; /* Top left border radius */
-  width: 174px; /* Fixed width */
-  height: 40px; /* Fixed height */
-  cursor: pointer;
-  opacity: 1; /* Fully opaque */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px; /* Space between text and any icons */
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #ffffff; /* Text color */
+    background-color: rgba(82, 76, 189, 1); /* Button background color */
+    border: none;
+    border-radius: 12px; /* Top left border radius */
+    width: 174px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    cursor: pointer;
+    opacity: 1; /* Fully opaque */
 }
 
 .action-login.active {
-  color: rgba(168, 169, 170, 1);
+    color: rgba(168, 169, 170, 1);
 }
 /* Style for the globe/world icon if it is not part of a button */
 .world-icon {
-  width: 24px; /* Set the width as per your design */
-  height: 24px; /* Set the height as per your design */
+    width: 24px; /* Set the width as per your design */
+    height: 24px; /* Set the height as per your design */
 }
 
 .dropdown-content-login {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* For rounded corners */
-  position: absolute;
-  background: #ffffff;
-  border-radius: 16px;
-  overflow: hidden; /* To ensure rounded corners are respected */
-  width: 250px; 
-  border: 1px solid #ddd;
-  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  gap: 12px; /* Space between items */
-  opacity: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* For rounded corners */
+    position: absolute;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden; /* To ensure rounded corners are respected */
+    width: 250px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    gap: 12px; /* Space between items */
+    opacity: 1;
 }
 
 .dropdown-item-login {
-  display: flex;
-  align-items: center;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 20px;
-  text-align: center;
-  padding: 16px;
-  border-bottom: 1px solid #eaeaea;
-  text-decoration: none;
-  color: #000000;
+    display: flex;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    padding: 16px;
+    border-bottom: 1px solid #eaeaea;
+    text-decoration: none;
+    color: #000000;
 }
 
 .dropdown-item-login:last-child {
-  border-bottom: none; /* No border for the last item */
+    border-bottom: none; /* No border for the last item */
 }
 
 .dropdown-item-login:hover {
-  background-color: #f8f8f8; /* Light grey background on hover */
+    background-color: #f8f8f8; /* Light grey background on hover */
 }
 
 .icon-login,
 .chevron-right {
-  margin-right: 12px; /* Space between the icon and the text */
+    margin-right: 12px; /* Space between the icon and the text */
 }
 
 .icon-login {
-  width: 24px; /* Size of the icon */
-  height: 24px; /* Size of the icon */
+    width: 24px; /* Size of the icon */
+    height: 24px; /* Size of the icon */
 }
 
 .chevron-right {
-  margin-left: auto; /* Pushes the chevron to the right */
-  width: 24px; /* Size of the chevron */
-  height: 24px; /* Size of the chevron */
+    margin-left: auto; /* Pushes the chevron to the right */
+    width: 24px; /* Size of the chevron */
+    height: 24px; /* Size of the chevron */
 }
-
 
 .hamburger-menu {
-  display: none;
-}
-
-.navbar-links.show {
-  display: block;
-  position: absolute;
-  top: 100%; /* Positioned right below the navbar */
-  left: 0; /* Aligned to the left edge of the parent */
-  width: 100%; /* Default to full width of the parent container */
-  background-color: #ffffff; /* Background color */
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); /* Drop shadow for depth */
-  z-index: 20;
-  padding: 0px 20px 15px;
-  border-radius: 8px;
-}
-
-
-@media (min-width: 1200px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff; /* Background color */
-    width: 100%;
-  }
-
-  .nav-link {
-    margin-right: 48px; /* Space between links */
-    padding: 20px 0; /* Padding top and bottom */
-  }
-
-
-  .contact-dropdown {
-    position: relative;
-  }
-
-  .dropdown-content-login {
-    position: absolute;
-    top: 55px;
-    transform: translateX(
-    -50%
-  ); /* Shift to the left by half of its own width to center it */
-  }
-
-  .navbar-links {
-    display: flex;
-    align-items: center;
-    margin-left: 49px;
-  }
-}
-
-@media (min-width: 1015px) and (max-width: 1200px){
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff; /* Background color */
-    width: 100%;
-  }
-
-  .navbar-logo{
-    margin-right: 20px;
-  }
-
-  .nav-link {
-    margin-right: 20px; /* Space between links */
-    padding: 20px 0; /* Padding top and bottom */
-  }
-
-
-  .contact-dropdown {
-    position: relative;
-  }
-
-  .dropdown-content{
-    left: -50%;
-  }
-
-  .dropdown-content-login {
-    position: relative;
-    top: 75px;
-  }
-  .navbar-links {
-    display: flex;
-    align-items: center;
-  }
-
-  .navbar-links.show {
     display: none;
+}
+
+@media (max-width: 1016px) {
+    .navbar-logo {
+        height: 32px;
     }
-}
-
-@media (min-width: 769px) and (max-width: 1015px){
-  .navbar-logo{
-    margin-right: 50px;
-  }
-
-  .navbar-section.left {
-    justify-content: space-between; /* Распределить логотип и гамбургер меню по краям */
-    width: 100%; /* на мобильных занимаем всю ширину */
-    flex-wrap: wrap; /* Перенос элементов если не хватает места */
-  }
-
-  .navbar-links {
-    display: none;
-  }
-
-  .nav-link {
-    background-color:rgba(245, 245, 245, 1); /* Remove any background color */
-    color: #000; /* Text color for the items */
-    border-bottom: 1px solid #eaeaea; /* Separator between items */
-    padding: 15px 20px; /* Spacing around items */
-    text-align: left; /* Align text to the left */
-  }
-
-  .dropbtn {
-    display: none;
-  }
-
-  .dropdown-content {
-    display: block; /* Или используйте 'flex', 'grid' или другой тип отображения, в зависимости от вашего дизайна */
-  }
-
-  .contact-dropdown .active + .dropdown-content {
-    display: none;
-  }
-
-  .contact-dropdown .dropdown-content {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Match width with the navbar */
-    box-shadow: none; /* No shadow */
-    position: relative; /* Reset position */
-    border-top: 1px solid #e6e6e6; 
-  }
-
-  .contact-dropdown .dropdown-content .dropdown-item {
-    display: flex;
-    align-items: center; /* Align items in the center vertically */
-    justify-content: space-between; /* Spread out the phone/email and icon */
-    width: 100%; /* Full width of its container */
-    padding: 15px 20px; /* Padding inside each item */
-    border-bottom: 1px solid #e6e6e6; /* Border at the bottom of each item */
-  }
-
-  .contact-dropdown .dropdown-content .social-icons {
-    display: flex;
-    justify-content: center; /* Center the social icons */
-    padding: 15px 0; /* Padding above and below the social icons */
-  }
-
-  .navbar-links {
-    display: none;
-  }
-
-  /* Стиль для иконки гамбургер-меню */
-  .hamburger-menu {
-    display: block;
-    cursor: pointer;
-  }
-  
-  /* Стиль для активного состояния гамбургер-меню, когда меню открыто */
-  .navbar-links.show {
-    width: 100%;
-    transition: width 0.3s ease-in-out; /* Smooth transition for width adjustment */
-  }
-}
-
-/* Медиа запрос для мобильных устройств */
-@media (min-width: 600px) and (max-width: 769px) {
-  .navbar-logo{
-    margin-right: 50px;
-  }
-
-  .navbar-section.left {
-    justify-content: space-between; /* Распределить логотип и гамбургер меню по краям */
-    width: 100%; /* на мобильных занимаем всю ширину */
-    flex-wrap: wrap; /* Перенос элементов если не хватает места */
-  }
-
-  /* Скрываем навигационные ссылки для мобильных устройств */
-  .navbar-links {
-    display: none;
-  }
-  
-  /* Стиль для иконки гамбургер-меню */
-  .hamburger-menu {
-    display: block;
-    cursor: pointer;
-  }
-  
-  /* Стиль для активного состояния гамбургер-меню, когда меню открыто */
 
 
-  .navbar-links.show {
-    width: 50%; /* Slightly less than full width for some margin around */
-    left: 5%; /* Centering it by setting equal left and right margins */
-    transition: width 0.3s ease-in-out; /* Smooth transition for width adjustment */
-  }
+    .navbar.show {
+        background-color: white;
+        height: 429px;
+        border-radius: 0 0 32px 32px;
+    }
 
-  .nav-link{
-    padding-bottom: 5px;
-  }
- 
-  .dropdown-content {
-    position: static;
-  }
+    .show .navbar__inner {
+        padding-bottom: 16px;
+    }
 
-  /* Скрытие активного состояния дропдаунов, так как они будут открыты по умолчанию */
-  .dropdown-content,
-  .dropdown-content-login {
-    display: block;
-    position: static;
-    box-shadow: none;
-    width: auto;
-    transform: none;
-  }
+    .show .navbar-links {
+        position: absolute;
+        top: 100%; /* Positioned right below the navbar */
+        left: 0; /* Aligned to the left edge of the parent */
+        z-index: 999;
 
-  /* Стили для ссылок, чтобы они занимали всю ширину навбара */
-  .dropdown-item,
-  .dropdown-item-login {
-    width: 100%;
-    text-align: left;
-  }
+        display: block;
+        width: 100%; /* Default to full width of the parent container */
 
-  .contact-dropdown {
-    position: static; 
-    width: 350px;
-  }
+        background-color: #ffffff; /* Background color */
+        border-radius: 8px;
+    }
 
-  .dropbtn {
-    width: 100%; /* Растягиваем кнопку на всю ширину */
-    text-align: left;
+    .navbar-links.show {
+        width: 100%;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .show .nav-link {
+        margin-right: 0;
+    }
+
+    .show .nav-link:first-child {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .show .nav-link:nth-last-of-type(1) {
+        border-radius: 0 0 8px 8px;
+    }
+
+    .show .nav-link:not(:last-child) {
+        padding: 14px 16px;
+
+        color: #000; /* Text color for the items */
+        text-align: left; /* Align text to the left */
+        line-height: 20px;
+
+        background-color: rgba(245, 245, 245, 1); /* Remove any background color */
+        border-bottom: 1px solid #eaeaea; /* Separator between items */
+    }
+
+    .show .navbar-link:last-child {
+        margin-bottom: 0;
+    }
     
-  }
+    .show .dropdown-content {
+        gap: 0;
 
-  .dropdown-content {
-    position: static; /* Убираем абсолютное позиционирование */
-    box-shadow: none; /* Убираем тень (если не нужна) */
-  }
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
 
-  .dropdown-item {
-    width: 500px;
-    justify-content: space-between; /* Распределяем пространство между текстом и иконкой */
-    padding: 10px 0; /* Добавляем немного отступа для лучшего визуального восприятия */
-  }
+        padding: 0;
+        
 
-  .social-icons {
-    justify-content: start; /* Выравниваем иконки социальных сетей по началу контейнера */
-  }
+        background-color: #ffffff; /* Background color */
+        border-radius: 8px;
+        border: none;
 
-  .social-link {
-    padding: 8px 0; /* Увеличиваем отступы для удобства нажатия пальцем */
-  }
-
-  .dropdown-content-login{
-    position:fixed;
-    margin-top: 20px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); 
-  }
-
-}
-
-@media (max-width: 600px) {
-  .navbar {
-    justify-content: center; /* Centers all content in the navbar */
-  }
-
-  .navbar-logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-  }
-
-  .navbar-section.left {
-    justify-content: space-between;
-    width: 100%;
-    padding: 0; /* Remove padding to use the full width */
-  }
-
-  /* Скрываем навигационные ссылки для мобильных устройств */
-  .navbar-links {
-    display: none;
-  }
-  .hamburger-menu {
-    display: block;
-    cursor: pointer;
-  }
-  
-  /* Стиль для активного состояния гамбургер-меню, когда меню открыто */
-  .navbar-links.show {
-    width: 100%;
-    padding: 20px; /* More padding to account for smaller screen */
-  }
-
-  .contact-dropdown .dropbtn {
-    display: none;
-  }
-
-  .contact-dropdown .dropdown-content,
-  .contact-dropdown .social-icons {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding-left: 20px; /* Align with other menu items */
-  }
-
-  /* Скрытие активного состояния дропдаунов, так как они будут открыты по умолчанию */
-  /* .dropdown-content,
-  .dropdown-content-login {
-    display: block;
-    position: static;
-    box-shadow: none;
-    width: auto;
-    transform: none;
-  } */
-
-  /* Стили для ссылок, чтобы они занимали всю ширину навбара */
-  /* .dropdown-item,
-  .dropdown-item-login {
-    width: 100%;
-    text-align: left;
-  }
-
-  .contact-dropdown {
-    position: static; 
-    width: 350px;
-  } */
-
-  /* .dropbtn {
-    width: 100%;
-    text-align: left;
-  } */
-
-    .dropdown-content {
-      display: flex;
-      position: static; 
-      box-shadow: none; 
+        box-shadow: none;
     }
 
-  /* .dropdown-item {
-    width: 500px;
-    justify-content: space-between; 
-    padding: 10px 0;
-  } */
+    .show .contact-dropdown {
+        width: 100%;
+        margin-top: 16px;
+    }
 
-  /* .social-icons {
-    justify-content: start;
-  } */
+    .show .dropdown-item {
+        padding: 12px 16px;
+    }
 
-  .social-link {
-    margin-right: 15px;
-    display: flex;
-    align-items: center;
-  }
+    .show .dropdown-item {
+        color: #000; /* Text color for the items */
+        text-align: left; /* Align text to the left */
+        line-height: 20px;
 
-  .navbar-links .nav-link,
-  .contact-dropdown .dropdown-item {
-    background-color:rgba(245, 245, 245, 1); /* Remove any background color */
-    color: #000; /* Text color for the items */
-    border-bottom: 1px solid #eaeaea; /* Separator between items */
-    padding: 15px 20px; /* Spacing around items */
-    text-align: left; /* Align text to the left */
-  }
+        background-color: rgba(245, 245, 245, 1); /* Remove any background color */
+        border-bottom: 1px solid #eaeaea; /* Separator between items */
+    }
 
-  .icon {
-    width: 24px; 
-    height: 24px; 
-    margin-right: 10px;
-  }
+    .show .social-icons {
+        padding-top: 0;
+        border-top: 0;
+        gap: 0;
+    }
 
-  .chevron-right {
-    display: none;
-  }
+    .show .social-link {
+        margin-top: 0;
+        padding: 12px 0;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: rgba(245, 245, 245, 1); /* Remove any background color */
+    }
 
-  .action-button--accent{
-    display: none;
-  }
+    .navbar-logo {
+        margin-right: 0;
+    }
 
-  .dropdown-content-login{
-    position:fixed;
-    margin-top: 20px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); 
-  }
+    /* Стиль для иконки гамбургер-меню */
+    .hamburger-menu {
+        width: 24px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger-menu img {
+        width: 100%;
+    }
+
+    .action-button {
+        display: none;
+    }
+
+    .dropbtn {
+        display: none;
+    }
+
+
+    .navbar-links {
+        display: none;
+    }
+
+    /* Стиль для активного состояния гамбургер-меню, когда меню открыто */
+    .navbar-links.show {
+        width: 100%;
+        transition: width 0.3s ease-in-out; /* Smooth transition for width adjustment */
+    }
 }
-
-/* Отображение гамбургер-меню на мобильных устройствах */
-@media (max-width: 768px) {
-  .hamburger-menu {
-    display: block;
-  }
-}
-

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 import Logo from "../../Picture/Long logo.png";
@@ -14,158 +14,139 @@ import PostIcon from "../../Picture/Graphic (1).png";
 import Burger from "./Burger.png";
 
 function Navbar({
-  isContactDropdownOpen,
-  isLoginDropdownOpen,
-  isMobileMenuOpen,
-  toggleContactDropdown,
-  toggleLoginDropdown,
-  toggleMobileMenu,
-  openFormModal,
+    isContactDropdownOpen,
+    isLoginDropdownOpen,
+    isMobileMenuOpen,
+    toggleContactDropdown,
+    toggleLoginDropdown,
+    toggleMobileMenu,
+    openFormModal,
 }) {
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth <= 1015) {
-        // Если ширина окна меньше или равна 1015px, мы считаем, что выпадающий список должен быть открытым
-        toggleContactDropdown(true);
-      } else {
-        toggleContactDropdown(false);
-      }
-    }
+    const [contactDropdownOpen, setContactDropdownOpen] = useState(false);
 
-    handleResize();
+    useEffect(() => {
+        function handleResize() {
+            if (window.innerWidth <= 1015) {
+                setContactDropdownOpen(true);
+            } else {
+                setContactDropdownOpen(false);
+            }
+        }
 
-    window.addEventListener("resize", handleResize);
+        window.addEventListener("resize", handleResize);
+        handleResize();
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
-  return (
-    <nav className="navbar">
-      <div className="navbar-section left">
-        <div className="hamburger-menu" onClick={toggleMobileMenu}>
-          <img src={Burger} alt="Menu" />
-        </div>
-        <Link to="/" className="navbar-logo">
-          <img src={Logo} alt="Logo" />
-        </Link>
-        <div className={`navbar-links ${isMobileMenuOpen ? "show" : ""}`}>
-          <NavLink
-            to="/"
-            className="nav-link"
-            activeClassName="nav-link-active"
-          >
-            Главная
-          </NavLink>
-          <NavLink
-            to="/restaurants"
-            className="nav-link"
-            activeClassName="nav-link-active"
-          >
-            Рестораны
-          </NavLink>
-          <NavLink
-            to="/suppliers"
-            className="nav-link"
-            activeClassName="nav-link-active"
-          >
-            Поставщики
-          </NavLink>
-          <NavLink
-            to="/about"
-            className="nav-link"
-            activeClassName="nav-link-active"
-          >
-            О нас
-          </NavLink>
-          <div className="nav-link contact-dropdown">
-            {window.innerWidth > 1015 && (
-              <button
-                onClick={() => toggleContactDropdown()}
-                className={`dropbtn ${isContactDropdownOpen ? "active" : ""}`}
-              >
-                Контакты
-                {isContactDropdownOpen ? (
-                  <img src={ChevronUp} alt="Chevron Up" />
-                ) : (
-                  <img src={Chevron} alt="Chevron Down" />
-                )}
-              </button>
-            )}
-            {(isContactDropdownOpen || window.innerWidth <= 1015) && (
-              <div className="dropdown-content">
-                <a href="tel:+77777777777" className="dropdown-item">
-                  <img src={Phone} alt="Phone" className="icon phone-icon" />
-                  + 7 (777) 777 77 77
-                  <img src={Action} alt="Action" className="chevron-right" />
-                </a>
-                <a href="mailto:hello@3f.com" className="dropdown-item">
-                  <img
-                    src={Graphic}
-                    alt="Graphic"
-                    className="icon email-icon"
-                  />
-                  support@kook.kz
-                  <img src={Action} alt="Action" className="chevron-right" />
-                </a>
-                <div className="social-icons">
-                  <a href="#" className="social-link">
-                    <span className="icon linkedin-icon">
-                      <img src={Linkedin} alt="Linkedin" />
-                    </span>
-                  </a>
-                  <a href="#" className="social-link">
-                    <span className="icon whatsapp-icon">
-                      <img src={Whatsapp} alt="Whatsapp" />
-                    </span>
-                  </a>
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return (
+        <nav className={`navbar ${isMobileMenuOpen ? "show" : ""}`}>
+            <div className="container">
+                <div className="navbar__inner">
+                    <div className="hamburger-menu" onClick={toggleMobileMenu}>
+                        <img src={Burger} alt="Burger" className={`hambureger-menu__icon ${toggleMobileMenu ? "hidden" : ""}`} />
+                        <span className={`hamburger-menu__cancel ${toggleMobileMenu ? "" : "hidden"}`}>X</span>
+                    </div>
+
+                    <div className="navbar-left">
+                        <Link to="/" className="navbar-logo">
+                            <img src={Logo} alt="Logo" />
+                        </Link>
+
+                        <div className="navbar-links">
+                            <NavLink to="/" className="nav-link" activeClassName="nav-link-active">
+                                Главная
+                            </NavLink>
+                            <NavLink to="/restaurants" className="nav-link" activeClassName="nav-link-active">
+                                Рестораны
+                            </NavLink>
+                            <NavLink to="/suppliers" className="nav-link" activeClassName="nav-link-active">
+                                Поставщики
+                            </NavLink>
+                            <NavLink to="/about" className="nav-link" activeClassName="nav-link-active">
+                                О нас
+                            </NavLink>
+
+                            <div className="nav-link contact-dropdown">
+                                <button
+                                    onClick={toggleContactDropdown}
+                                    className={`dropbtn ${isContactDropdownOpen ? "active" : ""}`}
+                                >
+                                    Контакты
+                                    {isContactDropdownOpen ? (
+                                        <img src={ChevronUp} alt="Chevron Up" />
+                                    ) : (
+                                        <img src={Chevron} alt="Chevron Down" />
+                                    )}
+                                </button>
+
+                                {(isContactDropdownOpen || contactDropdownOpen) && (
+                                    <div className="dropdown-content">
+                                        <a href="tel:+77777777777" className="dropdown-item">
+                                            <img src={Phone} alt="Phone" className="icon phone-icon" />
+                                            + 7 (777) 777 77 77
+                                            <img src={Action} alt="Action" className="chevron-right" />
+                                        </a>
+                                        <a href="mailto:hello@3f.com" className="dropdown-item">
+                                            <img src={Graphic} alt="Graphic" className="icon email-icon" />
+                                            support@kook.kz
+                                            <img src={Action} alt="Action" className="chevron-right" />
+                                        </a>
+                                        <div className="social-icons">
+                                            <a href="#" className="social-link">
+                                                <span className="icon linkedin-icon">
+                                                    <img src={Linkedin} alt="Linkedin" />
+                                                </span>
+                                            </a>
+                                            <a href="#" className="social-link">
+                                                <span className="icon whatsapp-icon">
+                                                    <img src={Whatsapp} alt="Whatsapp" />
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="navbar-actions">
+                        <div className="nav-link-login login-dropdown">
+                            <button
+                                onClick={toggleLoginDropdown}
+                                className={`action-login ${isLoginDropdownOpen ? "active" : ""}`}
+                            >
+                                Войти{" "}
+                                {isLoginDropdownOpen ? (
+                                    <img src={ChevronUp} alt="Chevron Up" />
+                                ) : (
+                                    <img src={Chevron} alt="Chevron Down" />
+                                )}
+                            </button>
+                            {isLoginDropdownOpen && (
+                                <div className="dropdown-content-login">
+                                    <a href="https://shop.3f.kz/" className="dropdown-item-login">
+                                        <img src={RestIcon} alt="Restaurant" className="icon-login" />
+                                        Как ресторан
+                                        <img src={Action} alt="Action" className="chevron-right" />
+                                    </a>
+                                    <a href="https://shop.3f.kz/index.php?route=vendor/login" className="dropdown-item-login">
+                                        <img src={PostIcon} alt="Supplier" className="icon-login" />
+                                        Как поставщик
+                                        <img src={Action} alt="Action" className="chevron-right" />
+                                    </a>
+                                </div>
+                            )}
+                        </div>
+                        <button className="action-button" onClick={openFormModal}>
+                            Начать бесплатно
+                        </button>
+                    </div>
                 </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-      <div className="navbar-actions">
-        <div className="nav-link-login login-dropdown">
-          <button
-            onClick={toggleLoginDropdown}
-            className={`action-button action-login ${
-              isLoginDropdownOpen ? "active" : ""
-            }`}
-          >
-            Войти{" "}
-            {isLoginDropdownOpen ? (
-              <img src={ChevronUp} alt="Chevron Up" />
-            ) : (
-              <img src={Chevron} alt="Chevron Down" />
-            )}
-          </button>
-          {isLoginDropdownOpen && (
-            <div className="dropdown-content-login">
-              <a href="https://shop.3f.kz/" className="dropdown-item-login">
-                <img src={RestIcon} alt="Restaurant" className="icon-login" />
-                Как ресторан
-                <img src={Action} alt="Action" className="chevron-right" />
-              </a>
-              <a
-                href="https://shop.3f.kz/index.php?route=vendor/login"
-                className="dropdown-item-login"
-              >
-                <img src={PostIcon} alt="Supplier" className="icon-login" />
-                Как поставщик
-                <img src={Action} alt="Action" className="chevron-right" />
-              </a>
             </div>
-          )}
-        </div>
-        <button
-          className="action-button action-button--accent"
-          onClick={openFormModal}
-        >
-          Начать бесплатно
-        </button>
-      </div>
-    </nav>
-  );
+        </nav>
+    );
 }
 
 export default Navbar;
