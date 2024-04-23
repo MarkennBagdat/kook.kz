@@ -383,6 +383,14 @@
   .find-products-section {
     padding: 48px;
   }
+
+  .integration-section {
+    padding: 48px;
+  }
+  
+  .conditions-section {
+    padding: 48px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -407,16 +415,25 @@
   .ensure-transparency-section {
     flex-direction: column-reverse; /* Содержание и изображение в ряд на больших экранах */
     justify-content: space-between;
+    padding: 20px;
   }
 
   .order-section {
     flex-direction: column; /* Содержание и изображение в ряд на больших экранах */
     justify-content: space-between;
+    padding: 20px;
   }
   
   .conditions-section {
+    flex-direction: column-reverse; /* Содержание и изображение в ряд на больших экранах */
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .integration-section {
     flex-direction: column; /* Содержание и изображение в ряд на больших экранах */
     justify-content: space-between;
+    padding: 20px;
   }
 
   .save-time-content,
@@ -459,9 +476,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 48px;
   border: none;
-  margin: 24px;
 }
 
 .notification-section {
