@@ -1,31 +1,33 @@
 import React, { useState, useEffect } from "react";
 import "./MainPage.css";
 import PhotoMedia from "../../../Picture/Photo.png";
-import PhotoMobile from "../../../Picture/Visual (9).png";
+import PhotoMobile from "../../../Picture/Visual (11).png";
 import ExternalLink from "../../../Picture/external-link.png";
 
 const MediaSection = () => {
   const [bannerSrc, setBannerSrc] = useState(PhotoMedia);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth <= 768) {
-        setBannerSrc(PhotoMobile);
-      } else {
-        setBannerSrc(PhotoMedia);
-      }
+      setWindowWidth(window.innerWidth);
     }
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Call once immediately
-
-    // Cleanup function
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (windowWidth <= 768) {
+      setBannerSrc(PhotoMobile);
+    } else {
+      setBannerSrc(PhotoMedia);
+    }
+  }, [windowWidth]);
   return (
     <section className="media-part">
       <div className="container">
-        <div className="features__inner">
+        <div className="media__inner">
           <div className="media-section">
             <div className="media-info">
               <div className="media-article">

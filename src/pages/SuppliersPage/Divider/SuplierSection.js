@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState, useEffect }  from "react";
 import "./suppliersPage.css"; // Make sure the CSS file path is correct
 import BannerImage from "../../../Picture/Banner-2.png"; // Update the import path if necessary
+import BannerMobile from "../../../Picture/Banner (4).png"; // Update the import path if necessary
+
 
 const SuplierSection = ({ openFormModal }) => {
+  const [bannerSrc, setBannerSrc] = useState(BannerImage);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 768) {
+        setBannerSrc(BannerMobile);
+      } else {
+        setBannerSrc(BannerImage);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call once immediately
+
+    // Cleanup function
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="suplier">
       <div className="container">
@@ -10,7 +30,7 @@ const SuplierSection = ({ openFormModal }) => {
           <div className="suppliers-pages">
             <div
               className="hero-section"
-              style={{ backgroundImage: `url(${BannerImage})` }}
+              style={{ backgroundImage: `url(${bannerSrc})` }}
             >
               <div className="hero-content">
                 <h1 className="hero-title">
