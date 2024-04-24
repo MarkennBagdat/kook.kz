@@ -19,10 +19,13 @@ const MainPage = () => {
     setIsModalOpen(!isModalOpen);
   };
 
+
   return (
     <main className="main-page">
       <div>
-        <Features openFormModal={toggleModal} />
+        <Features
+          openFormModal={toggleModal}
+        />
         {isModalOpen && <FormSection toggleModal={toggleModal} />}
       </div>
       {/* <Testimonials /> */}
@@ -36,7 +39,7 @@ const MainPage = () => {
       </div>
       <MediaSection />
       <FAQ />
-      <QRCode/>
+      <QRCode />
     </main>
   );
 };

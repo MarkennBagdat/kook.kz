@@ -14,9 +14,7 @@ function QRCode() {
       </button>
       <p className="qr-code-text">Скачайте приложение</p>
       <p className="qr-code-subtext">Отсканируйте QR-код</p>
-      <a href="https://shop.3f.kz/" target="_blank" rel="noopener noreferrer">
       <img src={QRCodeImage} alt="QR Code" className="qr-code-image" />
-      </a>
     </div>
   ) : (
     <div className="qr-section qr-collapsed" onClick={toggleQR}>

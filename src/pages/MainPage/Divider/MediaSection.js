@@ -34,7 +34,7 @@ const MediaSection = () => {
                 <h2>СМИ о нас</h2>
                 <p>Читайте статью о нашем сервисе на kapital.kz</p>
                 <a
-                  href="https://kapital.kz"
+                  href="https://kapital.kz/business/124264/kazakhstanskiy-startap-kook-privlek-200-tysyach-angel-skikh-investitsiy.html?ysclid=lvdrc8chg3214582146"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="media-link"

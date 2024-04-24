@@ -446,7 +446,7 @@
 /* Медиазапрос для мобильных устройств */
 @media (max-width: 980px) {
   .service-section__inner {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
   }
 
@@ -556,7 +556,6 @@
   width: 256px;
   height: auto;
 }
-
 
 .access-description {
   font-family: "Inter", sans-serif;
@@ -862,12 +861,10 @@
   flex-direction: column;
   justify-content: center; /* Center content vertically */
   align-items: center;
-  width: 15%; /* Width as a percentage of the screen width */
-  min-width: 250px; /* Minimum width to ensure readability */
-  height: auto; /* Height adjusted to content */
+  max-width: 312px; /* Width as a percentage of the screen width */
+  max-height: 388px; /* Height adjusted to content */
   bottom: 30px; /* Position from the bottom */
   left: 24px; /* Position from the left */
-  padding: 24px; /* Padding inside the container */
   background-color: rgba(
     63,
     132,
@@ -901,21 +898,27 @@
 }
 
 .qr-code-subtext {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.25px;
   text-align: center; /* Center the text */
-  margin: 8px 0; /* Spacing for aesthetic */
+  margin: 8px 0 0; /* Spacing for aesthetic */
 }
 
 .qr-code-image {
-  width: 100%; /* Full width of the container */
+  max-width: 264px;
   height: auto; /* Height adjusted to the image aspect ratio */
-  margin-top: 16px; /* Spacing above the image */
+  margin-top: 24px; /* Spacing above the image */
 }
 
 .qr-collapsed {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
+  max-width: 254px;
+  max-height: 56px;
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
@@ -937,18 +940,14 @@
   margin: 0; /* Это уберет стандартные отступы у параграфа */
 }
 
-@media (min-width: 769px) {
+@media (min-width: 953px) {
   .qrcode-image {
     margin-right: 12px;
   }
 }
 
-@media (max-width: 769px) {
-  .qr-collapsed {
-    border-radius: 16px;
-    box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.08);
-  }
-  .qrcode-text {
+@media (max-width: 953px) {
+  .qr-container{
     display: none;
   }
 }

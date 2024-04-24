@@ -103,20 +103,20 @@ function Navbar({
 
                 {(isContactDropdownOpen || contactDropdownOpen) && (
                   <div className="dropdown-content">
-                    <a href="tel:+77777777777" className="dropdown-item">
+                    <a href="tel:+77717488223" className="dropdown-item">
                       <img
                         src={Phone}
                         alt="Phone"
                         className="icon phone-icon"
                       />
-                      + 7 (777) 777 77 77
+                      + 7 (771) 7488223
                       <img
                         src={Action}
                         alt="Action"
                         className="chevron-right"
                       />
                     </a>
-                    <a href="mailto:hello@3f.com" className="dropdown-item">
+                    <a href="mailto:support@kook.kz" className="dropdown-item">
                       <img
                         src={Graphic}
                         alt="Graphic"
@@ -130,12 +130,22 @@ function Navbar({
                       />
                     </a>
                     <div className="social-icons">
-                      <a href="#" className="social-link">
+                      <a
+                        href="https://www.linkedin.com/company/kook-startup/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-link"
+                      >
                         <span className="icon linkedin-icon">
                           <img src={Linkedin} alt="Linkedin" />
                         </span>
                       </a>
-                      <a href="#" className="social-link">
+                      <a
+                        href="https://api.whatsapp.com/send?phone=77717488223"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-link"
+                      >
                         <span className="icon whatsapp-icon">
                           <img src={Whatsapp} alt="Whatsapp" />
                         </span>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import "./FormSection.css";
+import PersonalData from "../../Picture/ОбработкаПерсональныхДанных.pdf";
+import UserAgreement from "../../Picture/ПользовательскоеСоглашение.pdf";
 
 const FormSection = ({ toggleModal }) => {
   const [email, setEmail] = useState("");
@@ -31,6 +33,7 @@ const FormSection = ({ toggleModal }) => {
     surname: false,
     phone: false,
     email: false,
+    establishmentName: false,
   });
 
   const SERVICE_ID = "service_mq77pnl";
@@ -182,14 +185,15 @@ const FormSection = ({ toggleModal }) => {
         </button>
       </div>
       <input type="hidden" name="city" value={selectedCity} />
-      <input
-        type="text"
-        name="establishmentName"
-        placeholder="Название заведения *"
-        required
-        onChange={handleInputChange}
-      />
-
+      <div className="input-group">
+        <input
+          type="text"
+          name="establishmentName"
+          placeholder="Название заведения *"
+          required
+          onChange={handleInputChange}
+        />
+      </div>
       <div>
         <h3 className="section-title">Дополнительно</h3>
         <div className="input-group">
@@ -390,52 +394,66 @@ const FormSection = ({ toggleModal }) => {
 
   return (
     <div className="component-form">
-    <div className="modal">
-      <form
-        className="modal-content"
-        onSubmit={
-          activeTab === "HoReCa"
-            ? handleSubmitForHoReCa
-            : handleSubmitForSupplier
-        }
-      >
-        <div className="modal-header">
-          <h2 className="modal-title">Заявка</h2>
-          <span onClick={toggleModal} className="close-btn">
-            &times;
-          </span>
-        </div>
-        <div className="form-section">
-          <button
-            className={`form-tab ${activeTab === "HoReCa" ? "active" : ""}`}
-            onClick={() => handleTabChange("HoReCa")}
-          >
-            HoReCa
-          </button>
-          <button
-            className={`form-tab ${activeTab === "Supplier" ? "active" : ""}`}
-            onClick={() => handleTabChange("Supplier")}
-          >
-            Поставщик
-          </button>
-        </div>
+      <div className="modal">
+        <form
+          className="modal-content"
+          onSubmit={
+            activeTab === "HoReCa"
+              ? handleSubmitForHoReCa
+              : handleSubmitForSupplier
+          }
+        >
+          <div className="modal-header">
+            <h2 className="modal-title">Заявка</h2>
+            <span onClick={toggleModal} className="close-btn">
+              &times;
+            </span>
+          </div>
+          <div className="form-section">
+            <button
+              className={`form-tab ${activeTab === "HoReCa" ? "active" : ""}`}
+              onClick={() => handleTabChange("HoReCa")}
+            >
+              HoReCa
+            </button>
+            <button
+              className={`form-tab ${activeTab === "Supplier" ? "active" : ""}`}
+              onClick={() => handleTabChange("Supplier")}
+            >
+              Поставщик
+            </button>
+          </div>
 
-        {/* Условный рендеринг полей формы в зависимости от активной вкладки */}
-        {activeTab === "HoReCa" ? fieldsForHoReCa : fieldsForSupplier}
+          {/* Условный рендеринг полей формы в зависимости от активной вкладки */}
+          {activeTab === "HoReCa" ? fieldsForHoReCa : fieldsForSupplier}
 
-        <div className="form-actions">
-          <button className="form-btn cancel" onClick={toggleModal}>
-            Отмена
-          </button>
-          <button className="form-btn submit">Отправить заявку</button>
-        </div>
-        <p className="consent-text">
-          Оставляя заявку, вы соглашаетесь на{" "}
-          <span className="highlight">обработку персональных данных</span> и{" "}
-          <span className="highlight">пользовательское соглашение</span>
-        </p>
-      </form>
-    </div>
+          <div className="form-actions">
+            <button className="form-btn cancel" onClick={toggleModal}>
+              Отмена
+            </button>
+            <button className="form-btn submit">Отправить заявку</button>
+          </div>
+          <p className="consent-text">
+            Оставляя заявку, вы соглашаетесь на{" "}
+            <a
+              href={PersonalData}
+              target="_blank"
+              className="highlight"
+            >
+              обработку персональных данных
+            </a>{" "}
+            и{" "}
+            <a
+              href={UserAgreement}
+              target="_blank"
+              className="highlight"
+            >
+              пользовательское соглашение
+            </a>
+            .
+          </p>
+        </form>
+      </div>
     </div>
   );
 };

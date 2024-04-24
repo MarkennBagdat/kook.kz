@@ -153,6 +153,7 @@ textarea:hover {
 /* Стиль полей ввода при фокусе */
 input:focus,
 textarea:focus {
+  font-family: "Inter", sans-serif;
   outline: none;
   font-size: 16px;
   border: 1.5px solid rgba(82, 76, 189, 1);

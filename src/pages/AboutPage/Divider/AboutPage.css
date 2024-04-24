@@ -111,7 +111,7 @@
   border-radius: 32px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 24px;
-  width: 369px; /* Adjust width as necessary */
+  max-width: 369px; /* Adjust width as necessary */
   text-align: start;
 }
 
@@ -168,6 +168,10 @@
   .description-section p,
   .value-description {
     font-size: 16px; /* Smaller font size */
+  }
+
+  .value-card {
+    width: 80%;
   }
 
   .aboutme-title__inner{
