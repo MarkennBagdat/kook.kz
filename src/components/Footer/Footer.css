@@ -262,8 +262,9 @@
     .store-badges {
         flex-direction: row;
     }
-    .paragraph-style {
-    }
+
+    /* .paragraph-style {
+    } */
 
     .footer-sitemap h3,
     .footer-contacts h3 {
