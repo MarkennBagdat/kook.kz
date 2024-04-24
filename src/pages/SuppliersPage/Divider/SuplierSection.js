@@ -1,27 +1,30 @@
 import React, { useState, useEffect }  from "react";
 import "./suppliersPage.css"; // Make sure the CSS file path is correct
-import BannerImage from "../../../Picture/Banner-2.png"; // Update the import path if necessary
-import BannerMobile from "../../../Picture/Banner (4).png"; // Update the import path if necessary
+import BannerImageDesk from "../../../Picture/Banner-2.png"; // Update the import path if necessary
+import BannerMobileVer from "../../../Picture/Banner 6.png"; // Update the import path if necessary
 
 
 const SuplierSection = ({ openFormModal }) => {
-  const [bannerSrc, setBannerSrc] = useState(BannerImage);
+  const [bannerSrc, setBannerSrc] = useState(BannerImageDesk);
 
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth <= 768) {
-        setBannerSrc(BannerMobile);
+        console.log("Setting mobile banner");
+        setBannerSrc(BannerMobileVer);
       } else {
-        setBannerSrc(BannerImage);
+        console.log("Setting desktop banner");
+        setBannerSrc(BannerImageDesk);
       }
     }
-
+  
     window.addEventListener("resize", handleResize);
     handleResize(); // Call once immediately
-
+  
     // Cleanup function
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  
 
   return (
     <section className="suplier">

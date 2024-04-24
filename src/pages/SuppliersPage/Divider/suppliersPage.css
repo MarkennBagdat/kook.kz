@@ -27,22 +27,11 @@
 
 .hero-content .hero-title {
   font-family: "BodyGrotesqueLarge", sans-serif;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 64px;
-  letter-spacing: -0.25px;
   color: white;
-  padding: 0;
 }
 
 .custom-paragraph {
   font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.25px;
-  margin-top: 40px;
-  margin-bottom: 70px;
 }
 
 .hero-buttons {
@@ -132,6 +121,22 @@
     padding: 80px;
   }
 
+  .hero-content .hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: -0.25px;
+    padding: 0;
+  }
+
+  .custom-paragraph {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.25px;
+    margin: 40px 0 70px;
+  }
+
   .hero-content .hero-title,
   .custom-paragraph {
     text-align: left;
@@ -139,21 +144,35 @@
 }
 
 @media (max-width: 769px) {
+  .hero-section {
+    justify-content: center;
+    padding-top: 40px;
+  }
   .hero-content {
     background: none; /* Убираем прозрачный фон для десктопов */
     transform: none;
     justify-content: center;
     align-items: center;
+    padding: 16px 16px 224px;
   }
 
   .hero-title {
-    font-size: 36px;
     justify-content: center;
     align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.64px;
+    letter-spacing: -0.0025em;
+    text-align: center;
+    margin-bottom: 6px;
   }
 
   .custom-paragraph {
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.25px;
+    text-align: center;
     justify-content: center;
     align-items: center;
   }
@@ -161,17 +180,14 @@
   .hero-buttons {
     flex-direction: column; /* Рядовое направление для кнопок */
     gap: 15px; /* Увеличиваем расстояние между кнопками */
-    justify-content: center; /* Выравниваем кнопки по центру */
-  }
-
-  .hero-section {
-    padding: 16px 16px 200px;
+    justify-content: center;
+    align-items: center;
+    max-width: 310px;
+    margin-top: 32px;
   }
 
   .btn {
-    width: auto; /* Ширина кнопок по содержимому */
-    padding: 15px 30px; /* Увеличиваем паддинг */
-    font-size: 20px; /* Увеличиваем размер шрифта кнопок */
+    width: 90%;
   }
 }
 
