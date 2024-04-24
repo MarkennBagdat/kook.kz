@@ -276,7 +276,7 @@
     background: #ffffff;
     border-radius: 16px;
     overflow: hidden; /* To ensure rounded corners are respected */
-    width: 250px;
+    width: 100%;
     border: 1px solid #ddd;
     box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -326,11 +326,23 @@
     display: none;
 }
 
+@media (min-width: 1016px) {
+    .dropdown-content-login {
+        width: 25%;
+        top: 60px;
+        right: 30px;
+    }
+
+    .dropdown-content{
+        top: 40px;
+        right: -15px;
+    }
+}
+
 @media (max-width: 1016px) {
     .navbar-logo {
         height: 32px;
     }
-
 
     .navbar.show {
         background-color: white;
@@ -472,4 +484,17 @@
         width: 100%;
         transition: width 0.3s ease-in-out; /* Smooth transition for width adjustment */
     }
+
+    .dropdown-content-login {
+        position: fixed; /* Фиксированное позиционирование относительно вьюпорта */
+        left: 0; /* Расположение в левом нижнем углу */
+        right: 0; /* Расположение в правом нижнем углу */
+        bottom: 0; /* Расположение внизу экрана */
+        z-index: 1000;
+        background: #fff; /* Пример фона */
+        border-top: 1px solid #ccc; /* Пример границы сверху */
+        padding: 20px;
+        border-radius: 32px 32px 0px 0px;
+      }
+      
 }

@@ -71,8 +71,8 @@
     border: 2px solid #fff; /* White border */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
     text-decoration: none;
-    width: 194px;
-    height: 56px;
+    max-width: 194px;
+    max-height: 56px;
     cursor: pointer; /* Changes cursor to pointer on hover */
     transition: all 0.3s ease;
 }
@@ -102,9 +102,14 @@
 .footer-star {
     position: absolute;
     right: 0;
-    left: 98%;
+    left: 97%;
     top: 3%; /* Adjust this value as necessary */
-    transform: translateY(-50%); /* This will vertically center it */
+    transform: translateY(-50%); 
+}
+
+.footer-star img{
+    width: 36px;
+    height: auto;
 }
 
 .footer-sitemap ul {
@@ -264,6 +269,10 @@
     .footer-contacts h3 {
         margin-bottom: 8px;
     }
+
+    .footer-star {
+        display: none;
+    }
 }
 
 /* Responsive styles for mobile */
@@ -282,7 +291,7 @@
     }
 
     .store-badge {
-        width: 100%;
+        width: 80%;
     }
 
     .footer-contacts .social-links {

@@ -95,6 +95,7 @@
   width: 50%; /* Ширина каждой вкладки */
   height: 32px; /* Высота каждой вкладки */
   padding: 0 12px; /* Внутренние отступы вокруг текста */
+  font-family: "Inter", sans-serif;
   border: none; /* Убрать границу */
   background: transparent; /* Начальный фон для неактивной вкладки */
   cursor: pointer; /* Стиль курсора для указания на кликабельность */
@@ -131,13 +132,21 @@
   color: rgba(15, 23, 33, 1);
 }
 
+.input-group input{
+  font-family: "Inter", sans-serif;
+  width: 90%;
+}
+
 .textarea {
+  font-family: "Inter", sans-serif;
   height: 120px;
+  width: 90%;
 }
 
 /* Стиль полей ввода при наведении курсора */
 input:hover,
 textarea:hover {
+  font-family: "Inter", sans-serif;
   border-color: #a9a9a9; /* темно-серая граница */
 }
 
@@ -224,6 +233,7 @@ input.error + .error-message {
 .select-wrapper {
   position: relative;
   width: 100%;
+  font-family: "Inter", sans-serif;
 }
 
 .select-wrapper::after {
@@ -242,7 +252,8 @@ textarea,
 select {
   width: 100%;
   padding: 16px;
-  background-color: #fff; /* Белый фон для выпадающего списка */
+  background-color: #fff;
+  font-family: "Inter", sans-serif;
   background-repeat: no-repeat; /* Предотвращает повторение иконки */
   background-position: right 10px center; /* Позиционирование иконки справа и по центру по вертикали */
   background-size: 12px;
@@ -256,17 +267,20 @@ select {
 }
 
 select:focus {
+  font-family: "Inter", sans-serif;
   border-color: #a9a9a9;
   outline: none;
 }
 
 .select-wrapper select:focus,
 .select-wrapper select:hover {
+  font-family: "Inter", sans-serif;
   outline: none;
   color: #000; /* Darker border on hover/focus */
 }
 
 .form-actions {
+  font-family: "Inter", sans-serif;
   display: flex; /* Для горизонтального выравнивания кнопок */
   gap: 8px; /* Отступ между кнопками */
 }

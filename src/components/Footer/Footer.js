@@ -6,7 +6,7 @@ import GooglePlayBadge from "../../Picture/Logos (1).png";
 import LinkedinIcon from "../../Picture/brand-linkedin (1).png";
 import WhatsappIcon from "../../Picture/brand-whatsapp (1).png";
 import Logo from "../../Picture/Logo2.png";
-import Star from "../../Picture/Star1.png";
+import Star from "../../Picture/Star 1.png";
 
 function Footer() {
     return (
@@ -53,7 +53,7 @@ function Footer() {
                         </div>
                         <div className="footer-contacts">
                             <h3>Контакты</h3>
-                            <a href="mailto:hello@3f.com">hello@3f.com</a>
+                            <a href="mailto:hello@3f.com">support@kook.kz</a>
                             <div className="social-links">
                                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                                     <img src={LinkedinIcon} alt="LinkedIn" />
