@@ -312,8 +312,8 @@
 }
 
 .icon-login {
-    width: 24px; /* Size of the icon */
-    height: 24px; /* Size of the icon */
+    width: 32px; /* Size of the icon */
+    height: auto;
 }
 
 .chevron-right {

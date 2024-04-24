@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
-import Logo from "../../Picture/Long logo.png";
-import Phone from "../../Picture/phone-call.png";
-import Graphic from "../../Picture/mail-opened.png";
+import Logo from "../../Picture/Longlogo.svg";
+import Phone from "../../Picture/Graphic.svg";
+import Graphic from "../../Picture/mail-opened.svg";
 import Chevron from "../../Picture/chevron-down (1).png";
-import Whatsapp from "../../Picture/brand-whatsapp.png";
-import Linkedin from "../../Picture/brand-linkedin.png";
+import Whatsapp from "../../Picture/brand-whatsapp.svg";
+import Linkedin from "../../Picture/brand-linkedin.svg";
 import Action from "../../Picture/chevron-right.png";
 import ChevronUp from "../../Picture/chevron-up.png";
-import RestIcon from "../../Picture/Graphic.png";
-import PostIcon from "../../Picture/Graphic (1).png";
+import RestIcon from "../../Picture/Graphic (1).svg";
+import PostIcon from "../../Picture/Graphic (2).svg";
 import Burger from "./Burger.png";
 import XIcon from "../../Picture/x.png";
 
@@ -119,7 +119,7 @@ function Navbar({
                         alt="Phone"
                         className="icon phone-icon"
                       />
-                      + 7 (771) 7488223
+                      + 7 (771) 748 82 23
                       <img
                         src={Action}
                         alt="Action"

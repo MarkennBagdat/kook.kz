@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./MainPage.css";
 import Spot1 from "../../../Picture/Spot1.png"; // Photo for the "Restaurants" section
 import Spot2 from "../../../Picture/Spot2.png"; // Photo for the "Suppliers" section
-import StarIcon1 from "../../../Picture/Star1.png"; // Icon for the "Restaurants" section
-import StarIcon2 from "../../../Picture/Star2.png"; // Icon for the "Suppliers" section
+import StarIcon1 from "../../../Picture/Star1.svg"; // Icon for the "Restaurants" section
+import StarIcon2 from "../../../Picture/Star2.svg"; // Icon for the "Suppliers" section
 import ArrowUp from "../../../Picture/arrow-up-right.png";
 
 const ServiceSection = ({ openFormModal }) => {

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./MainPage.css";
-import CheckFilled from "../../../Picture/check_filled.png";
+import CheckFilled from "../../../Picture/check_filled.svg";
 import BannerDesktop from "../../../Picture/Banner.png";
-import BannerMobile from "../../../Picture/Banner (3).png";
+import BannerMobile from "../../../Picture/BannerMobileMain.png";
 import DemoButton from "../../FormPage/DemoButton";
 
 // Accept `openFormModal` as a prop

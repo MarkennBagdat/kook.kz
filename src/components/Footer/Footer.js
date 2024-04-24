@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import AppStoreBadge from "../../Picture/Logos.png";
-import GooglePlayBadge from "../../Picture/Logos (1).png";
+import AppStoreBadge from "../../Picture/Logo (1).svg";
+import GooglePlayBadge from "../../Picture/Logos.svg";
 import LinkedinIcon from "../../Picture/brand-linkedin (1).png";
 import WhatsappIcon from "../../Picture/brand-whatsapp (1).png";
-import Logo from "../../Picture/Logo2.png";
+import Logo from "../../Picture/Logo.svg";
 import Star from "../../Picture/Star 1.png";
 
 function Footer() {

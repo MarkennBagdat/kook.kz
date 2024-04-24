@@ -1,7 +1,7 @@
 import React from "react";
 import "../../SuppliersPage/Divider/suppliersPage.css"; // Path to your CSS file
 import Visual from "../../../Picture/Visual (1).png"; // Update the import if your image is in a different directory
-import Star from "../../../Picture/Star1.png"; // Update the import if your image is in a different directory
+import Star from "../../../Picture/Star1.svg"; // Update the import if your image is in a different directory
 
 const SaveTimeSection = ({ openFormModal }) => {
   return (

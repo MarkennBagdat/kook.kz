@@ -2,7 +2,7 @@
 import React from "react";
 import "../../SuppliersPage/Divider/suppliersPage.css"; // Path to your CSS file
 import Visual from "../../../Picture/Visual (4).png";
-import StarIcon from "../../../Picture/Star1.png";
+import StarIcon from "../../../Picture/Star1.svg";
 
 const BeSureSection = ({ openFormModal }) => {
   return (

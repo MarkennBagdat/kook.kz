@@ -437,7 +437,7 @@
   .find-products-list {
     padding: 0;
     list-style: none;
-    margin: 20px 0 32px;
+    margin: 32px 0;
   }
 
   .statuses-container {

@@ -27,7 +27,8 @@
 }
 
 .logo-image {
-    height: 100%;
+    width: 32px;
+    height: auto;
     margin-right: 12px; /* Adjust the spacing to match your design */
 }
 
@@ -289,10 +290,12 @@
     .store-badges {
         flex-direction: column;
         gap: 12px;
+        align-items: center;
+        justify-content: center;
     }
 
     .store-badge {
-        width: 80%;
+        width: 100%;
     }
 
     .footer-contacts .social-links {

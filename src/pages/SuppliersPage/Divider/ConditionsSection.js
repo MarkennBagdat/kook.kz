@@ -1,7 +1,7 @@
 import React from "react";
 import "./suppliersPage.css"; // Update the path according to your file structure
 import Visual from "../../../Picture/Visual (5).png"; // Update the import if your image is in a different directory
-import Star from "../../../Picture/Star2.png"; // Update the import if your image is in a different directory
+import Star from "../../../Picture/Star2.svg"; // Update the import if your image is in a different directory
 
 const ConditionsSection = ({ openFormModal }) => {
   return (

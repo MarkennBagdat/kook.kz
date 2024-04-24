@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutPage.css";
-import LongLogo from "../../../Picture/Long logo.png";
+import LongLogo from "../../../Picture/Longlogo.svg";
 import ExternalLinkIcon from "../../../Picture/external-link.png";
 
 const LinkSection = () => {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./MainPage.css";
-import PhotoMedia from "../../../Picture/Photo.png";
-import PhotoMobile from "../../../Picture/Visual (11).png";
+import PhotoMedia from "../../../Picture/Photo (1).png";
+import PhotoMobile from "../../../Picture/Visual (15).png";
 import ExternalLink from "../../../Picture/external-link.png";
 
 const MediaSection = () => {
@@ -39,7 +39,7 @@ const MediaSection = () => {
                   rel="noopener noreferrer"
                   className="media-link"
                 >
-                  Kapital <img src={ExternalLink} alt="External link" />
+                  Kapital <img src={ExternalLink} alt="External link" className="photonews"/>
                 </a>
               </div>
               <div className="media-avatar">
