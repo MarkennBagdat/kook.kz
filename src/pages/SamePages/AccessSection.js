@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../MainPage/Divider/MainPage.css";
-import BannerImage from "../../Picture/Visual (12).png"; // The phone and sun graphic
-import BannerMobile from "../../Picture/Visual (13).png";
+import BannerImage from "../../Picture/Visual (17).png"; // The phone and sun graphic
+import BannerMobile from "../../Picture/Visual (16).png";
 // import StarAccess from "../../Picture/StarAccess.png";
 import Ellipse from "../../Picture/Ellipse.png";
 import DemoButton from "../FormPage/DemoButton";

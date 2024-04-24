@@ -39,7 +39,7 @@ const MediaSection = () => {
                   rel="noopener noreferrer"
                   className="media-link"
                 >
-                  Kapital <img src={ExternalLink} alt="External link" className="photonews"/>
+                  Kapital <img src={ExternalLink} alt="External link"/>
                 </a>
               </div>
               <div className="media-avatar">

@@ -792,10 +792,6 @@
   background-color: rgba(62, 56, 169, 1); /* Slightly darker purple on hover */
 }
 
-.media-avatar img {
-  max-width: 378px;
-}
-
 @media (min-width: 768px) {
   .media-avatar {
     position: absolute;
@@ -803,10 +799,15 @@
     top: -34px;
   }
 
+  .media-avatar img {
+    max-width: 378px;
+  }
+
   .media-section {
     padding: 24px 32px;
   }
 }
+
 /* Add responsiveness if the section needs to stack on smaller screens */
 @media (max-width: 768px) {
   .media-section {
@@ -839,6 +840,10 @@
   .media-avatar {
     order: -1;
     margin-bottom: 20px; /* добавляем отступ снизу изображения */
+  }
+
+  .media-avatar img {
+    max-width: 220px;
   }
 }
 
