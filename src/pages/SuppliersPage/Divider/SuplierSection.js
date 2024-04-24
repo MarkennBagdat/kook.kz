@@ -1,11 +1,14 @@
-import React, { useState, useEffect }  from "react";
+import React, { useState, useEffect } from "react";
 import "./suppliersPage.css"; // Make sure the CSS file path is correct
 import BannerImageDesk from "../../../Picture/Banner-2.png"; // Update the import path if necessary
 import BannerMobileVer from "../../../Picture/Banner 6.png"; // Update the import path if necessary
 
-
 const SuplierSection = ({ openFormModal }) => {
   const [bannerSrc, setBannerSrc] = useState(BannerImageDesk);
+  const message =
+    "Здравствуйте! Я бы хотел(а) записаться на демонстрацию продукта. Можем ли мы обговорить время и дату? Буду ждать вашего подтверждения. Спасибо!";
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/+77717488223?text=${encodedMessage}`;
 
   useEffect(() => {
     function handleResize() {
@@ -17,14 +20,13 @@ const SuplierSection = ({ openFormModal }) => {
         setBannerSrc(BannerImageDesk);
       }
     }
-  
+
     window.addEventListener("resize", handleResize);
     handleResize(); // Call once immediately
-  
+
     // Cleanup function
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  
 
   return (
     <section className="suplier">
@@ -49,7 +51,10 @@ const SuplierSection = ({ openFormModal }) => {
                   <button className="btn btn-primary" onClick={openFormModal}>
                     Начать бесплатно
                   </button>
-                  <button className="btn btn-secondary">
+                  <button
+                    className="btn btn-secondary"
+                    onClick={() => window.open(whatsappUrl, "_blank")}
+                  >
                     Записаться на демо
                   </button>
                 </div>

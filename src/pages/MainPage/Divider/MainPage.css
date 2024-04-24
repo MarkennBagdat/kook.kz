@@ -19,6 +19,35 @@
   width: 100%;
 }
 
+@media (min-width: 952px) {
+  .features-title {
+    max-width: 566px;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 64px;
+  }
+
+  .main-description {
+    width: 482px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .features-buttons {
+    flex-direction: row; /* Stack buttons vertically */
+  }
+
+  .button-free,
+  .button-demo {
+    width: 100%; /* Full width for buttons */
+  }
+
+  .feature-item {
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+
 @media (max-width: 952px) {
   .features__inner {
     flex-direction: column;
@@ -65,35 +94,6 @@
     font-weight: 500;
     line-height: 16px;
     margin-bottom: 10px; /* Space between items */
-  }
-}
-
-@media (min-width: 952px) {
-  .features-title {
-    max-width: 566px;
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 64px;
-  }
-
-  .main-description {
-    width: 482px;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 24px;
-  }
-  .features-buttons {
-    flex-direction: row; /* Stack buttons vertically */
-  }
-
-  .button-free,
-  .button-demo {
-    width: 100%; /* Full width for buttons */
-  }
-
-  .feature-item {
-    font-weight: 500;
-    line-height: 24px;
   }
 }
 
@@ -655,7 +655,7 @@
 .faq-item {
   width: 100%;
   padding: 25px;
-  margin: 10px; /* Set margin around the item */
+  margin: 10px 0; /* Set margin around the item */
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05); /* Adjust the box shadow as per design */
   border-radius: 8px; /* Rounded corners */
   background-color: rgba(245, 245, 245, 1); /* White background */

@@ -250,7 +250,7 @@
 
 @media (max-width: 768px) {
     .footer {
-        margin: 20px;
+        margin-bottom: 20px;
         height: 50%;
     }
 

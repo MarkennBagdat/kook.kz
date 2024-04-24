@@ -10,10 +10,10 @@ const ConditionsSection = ({ openFormModal }) => {
         <div className="save-time__inner">
           <div className="save-time-content">
             <h2 className="save-time-title">
-              Экономьте время на оформлении заказов
+            Обозначьте свои условия работы
             </h2>
             <div className="save-time-list">
-              <div className="suplier-item">
+              <div className="save-time-item">
                 <img src={Star} alt="Star icon" className="star-icon" />
                 <span>
                   Выбирайте{" "}
@@ -21,7 +21,7 @@ const ConditionsSection = ({ openFormModal }) => {
                   временные слоты
                 </span>
               </div>
-              <div className="suplier-item">
+              <div className="save-time-item">
                 <img src={Star} alt="Star icon" className="star-icon" />
                 <span>
                   Устанавливайте{" "}
@@ -31,7 +31,7 @@ const ConditionsSection = ({ openFormModal }) => {
                   и стоимость доставки
                 </span>
               </div>
-              <div className="suplier-item">
+              <div className="save-time-item">
                 <img src={Star} alt="Star icon" className="star-icon" />
                 <span>
                   Добавляйте ваш логотип,{" "}

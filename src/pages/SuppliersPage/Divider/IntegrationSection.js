@@ -7,7 +7,7 @@ const IntegrationSection = ({ openFormModal }) => {
   return (
     <section className="integration-section">
       <div className="container">
-        <div className="save-time__inner">
+        <div className="find__inner">
       <div className="find-products-visual">
         <img src={Visual} alt="Mobile app interface" className="phone-image" />
       </div>
@@ -20,8 +20,8 @@ const IntegrationSection = ({ openFormModal }) => {
             <img src={StarIcon} alt="Star" className="find-products-star" />
             <span>
               <span className="suplier-highlight">
-                Сократите до 3 часов в день
-              </span>{" "}
+                Сократите до 3 часов в день{" "}
+              </span>
               времени на перебивание заказов в систему
             </span>
           </div>

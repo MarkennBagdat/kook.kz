@@ -45,6 +45,7 @@ function Navbar({
     <nav className={`navbar ${isMobileMenuOpen ? "show" : ""}`}>
       <div className="container">
         <div className="navbar__inner">
+        <div className="hamburger">
           <div className="hamburger-menu" onClick={toggleMobileMenu}>
             {!isMobileMenuOpen && (
               <img src={Burger} alt="Menu" className="hamburger-menu__icon" />
@@ -52,6 +53,7 @@ function Navbar({
             {isMobileMenuOpen && (
               <img src={XIcon} alt="Menu" className="hamburger-menu__cancel" />
             )}{" "}
+          </div>
           </div>
 
           <div className="navbar-left">

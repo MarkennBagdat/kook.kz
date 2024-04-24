@@ -14,16 +14,16 @@ const OrderSection = ({ openFormModal }) => {
               Получайте заказы от новых клиентов{" "}
             </h2>
             <div className="save-time-list">
-              <div className="suplier-item">
+              <div className="save-time-item">
                 <img src={Star} alt="Star icon" className="star-icon" />
                 <span>
                   Получайте заказы от клиентов, которые{" "}
                   <span className="suplier-highlight">
-                    уже заказывают через 3F
+                    уже заказывают через kook
                   </span>
                 </span>
               </div>
-              <div className="suplier-item">
+              <div className="save-time-item">
                 <img src={Star} alt="Star icon" className="star-icon" />
                 <span>
                   <span className="suplier-highlight">
@@ -32,7 +32,7 @@ const OrderSection = ({ openFormModal }) => {
                   на разбор непонятного почерка и уточнение
                 </span>
               </div>
-              <div className="suplier-item">
+              <div className="save-time-item">
                 <img src={Star} alt="Star icon" className="star-icon" />
                 <div className="statuses-container">
                   <span className="statuses-text">Меняйте статус заказов:</span>

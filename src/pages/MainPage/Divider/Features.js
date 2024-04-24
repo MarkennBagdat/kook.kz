@@ -40,7 +40,7 @@ const Features = ({ openFormModal}) => {
                 <button className="button-free" onClick={openFormModal}>
                   Начать бесплатно
                 </button>
-                <button className="button-demo" onClick={DemoButton}>Записаться на демо</button>
+                <DemoButton />
               </div>
               <div className="features-list">
                 <div className="feature-item">

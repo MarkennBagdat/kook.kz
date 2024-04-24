@@ -204,7 +204,7 @@
   color: rgba(15, 23, 33, 1); /* Assuming you want the text to be white */
 }
 
-.suplier-item .suplier-highlight {
+.save-time-item .suplier-highlight {
   background: rgba(230, 70, 70, 1); /* Green background for highlighted text */
   color: #ffffff; /* White text color for highlighted text */
   padding: 0.2em; /* Optional: if you want padding around the highlighted text */
@@ -257,7 +257,7 @@
   justify-content: space-between;
   align-items: center;
   border: none;
-  margin: 24px;
+  margin-bottom: 24px;
 }
 
 .save-time__inner {
@@ -275,13 +275,11 @@
 .save-time-item,
 .suplier-item {
   display: flex;
-  align-items: flex-start; /* Align the items to the start of the cross axis */
-  padding-left: 8px;
+  align-items: flex-start;
   margin-bottom: 16px;
 }
 
 .save-time-item span {
-  padding-left: 8px;
   font-family: "Inter", sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -294,7 +292,6 @@
 .save-time-item .save-highlight {
   background: rgba(53, 163, 123, 1); /* Green background for highlighted text */
   color: #ffffff; /* White text color for highlighted text */
-  padding: 0.2em; /* Optional: if you want padding around the highlighted text */
 }
 
 .phone-image {
@@ -316,8 +313,8 @@
 }
 
 .statuses-icon {
-  height: auto; /* Maintain the aspect ratio */
-  width: auto; /* Adjust width as necessary to fit your design */
+  max-width: 290px;
+  height: auto;
 }
 
 @media (min-width: 768px) {
@@ -442,4 +439,8 @@
     list-style: none;
     margin: 20px 0 32px;
   }
+
+  .statuses-container {
+    flex-direction: column; 
+   }
 }

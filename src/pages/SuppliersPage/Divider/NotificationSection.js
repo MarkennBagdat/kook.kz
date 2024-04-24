@@ -7,7 +7,7 @@ const NotificationSection = ({ openFormModal }) => {
   return (
     <section className="notification-section">
       <div className="container">
-        <div className="save-time__inner">
+        <div className="find__inner">
           <div className="find-products-visual">
             <img
               src={Visual}

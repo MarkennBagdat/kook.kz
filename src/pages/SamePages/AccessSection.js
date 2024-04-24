@@ -4,6 +4,7 @@ import BannerImage from "../../Picture/Visual (12).png"; // The phone and sun gr
 import BannerMobile from "../../Picture/Visual (13).png";
 // import StarAccess from "../../Picture/StarAccess.png";
 import Ellipse from "../../Picture/Ellipse.png";
+import DemoButton from "../FormPage/DemoButton";
 
 const AccessSection = ({ openFormModal }) => {
   const [bannerSrc, setBannerSrc] = useState(BannerImage);
@@ -47,7 +48,7 @@ const AccessSection = ({ openFormModal }) => {
               <button class="button-free" onClick={openFormModal}>
                 Подать заявку
               </button>
-              <button class="button-demo">Записаться на демо</button>
+              <DemoButton />
             </div>
           </div>
           <div className="access-visual">
