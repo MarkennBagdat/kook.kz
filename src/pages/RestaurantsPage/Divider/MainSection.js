@@ -26,7 +26,7 @@ const MainSection = ({ openFormModal }) => {
     <section className="suplier">
       <div className="container">
         <div className="suplier__inner">
-          <div className="suppliers-pages-rest">
+          <div className="suppliers-pages">
             <div
               className="hero-section"
               style={{ backgroundImage: `url(${bannerSrc})` }}

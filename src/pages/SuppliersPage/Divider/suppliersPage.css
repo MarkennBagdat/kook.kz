@@ -1,15 +1,11 @@
 /* 1ST SECTION */
 /* MAIN */
 
-.suplier{
+.suplier {
   margin-top: 88px;
 }
 
 .suppliers-pages {
-  margin-bottom: 80px;
-}
-
-.suppliers-pages-rest {
   margin-bottom: 80px;
 }
 
@@ -54,17 +50,6 @@
   gap: 15px;
 }
 
-.btn {
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.btn-primary {
-  color: white;
-}
-
 .btn-secondary {
   background-color: transparent; /* Transparent or a secondary color */
   color: white;
@@ -85,9 +70,7 @@
   max-width: 800px; /* Fixed width */
   height: auto;
   text-align: left;
-  margin-top: 200px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 200px 40px 0;
 }
 
 .main-content h1 {
@@ -97,7 +80,6 @@
   line-height: 64px;
   letter-spacing: -0.25px;
   color: rgba(255, 255, 255, 1);
-  margin-bottom: 16px;
 }
 
 .main-content p {
@@ -106,7 +88,7 @@
   line-height: 24px;
   letter-spacing: -0.25px;
   color: rgba(255, 255, 255, 1);
-  margin-bottom: 64px;
+  margin-bottom: 16px 0 100px;
 }
 
 .main-buttons {
@@ -114,7 +96,6 @@
   justify-content: start;
   align-items: center;
   gap: 12px;
-  margin-top: 40px;
 }
 
 .btn {
@@ -151,10 +132,7 @@
     padding: 80px;
   }
 
-  .hero-content .hero-title {
-    text-align: left;
-  }
-
+  .hero-content .hero-title,
   .custom-paragraph {
     text-align: left;
   }
@@ -199,43 +177,6 @@
 
 /* SAVE TIME SECTION */
 
-.order-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: none;
-}
-
-.save-time__inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.conditions-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: none;
-}
-
-.save-time-title {
-  font-family: "BodyGrotesque", sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: -0.0025em;
-  text-align: left;
-  color: rgba(15, 23, 33, 1);
-}
-
-.suplier-item {
-  display: flex;
-  align-items: flex-start; /* Align the items to the start of the cross axis */
-  padding-left: 8px;
-  margin-bottom: 16px;
-}
-
 .suplier-item span {
   padding-left: 8px;
   font-family: "Inter", sans-serif;
@@ -253,9 +194,10 @@
   padding: 0.2em; /* Optional: if you want padding around the highlighted text */
 }
 
-.save-time-list {
+.save-time-list,
+.find-products-list {
   padding: 0;
-  margin-bottom: 50px;
+  list-style: none;
 }
 
 .star-icon {
@@ -263,7 +205,8 @@
   width: 18px;
 }
 
-.save-time-button {
+.save-time-button,
+.find-products-button {
   width: 218px; /* Fixed width */
   height: 56px; /* Fixed height */
   border-radius: 16px; /* Rounded top-left corner */
@@ -279,28 +222,42 @@
   text-align: center;
 }
 
-.save-time-visual {
+.save-time-visual,
+.find-products-visual {
   position: relative;
 }
 
-
 /* SAVE TIME SECTION */
 
-.ensure-transparency-section {
+.ensure-transparency-section,
+.save-time-section,
+.be-sure-section,
+.find-products-section,
+.order-section,
+.conditions-section,
+.integration-section,
+.notification-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: none;
+  margin: 24px;
 }
 
-.save-time-section {
+.save-time__inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border: none;
+  gap: 24px;
 }
 
-.save-time-item {
+.find__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.save-time-item,
+.suplier-item {
   display: flex;
   align-items: flex-start; /* Align the items to the start of the cross axis */
   padding-left: 8px;
@@ -348,156 +305,42 @@
 }
 
 @media (min-width: 768px) {
-  .order-section {
-    padding: 48px;
+  .ensure-transparency-section,
+  .save-time-section,
+  .be-sure-section,
+  .find-products-section,
+  .order-section,
+  .conditions-section,
+  .integration-section,
+  .notification-section {
+    padding: 20px;
   }
 
-  .conditions-section {
-    padding: 48px;
-  }
-
-  .save-time-section {
-    padding: 48px;
-  }
-
-  .ensure-transparency-section {
-    padding: 48px;
-  }
-
-  .save-time-content {
+  .save-time-content,
+  .find-products-info {
     width: 43%;
   }
 
-  .save-time-visual {
-    width: 48%; 
-  }
-
+  .save-time-visual,
   .find-products-visual {
     width: 48%;
   }
 
-  .find-products-info {
-    width: 43%;
+  .save-time-button,
+  .find-products-button {
+    margin-top: 64px;
   }
 
   .find-products-button {
     width: 218px;
     height: 56px;
   }
-
-  .be-sure-section {
-    padding: 48px;
-  }
-
-  .find-products-section {
-    padding: 48px;
-  }
-
-  .integration-section {
-    padding: 48px;
-  }
-  
-  .conditions-section {
-    padding: 48px;
-  }
-}
-
-@media (max-width: 768px) {
-  .be-sure-section {
-    flex-direction: column; /* Содержание и изображение в ряд на больших экранах */
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  .find-products-section {
-    flex-direction: column; /* Содержание и изображение в ряд на больших экранах */
-    justify-content: space-between;
-    padding: 20px;
-  }
-
-  .save-time-section {
-    flex-direction: column-reverse; /* Содержание и изображение в ряд на больших экранах */
-    justify-content: space-between;
-    padding: 20px;
-  }
-
-  .ensure-transparency-section {
-    flex-direction: column-reverse; /* Содержание и изображение в ряд на больших экранах */
-    justify-content: space-between;
-    padding: 20px;
-  }
-
-  .order-section {
-    flex-direction: column; /* Содержание и изображение в ряд на больших экранах */
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  .conditions-section {
-    flex-direction: column-reverse; /* Содержание и изображение в ряд на больших экранах */
-    justify-content: space-between;
-    padding: 20px;
-  }
-
-  .integration-section {
-    flex-direction: column; /* Содержание и изображение в ряд на больших экранах */
-    justify-content: space-between;
-    padding: 20px;
-  }
-
-  .save-time-content,
-  .save-time-visual {
-    flex: 1; /* Занимает 50% ширины родителя */
-    max-width: 100%; /* Максимальная ширина для контента и изображения */
-  }
-
-  .find-products-section,
-  .find-products-info {
-    flex: 1; /* Занимает 50% ширины родителя */
-    max-width: 100%;
-  }
-
-  .save-time-title {
-    text-align: left; /* Выравнивание текста по левому краю */
-  }
-
-  .save-time-list {
-    text-align: left; /* Выравнивание текста списка по левому краю */
-  }
-
-  .save-time-item {
-    text-align: left; /* Выравнивание текста элемента по левому краю */
-    justify-content: start; /* Выравнивание содержимого элемента списка в начало */
-  }
-
-  .save-time-button {
-    width: 100%;
-  }
-
-  .find-products-button {
-    width: 100%;
-  }
 }
 
 /* 2ND SECTION */
 
-.integration-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: none;
-}
-
-.notification-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 48px;
-  border: none;
-  margin: 24px;
-}
-
-.find-products-title {
+.find-products-title,
+.save-time-title {
   font-family: "BodyGrotesque", sans-serif;
   font-size: 32px;
   font-weight: 700;
@@ -507,7 +350,8 @@
   color: rgba(15, 23, 33, 1);
 }
 
-.integration-item {
+.integration-item,
+.find-products-item {
   display: flex;
   align-items: flex-start;
   margin-bottom: 16px;
@@ -532,36 +376,6 @@
 
 /* FIND PRODUCTS */
 
-.be-sure-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: none;
-}
-
-.find-products-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: none;
-}
-
-.find-products-title {
-  font-family: "BodyGrotesque", sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: -0.0025em;
-  text-align: left;
-  color: rgba(15, 23, 33, 1);
-}
-
-.find-products-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 16px;
-}
-
 .find-products-star {
   margin-right: 8px; /* Space between the star icon and the text */
 }
@@ -583,35 +397,33 @@
   color: rgba(15, 23, 33, 1);
 }
 
-.find-products-button {
-  height: 56px;
-  border-radius: 16px;
-  border: 2px solid rgba(82, 76, 189, 1);
-  background: rgba(255, 255, 255, 1);
-  color: rgba(82, 76, 189, 1);
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  text-align: center;
-  cursor: pointer;
-  margin-top: 24px;
-}
-
-.find-products-list {
-  list-style: none; /* Removes default list styling */
-  padding-left: 0;
-}
-
-.find-products-visual {
-  position: relative;
-}
-
 .phone-image {
   width: 100%;
   display: block;
 }
 
 .Points-notification {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .save-time__inner {
+    flex-direction: column-reverse;
+  }
+
+  .find__inner {
+    flex-direction: column;
+  }
+
+  .find-products-button,
+  .save-time-button {
     width: 100%;
+  }
+
+  .save-time-list,
+  .find-products-list {
+    padding: 0;
+    list-style: none;
+    margin: 20px 0 32px;
+  }
 }

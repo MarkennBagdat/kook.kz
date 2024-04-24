@@ -8,7 +8,7 @@ const BeSureSection = ({ openFormModal }) => {
   return (
     <section className="be-sure-section">
       <div className="container">
-        <div className="save-time__inner">
+        <div className="find__inner">
           <div className="find-products-visual">
             <img
               src={Visual}
