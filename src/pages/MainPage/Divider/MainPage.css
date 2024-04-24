@@ -627,7 +627,7 @@
 
 .faq__inner {
   gap: 24px;
-  margin: 10px 0; /* Adjust as needed */
+  margin: 10px 0 30px; /* Adjust as needed */
 }
 
 .faq-title {
