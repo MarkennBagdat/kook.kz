@@ -3,6 +3,7 @@ import "./MainPage.css";
 import CheckFilled from "../../../Picture/check_filled.png";
 import BannerDesktop from "../../../Picture/Banner.png";
 import BannerMobile from "../../../Picture/Banner (3).png";
+import DemoButton from "../../FormPage/DemoButton";
 
 // Accept `openFormModal` as a prop
 const Features = ({ openFormModal}) => {
@@ -39,7 +40,7 @@ const Features = ({ openFormModal}) => {
                 <button className="button-free" onClick={openFormModal}>
                   Начать бесплатно
                 </button>
-                <button className="button-demo" >Записаться на демо</button>
+                <button className="button-demo" onClick={DemoButton}>Записаться на демо</button>
               </div>
               <div className="features-list">
                 <div className="feature-item">
