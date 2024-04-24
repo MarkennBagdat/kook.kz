@@ -940,6 +940,14 @@
   margin: 0; /* Это уберет стандартные отступы у параграфа */
 }
 
+
+.qr__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 @media (min-width: 953px) {
   .qrcode-image {
     margin-right: 12px;

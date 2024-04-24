@@ -8,6 +8,9 @@ function QRCode() {
 
     const toggleQR = () => setShowQR(!showQR);
   return showQR ? (
+    
+    <div className="container">
+      <div className="qr__inner">
     <div className="qr-section qr-container">
       <button className="close-qr" onClick={toggleQR}>
         ×
@@ -16,6 +19,8 @@ function QRCode() {
       <p className="qr-code-subtext">Отсканируйте QR-код</p>
       <img src={QRCodeImage} alt="QR Code" className="qr-code-image" />
     </div>
+    </div>
+  </div>
   ) : (
     <div className="qr-section qr-collapsed" onClick={toggleQR}>
       <img src={DeviceMobile} alt="Download" className="qrcode-image" />
