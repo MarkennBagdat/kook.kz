@@ -5,7 +5,7 @@ import BannerDesktop from "../../../Picture/Banner.png";
 import BannerMobile from "../../../Picture/Banner (3).png";
 
 // Accept `openFormModal` as a prop
-const Features = ({ openFormModal, openDemoFormModal }) => {
+const Features = ({ openFormModal}) => {
   const [bannerSrc, setBannerSrc] = useState(BannerDesktop);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const Features = ({ openFormModal, openDemoFormModal }) => {
                 <button className="button-free" onClick={openFormModal}>
                   Начать бесплатно
                 </button>
-                <button className="button-demo" onClick={openDemoFormModal}>Записаться на демо</button>
+                <button className="button-demo" >Записаться на демо</button>
               </div>
               <div className="features-list">
                 <div className="feature-item">

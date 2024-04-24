@@ -40,6 +40,7 @@ function Navbar({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  
   return (
     <nav className={`navbar ${isMobileMenuOpen ? "show" : ""}`}>
       <div className="container">
