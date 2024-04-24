@@ -24,7 +24,6 @@
 .navbar-left {
     display: flex;
     align-items: center;
-    margin-right: auto;
 }
 
 .navbar-logo {
@@ -337,6 +336,10 @@
     .dropdown-content{
         top: 40px;
         right: -15px;
+    }
+
+    .navbar-left {
+        margin-right: auto;
     }
 }
 

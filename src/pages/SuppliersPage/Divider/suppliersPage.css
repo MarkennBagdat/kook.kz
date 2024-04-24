@@ -154,6 +154,7 @@
     justify-content: center;
     align-items: center;
     padding: 16px 16px 224px;
+    max-width: 310px;;
   }
 
   .hero-title {
@@ -178,8 +179,10 @@
   }
 
   .hero-buttons {
+    display: inline-flex;
     flex-direction: column; /* Рядовое направление для кнопок */
-    gap: 15px; /* Увеличиваем расстояние между кнопками */
+    gap: 20px;
+    width: 100%;
     justify-content: center;
     align-items: center;
     max-width: 310px;
