@@ -40,20 +40,23 @@ function Navbar({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  
   return (
     <nav className={`navbar ${isMobileMenuOpen ? "show" : ""}`}>
       <div className="container">
         <div className="navbar__inner">
-        <div className="hamburger">
-          <div className="hamburger-menu" onClick={toggleMobileMenu}>
-            {!isMobileMenuOpen && (
-              <img src={Burger} alt="Menu" className="hamburger-menu__icon" />
-            )}
-            {isMobileMenuOpen && (
-              <img src={XIcon} alt="Menu" className="hamburger-menu__cancel" />
-            )}{" "}
-          </div>
+          <div className="hamburger">
+            <div className="hamburger-menu" onClick={toggleMobileMenu}>
+              {!isMobileMenuOpen && (
+                <img src={Burger} alt="Menu" className="hamburger-menu__icon" />
+              )}
+              {isMobileMenuOpen && (
+                <img
+                  src={XIcon}
+                  alt="Menu"
+                  className="hamburger-menu__cancel"
+                />
+              )}{" "}
+            </div>
           </div>
 
           <div className="navbar-left">
@@ -66,6 +69,7 @@ function Navbar({
                 to="/"
                 className="nav-link"
                 activeClassName="nav-link-active"
+                onClick={() => window.innerWidth <= 1015 && toggleMobileMenu()}
               >
                 Главная
               </NavLink>
@@ -73,6 +77,7 @@ function Navbar({
                 to="/restaurants"
                 className="nav-link"
                 activeClassName="nav-link-active"
+                onClick={() => window.innerWidth <= 1015 && toggleMobileMenu()}
               >
                 Рестораны
               </NavLink>
@@ -80,6 +85,7 @@ function Navbar({
                 to="/suppliers"
                 className="nav-link"
                 activeClassName="nav-link-active"
+                onClick={() => window.innerWidth <= 1015 && toggleMobileMenu()}
               >
                 Поставщики
               </NavLink>
@@ -87,6 +93,7 @@ function Navbar({
                 to="/about"
                 className="nav-link"
                 activeClassName="nav-link-active"
+                onClick={() => window.innerWidth <= 1015 && toggleMobileMenu()}
               >
                 О нас
               </NavLink>
