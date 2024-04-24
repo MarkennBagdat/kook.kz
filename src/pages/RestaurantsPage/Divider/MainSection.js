@@ -45,7 +45,7 @@ const MainSection = ({ openFormModal }) => {
                   <button
                     className="btn btn-secondary"
                     onClick={() =>
-                      (window.location.href = "https://apps.apple.com/ca/app/kook-kz/id6444289181")
+                      (window.location.href = "https://onelink.to/tpabss")
                     }
                   >
                     Скачать приложение
