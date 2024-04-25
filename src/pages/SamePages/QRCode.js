@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../MainPage/Divider/MainPage.css";
 import QRCodeImage from "../../Picture/QRCode.png";
 import DeviceMobile from "../../Picture/device-mobile.png";
@@ -9,6 +9,27 @@ function QRCode() {
   const [showQR, setShowQR] = useState(false); // This will toggle between showing and hiding the QR code
 
   const toggleQR = () => setShowQR(!showQR);
+
+  useEffect(() => {
+    function handleScroll() {
+      const footer = document.querySelector('.footer'); // Use the actual class or ID of your footer
+      const qrInfo = document.querySelector('.qr-info');
+      const footerRect = footer.getBoundingClientRect();
+      const footerPosition = footerRect.top - window.innerHeight;
+  
+      if (footerPosition <= 0) {
+        // We've reached the footer
+        qrInfo.style.display = 'none';
+      } else {
+        qrInfo.style.display = 'block';
+      }
+    }
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
 
   return (
     <div className="qr">

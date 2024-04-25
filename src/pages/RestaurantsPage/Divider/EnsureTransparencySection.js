@@ -1,7 +1,7 @@
 // EnsureTransparencySection.js
 import React from "react";
 import "../../SuppliersPage/Divider/suppliersPage.css"; // Path to your CSS file
-import Visual from "../../../Picture/Visual (3).png";
+import Visual from "../../../Picture/Visual (22).png";
 import Star from "../../../Picture/Star1.svg";
 
 const EnsureTransparencySection = ({ openFormModal }) => {

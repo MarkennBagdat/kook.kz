@@ -154,7 +154,7 @@
     justify-content: center;
     align-items: center;
     padding: 16px 16px 224px;
-    max-width: 310px;;
+    max-width: 310px;
   }
 
   .hero-title {
@@ -196,12 +196,15 @@
 
 /* SAVE TIME SECTION */
 
+.save-time-content,
+.find-products-info {
+  margin: 48px 0 24px;
+}
+
 .suplier-item span {
   padding-left: 8px;
   font-family: "Inter", sans-serif;
-  font-size: 18px;
   font-weight: 500;
-  line-height: 24px;
   letter-spacing: -0.25px;
   text-align: left;
   color: rgba(15, 23, 33, 1); /* Assuming you want the text to be white */
@@ -210,13 +213,13 @@
 .save-time-item .suplier-highlight {
   background: rgba(230, 70, 70, 1); /* Green background for highlighted text */
   color: #ffffff; /* White text color for highlighted text */
-  padding: 0.2em; /* Optional: if you want padding around the highlighted text */
 }
 
 .save-time-list,
 .find-products-list {
   padding: 0;
   list-style: none;
+  margin-bottom: 10%;
 }
 
 .star-icon {
@@ -279,14 +282,11 @@
 .suplier-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 16px;
 }
 
 .save-time-item span {
   font-family: "Inter", sans-serif;
-  font-size: 18px;
   font-weight: 500;
-  line-height: 24px;
   letter-spacing: -0.25px;
   text-align: left;
   color: rgba(15, 23, 33, 1); /* Assuming you want the text to be white */
@@ -323,7 +323,7 @@
 @media (min-width: 768px) {
   .save-time-content,
   .find-products-info {
-    width: 48%;
+    width: 45%;
   }
 
   .save-time-visual,
@@ -335,6 +335,17 @@
     width: 218px;
     height: 56px;
   }
+
+  .find-products-title,
+  .save-time-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .save-time-item span {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 /* 2ND SECTION */
@@ -342,9 +353,7 @@
 .find-products-title,
 .save-time-title {
   font-family: "BodyGrotesque", sans-serif;
-  font-size: 32px;
   font-weight: 700;
-  line-height: 40px;
   letter-spacing: -0.0025em;
   text-align: left;
   color: rgba(15, 23, 33, 1);
@@ -429,6 +438,17 @@
   }
 
   .statuses-container {
-    flex-direction: column; 
-   }
+    flex-direction: column;
+  }
+
+  .find-products-title,
+  .save-time-title {
+    font-size: 24px;
+    line-height: 31.64px;
+  }
+
+  .save-time-item span {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
