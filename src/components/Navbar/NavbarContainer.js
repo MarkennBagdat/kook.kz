@@ -20,6 +20,8 @@ function NavbarContainer() {
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
+        if (isContactDropdownOpen) setIsContactDropdownOpen(!isContactDropdownOpen);
+        if (isLoginDropdownOpen) setIsLoginDropdownOpen(!isLoginDropdownOpen);
     };
 
     const toggleModal = () => {
