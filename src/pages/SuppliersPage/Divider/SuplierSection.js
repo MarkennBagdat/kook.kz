@@ -1,31 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./suppliersPage.css"; // Make sure the CSS file path is correct
-import BannerImageSup from "../../../Picture/Banner-2.png"; // Update the import path if necessary
-import BannerMobileSup from "../../../Picture/Banner (6).png"; // Update the import path if necessary
-
+import BannerImageSup from "../../../Picture/Banner-2.png";
 const SuplierSection = ({ openFormModal }) => {
   const message =
     "Здравствуйте! Я бы хотел(а) записаться на демонстрацию продукта. Можем ли мы обговорить время и дату? Буду ждать вашего подтверждения. Спасибо!";
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/+77717488223?text=${encodedMessage}`;
-
-  const [bannerSupSrc, setBannerSupSrc] = useState(BannerImageSup);
-
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth <= 768) {
-        setBannerSupSrc(BannerMobileSup);
-      } else {
-        setBannerSupSrc(BannerImageSup);
-      }
-    }
-
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Call once immediately
-
-    // Cleanup function
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  
+  // const [bannerSupSrc, setBannerSupSrc] = useState(BannerImageSup);
+  // useEffect(() => {
+  //   function handleResize() {
+  //     if (window.innerWidth <= 768) {
+  //       setBannerSupSrc(BannerMobileSup);
+  //     } else {
+  //       setBannerSupSrc(BannerImageSup);
+  //     }
+  //   }
+  // , { useState, useEffect }
+  //   window.addEventListener("resize", handleResize);
+  //   handleResize();
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   return (
     <section className="suplier">
@@ -34,7 +29,7 @@ const SuplierSection = ({ openFormModal }) => {
           <div className="suppliers-pages">
             <div
               className="hero-section"
-              style={{ backgroundImage: `url(${bannerSupSrc})` }}
+              style={{ backgroundImage: `url(${BannerImageSup})` }}
             >
               <div className="hero-content">
                 <h1 className="hero-title">

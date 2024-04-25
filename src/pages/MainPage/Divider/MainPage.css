@@ -403,6 +403,7 @@
   align-items: center; /* Vertically center the content */
   justify-content: center; /* Horizontally center the content */
   padding: 16px 32px;
+  width: 100%;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -1066,7 +1067,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%; 
+    width: 80%;
     height: 48px;
     background-color: #ffffff; /* Button background color */
     color: rgba(15, 23, 33, 1); /* Button text color */
@@ -1091,5 +1092,15 @@
   .download-button img {
     margin-left: 4px; /* Space between icon and text */
     width: 24px; /* Icon size */
+  }
+
+  .qr-collapsed{
+    width: 24px;
+    height: 24px;
+    border-radius: 16px;
+  }
+
+  .qrcode-text {
+    display: none;
   }
 }
