@@ -469,7 +469,7 @@
   }
 
   .service {
-    width: 100%;
+    max-width: 96%;
   }
 
   .service-title {
