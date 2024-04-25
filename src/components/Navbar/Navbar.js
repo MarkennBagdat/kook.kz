@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "./navbar.css";
 import Logo from "../../Picture/Longlogo.svg";
 import Phone from "../../Picture/Graphic.svg";
@@ -13,6 +13,7 @@ import RestIcon from "../../Picture/Graphic (1).svg";
 import PostIcon from "../../Picture/Graphic (2).svg";
 import Burger from "./Burger.png";
 import XIcon from "../../Picture/x.png";
+import ScrollToTopLink from "../../pages/SamePages/ScrollToTopLink";
 
 function Navbar({
     isContactDropdownOpen,
@@ -57,33 +58,33 @@ function Navbar({
                         </Link>
 
                         <div className="navbar-links">
-                            <NavLink to="/" className="nav-link" activeClassName="nav-link-active" onClick={toggleMobileMenu}>
+                            <ScrollToTopLink to="/" className="nav-link" activeClassName="nav-link-active" onClick={toggleMobileMenu}>
                                 Главная
-                            </NavLink>
-                            <NavLink
+                            </ScrollToTopLink>
+                            <ScrollToTopLink
                                 to="/restaurants"
                                 className="nav-link"
                                 activeClassName="nav-link-active"
                                 onClick={toggleMobileMenu}
                             >
                                 Рестораны
-                            </NavLink>
-                            <NavLink
+                            </ScrollToTopLink>
+                            <ScrollToTopLink
                                 to="/suppliers"
                                 className="nav-link"
                                 activeClassName="nav-link-active"
                                 onClick={toggleMobileMenu}
                             >
                                 Поставщики
-                            </NavLink>
-                            <NavLink
+                            </ScrollToTopLink>
+                            <ScrollToTopLink
                                 to="/about"
                                 className="nav-link"
                                 activeClassName="nav-link-active"
                                 onClick={toggleMobileMenu}
                             >
                                 О нас
-                            </NavLink>
+                            </ScrollToTopLink>
 
                             <div className="nav-link contact-dropdown">
                                 <button
