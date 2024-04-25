@@ -30,14 +30,14 @@ function QRCode() {
               </button>
               <div className="download-text">Скачайте приложение</div>
               <a
-                href="https://apps.apple.com/app/id"
+                href="https://apps.apple.com/ca/app/kook-kz/id6444289181"
                 className="download-button app-store"
               >
                <p> App Store</p>
                 <img src={AppStoreIcon} alt="App Store" />
               </a>
               <a
-                href="https://play.google.com/store/apps/details?id"
+                href="https://play.google.com/store/apps/details?id=kz.freshfromfarm.app"
                 className="download-button google-play"
               >
                 <p>Google Play</p>
