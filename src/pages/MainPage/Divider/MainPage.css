@@ -78,7 +78,8 @@
 
 .button-free {
   background-color: rgba(82, 76, 189, 1); /* button background color */
-  color: #ffffff; /* button text color - assuming white */
+  color: #ffffff;
+  border: 2px solid rgba(82, 76, 189, 1); /* border color and size */
 }
 
 .button-demo {
@@ -329,7 +330,6 @@
 .service {
   background-color: rgba(245, 245, 245, 1); /* White background */
   border-radius: 32px; /* Rounded corners on the top-left and bottom-left */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
   width: 100%; /* Full width on small screens */
   max-width: 700px; /* Maximum width to control size on larger screens */
   height: auto;
@@ -419,6 +419,7 @@
 .service-button-in {
   background-color: rgba(82, 76, 189, 1);
   color: #ffffff;
+  border: 2px solid rgba(82, 76, 189, 1);
 }
 
 .service-button-out {
@@ -678,7 +679,6 @@
   width: 100%;
   padding: 25px;
   margin: 10px 0; /* Set margin around the item */
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05); /* Adjust the box shadow as per design */
   border-radius: 8px; /* Rounded corners */
   background-color: rgba(245, 245, 245, 1); /* White background */
   box-sizing: border-box;
@@ -917,6 +917,7 @@
   max-width: 1392px;
   padding: 0 24px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .qr-info {

@@ -8,6 +8,9 @@ import StarIcon2 from "../../../Picture/Star2.svg"; // Icon for the "Suppliers" 
 import ArrowUp from "../../../Picture/arrow-up-right.svg";
 
 const ServiceSection = ({ openFormModal }) => {
+  const message = "Здравствуйте! Я бы хотел(а) записаться на демонстрацию продукта. Можем ли мы обговорить время и дату? Буду ждать вашего подтверждения. Спасибо!";
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/+77717488223?text=${encodedMessage}`;
   let navigate = useNavigate();
 
   const navigateToRestaurants = () => {
@@ -17,6 +20,7 @@ const ServiceSection = ({ openFormModal }) => {
   const navigateToSuppliers = () => {
     navigate("/suppliers");
   };
+  
 
   return (
     <section className="service-section">
@@ -86,7 +90,7 @@ const ServiceSection = ({ openFormModal }) => {
                 </li>
               </ul>
               <div className="buttons-container">
-                <button className="service-button-in">
+                <button className="service-button-in" onClick={() => window.open(whatsappUrl, '_blank')}>
                   Записаться на демо
                 </button>
                 <button

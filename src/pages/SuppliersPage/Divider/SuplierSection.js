@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./suppliersPage.css"; // Make sure the CSS file path is correct
-import BannerImageDesk from "../../../Picture/Banner-2.png"; // Update the import path if necessary
-import BannerMobileVer from "../../../Picture/Banner 6.png"; // Update the import path if necessary
+import BannerImageSup from "../../../Picture/Banner-2.png"; // Update the import path if necessary
+import BannerMobileSup from "../../../Picture/Banner (6).png"; // Update the import path if necessary
 
 const SuplierSection = ({ openFormModal }) => {
-  const [bannerSrc, setBannerSrc] = useState(BannerImageDesk);
   const message =
     "Здравствуйте! Я бы хотел(а) записаться на демонстрацию продукта. Можем ли мы обговорить время и дату? Буду ждать вашего подтверждения. Спасибо!";
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/+77717488223?text=${encodedMessage}`;
 
+  const [bannerSupSrc, setBannerSupSrc] = useState(BannerImageSup);
+
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth <= 768) {
-        console.log("Setting mobile banner");
-        setBannerSrc(BannerMobileVer);
+        setBannerSupSrc(BannerMobileSup);
       } else {
-        console.log("Setting desktop banner");
-        setBannerSrc(BannerImageDesk);
+        setBannerSupSrc(BannerImageSup);
       }
     }
 
@@ -35,7 +34,7 @@ const SuplierSection = ({ openFormModal }) => {
           <div className="suppliers-pages">
             <div
               className="hero-section"
-              style={{ backgroundImage: `url(${bannerSrc})` }}
+              style={{ backgroundImage: `url(${bannerSupSrc})` }}
             >
               <div className="hero-content">
                 <h1 className="hero-title">
