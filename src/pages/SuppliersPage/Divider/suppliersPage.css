@@ -208,11 +208,6 @@
 
 /* SAVE TIME SECTION */
 
-.save-time-content,
-.find-products-info {
-  margin: 48px 0 24px;
-}
-
 .suplier-item span {
   padding-left: 8px;
   font-family: "Inter", sans-serif;
@@ -349,6 +344,11 @@
     height: 56px;
   }
 
+  .save-time-content,
+.find-products-info {
+  margin: 48px 0 24px;
+}
+
   .find-products-title,
   .save-time-title {
     font-size: 32px;
@@ -447,7 +447,7 @@
   .find-products-list {
     padding: 0;
     list-style: none;
-    margin: 32px 0;
+    margin: 25px 0;
   }
 
   .statuses-container {
@@ -463,5 +463,10 @@
   .save-time-item span {
     font-size: 15px;
     line-height: 20px;
+  }
+
+  .save-time-content,
+  .find-products-info {
+    margin: 0 0 24px;
   }
 }
