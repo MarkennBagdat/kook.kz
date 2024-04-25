@@ -919,13 +919,12 @@
   position: fixed; /* Keep the QR code fixed on the screen */
   bottom: 30px; /* Position from the bottom */
   left: 24px; /* Position from the left */
-  display: flex;
-  align-items: center;
-  width: 100%;
-  text-align: center;
 }
 
-.qr-section, .mobile-download-buttons {
+.qr-section {
+  display: flex;
+  align-items: center;
+  text-align: center;
   padding: 24px;
 }
 
@@ -1024,6 +1023,9 @@
   .qrcode-image {
     margin-right: 12px;
   }
+  .mobile-download-buttons{
+    display: none;
+  }
 
 }
 
@@ -1032,24 +1034,66 @@
     display: none;
   }
 
-  .mobile-download-buttons{
-
-  display: flex;
-  max-width: 100%;
-  max-height: 388px; /* Height adjusted to content */
-  background-color: rgba(
-    63,
-    132,
-    229,
-    1
-  ); 
-  left: 0; /* Расположение в левом нижнем углу */
-        right: 0; /* Расположение в правом нижнем углу */
-        bottom: 0; /* Расположение внизу экрана */
-        z-index: 1000;
-  border-radius: 32px; /* Rounded corners as specified */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for styling */
-  color: #ffffff; /* Text color white */
-
+  .mobile-download-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* For the close button to be absolutely positioned */
+    background-color: rgba(63, 132, 229, 1);
+    
+    border-radius: 14px; /* Rounded corners for the container */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for a slight depth effect */
   }
+  
+  .close-qr {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px; /* Size of the close button */
+  }
+  
+  .download-text {
+    margin-bottom: 20px;
+    font-size: 18px; /* Adjust to match your design */
+    color: rgba(255, 255, 255, 1); /* Text color */
+  }
+  
+  .download-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff; /* Button background color */
+    color: #ffffff; /* Button text color */
+    text-decoration: none;
+    border: none;
+    border-radius: 22px; /* Rounded corners for the buttons */
+    padding: 10px 20px;
+    margin: 10px 0; /* Space between buttons */
+    width: 80%; /* Width of the buttons */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for the buttons */
+    font-size: 16px; /* Text size */
+  }
+  
+  .download-button img {
+    margin-right: 10px; /* Space between icon and text */
+    width: 24px; /* Icon size */
+  }
+  
+  /* This is for the App Store button specifically */
+  .app-store {
+    background-color: #ffffff; /* Override for a white background */
+    color: #000000; /* Override for black text */
+  }
+  
+  /* This is for the Google Play button specifically */
+  .google-play {
+    background-color: #007bff; /* Specific blue for Google Play */
+    color: #ffffff; /* White text for Google Play button */
+  }
+  
 }
