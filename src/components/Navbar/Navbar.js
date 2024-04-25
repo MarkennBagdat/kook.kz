@@ -25,6 +25,7 @@ function Navbar({
 }) {
   const [contactDropdownOpen, setContactDropdownOpen] = useState(false);
 
+  
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth <= 1015) {
@@ -113,7 +114,7 @@ function Navbar({
 
                 {(isContactDropdownOpen || contactDropdownOpen) && (
                   <div className="dropdown-content">
-                    <a href="tel:+77717488223" className="dropdown-item">
+                    <a href="tel:+77717488223" className="dropdown-item" >
                       <img
                         src={Phone}
                         alt="Phone"
