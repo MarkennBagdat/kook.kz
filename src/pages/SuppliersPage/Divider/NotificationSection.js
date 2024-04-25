@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./suppliersPage.css";
-import Visual from "../../../Picture/Visual (8).png"; // Path to your visual image
-import Points from "../../../Picture/Points.png";
+import Visual7 from "../../../Picture/Visual (8).png"; // Path to your visual image
+import Points from "../../../Picture/Points (2).png";
+import VisualM7 from "../../../Picture/VisualSupM4.png";
+
 
 const NotificationSection = ({ openFormModal }) => {
+  const [bannerSrc, setBannerSrc] = useState(Visual7);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 768) {
+        setBannerSrc(VisualM7);
+      } else {
+        setBannerSrc(Visual7);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call once immediately
+
+    // Cleanup function
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="notification-section">
       <div className="container">
         <div className="find__inner">
           <div className="find-products-visual">
             <img
-              src={Visual}
+              src={bannerSrc}
               alt="Mobile app interface"
               className="phone-image"
             />

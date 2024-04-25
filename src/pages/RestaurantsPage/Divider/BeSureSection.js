@@ -1,17 +1,37 @@
 // BeSureSection.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../SuppliersPage/Divider/suppliersPage.css"; // Path to your CSS file
-import Visual from "../../../Picture/Visual (4).png";
+import Visual4 from "../../../Picture/Visual (25).png";
 import StarIcon from "../../../Picture/Star1.svg";
+import VisualM4 from "../../../Picture/Visual4 RestM.png";
+
 
 const BeSureSection = ({ openFormModal }) => {
+  const [bannerSrc, setBannerSrc] = useState(Visual4);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 768) {
+        setBannerSrc(VisualM4);
+      } else {
+        setBannerSrc(Visual4);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call once immediately
+
+    // Cleanup function
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="be-sure-section">
       <div className="container">
         <div className="find__inner">
           <div className="find-products-visual">
             <img
-              src={Visual}
+              src={bannerSrc}
               alt="Mobile app interface"
               className="phone-image"
             />

@@ -13,7 +13,6 @@ import RestIcon from "../../Picture/Graphic (1).svg";
 import PostIcon from "../../Picture/Graphic (2).svg";
 import Burger from "./Burger.png";
 import XIcon from "../../Picture/x.png";
-import ScrollToTopLink from "../../pages/SamePages/ScrollToTopLink";
 
 function Navbar({
   isContactDropdownOpen,

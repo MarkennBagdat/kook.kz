@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./suppliersPage.css";
-import Visual from "../../../Picture/Visual (21).png"; // Update the import if your image is in a different directory
+import Visual8 from "../../../Picture/Visual (21).png"; // Update the import if your image is in a different directory
 import Star from "../../../Picture/Star2.svg";
-import Statuses from "../../../Picture/Statuses.png";
+import Statuses from "../../../Picture/Statuses (2).png";
+import VisualM8 from "../../../Picture/VisualSupM3.png";
 
 const OrderSection = ({ openFormModal }) => {
+  const [bannerSrc, setBannerSrc] = useState(Visual8);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 768) {
+        setBannerSrc(VisualM8);
+      } else {
+        setBannerSrc(Visual8);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call once immediately
+
+    // Cleanup function
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="order-section">
       <div className="container">
@@ -49,7 +68,7 @@ const OrderSection = ({ openFormModal }) => {
             </button>
           </div>
           <div className="save-time-visual">
-            <img src={Visual} alt="Phone visual" className="phone-image" />
+            <img src={bannerSrc} alt="Phone visual" className="phone-image" />
           </div>
         </div>
       </div>

@@ -219,7 +219,8 @@
 
 .save-time-item .suplier-highlight {
   background: rgba(230, 70, 70, 1); /* Green background for highlighted text */
-  color: #ffffff; /* White text color for highlighted text */
+  color: #ffffff; 
+  padding: 0.2em;
 }
 
 .save-time-list,
@@ -289,6 +290,7 @@
 .suplier-item {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 16px;
 }
 
 .save-time-item span {
@@ -301,7 +303,8 @@
 
 .save-time-item .save-highlight {
   background: rgba(53, 163, 123, 1); /* Green background for highlighted text */
-  color: #ffffff; /* White text color for highlighted text */
+  color: #ffffff; 
+  padding: 0.2em;
 }
 
 .phone-image {
@@ -311,7 +314,7 @@
 
 .statuses-container {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 8px; /* Adjust the gap between the text and the image */
 }
 
@@ -355,6 +358,8 @@
     line-height: 40px;
   }
 
+  .find-products-item span,
+  .integration-item span,
   .save-time-item span {
     font-size: 18px;
     line-height: 24px;
@@ -389,7 +394,6 @@
 .integration-item span {
   margin-right: 8px;
   font-family: "Inter", sans-serif;
-  font-size: 18px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.25px;
@@ -460,6 +464,8 @@
     line-height: 31.64px;
   }
 
+  .integration-item span,
+  .find-products-item span,
   .save-time-item span {
     font-size: 15px;
     line-height: 20px;
@@ -468,5 +474,9 @@
   .save-time-content,
   .find-products-info {
     margin: 0 0 24px;
+  }
+
+  .statuses-icon {
+    width: 100%;
   }
 }
