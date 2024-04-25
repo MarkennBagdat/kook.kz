@@ -56,7 +56,6 @@
 .features-buttons {
   max-width: 448px;
   display: flex;
-  gap: 12px;
   margin-bottom: 32px;
 }
 
@@ -106,11 +105,10 @@
   margin-bottom: 8px;
 }
 
-.feature-item span{
+.feature-item span {
   font-family: "Inter", sans-serif;
   letter-spacing: -0.25px;
   color: rgba(15, 23, 33, 1);
-  
 }
 
 .feature-item img {
@@ -133,7 +131,8 @@
     line-height: 24px;
   }
   .features-buttons {
-    flex-direction: row; /* Stack buttons vertically */
+    flex-direction: row;
+    gap: 12px;
   }
 
   .button-free,
@@ -141,7 +140,7 @@
     width: 100%; /* Full width for buttons */
   }
 
-  .feature-item span{
+  .feature-item span {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -182,6 +181,7 @@
     flex-direction: column; /* Stack buttons vertically */
     align-items: center;
     max-width: 100%;
+    gap: 8px;
   }
 
   .button-free,
@@ -190,7 +190,7 @@
     height: 56px;
   }
 
-  .feature-item span{
+  .feature-item span {
     align-items: center;
     font-size: 14px;
     font-weight: 400;
@@ -379,7 +379,7 @@
 
 .service-list li {
   display: flex;
-  align-items: center;
+  align-items: start;
   font-family: "Inter", sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -437,7 +437,11 @@
     padding: 32px;
   }
 
-  .service-content p {
+  .service-title {
+    font-size: 32px;
+  }
+
+  .service-title-text {
     height: 48px;
   }
 
@@ -449,6 +453,7 @@
   .service-list li {
     font-size: 18px;
     font-weight: 500;
+    line-height: 24px;
   }
 }
 
@@ -464,12 +469,15 @@
   }
 
   .service-title {
+    font-size: 24px;
+    line-height: 31.64px;
     margin-top: 20px;
   }
 
   .service-title-text {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
+    line-height: 20px;
   }
 
   .service-list {
@@ -478,7 +486,7 @@
 
   .service-list li {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .buttons-container {
@@ -541,7 +549,6 @@
   font-family: "BodyGrotesqueFit", sans-serif;
   font-size: 40px;
   font-weight: 700;
-  line-height: 48px;
   letter-spacing: -0.25px;
   text-align: left;
   color: rgba(15, 23, 33, 1);
@@ -568,13 +575,9 @@
 
 .access-description {
   font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 24px;
   letter-spacing: -0.25px;
   text-align: left;
   color: rgba(102, 108, 116, 1);
-  margin-bottom: 50px;
 }
 
 .access-visual img.star {
@@ -583,6 +586,19 @@
   width: 40px; /* Example size, adjust using percentages for responsiveness if needed */
   height: 40px; /* Keep the height same as width for a square aspect ratio */
   z-index: 10; /* Ensures the star is above other elements */
+}
+
+@media (min-width: 980px) {
+  .access-title {
+    line-height: 48px;
+  }
+
+  .access-description {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 16px 0 50px;
+  }
 }
 
 @media (max-width: 980px) {
@@ -596,17 +612,20 @@
 
   .access-title,
   .access-title .highlight {
-    line-height: 40px; /* Adjust line-height accordingly */
+    font-size: 24px;
+    line-height: 31.64px;
   }
 
   .access-description {
-    font-size: 16px; /* Smaller font size on mobile devices */
-    line-height: 22px; /* Adjust line-height accordingly */
+    font-weight: 400;
+    font-size: 14px; /* Smaller font size on mobile devices */
+    line-height: 20px;
+    margin: 8px 0 32px;
   }
+
   .access-title,
   .access-title .highlight,
   .access-description {
-    width: 100%; /* Полная ширина контейнера */
     text-align: center; /* Центрирование текста */
   }
 
@@ -642,11 +661,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 20px;
   font-family: "BodyGrotesque", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 48px;
   letter-spacing: -0.0025em;
   color: rgba(15, 23, 33, 1); /* Assuming you want to set text color */
 }
@@ -672,9 +687,7 @@
 
 .faq-question {
   font-family: "Inter", sans-serif;
-  font-size: 18px; /* Set the font size */
-  font-weight: 600; /* Bold font weight as specified */
-  line-height: 24px; /* Line height for readability */
+  font-weight: 600; 
   letter-spacing: -0.25px; /* Adjust letter spacing as needed */
   text-align: left; /* Align text to the left */
   color: rgba(15, 23, 33, 1); /* Dark text color for better readability */
@@ -726,6 +739,34 @@
   text-align: left;
 }
 
+@media (min-width: 980px) {
+  .faq-title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    }
+
+    .faq-question {
+      font-size: 18px; /* Set the font size */
+      line-height: 24px; /* Line height for readability */
+    }
+  
+}
+
+@media (max-width: 980px) {
+  .faq-title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.64px;
+    }
+  
+    .faq-question {
+      font-size: 14px; /* Set the font size */
+      line-height: 20px; /* Line height for readability */
+    }
+}
 /* MediaSection */
 .media__inner {
   display: flex;
@@ -765,17 +806,12 @@
   line-height: 40px;
   letter-spacing: -0.0025em;
   color: rgba(15, 23, 33, 1);
-  margin: 0px 0px 10px;
 }
 
 .media-article p {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
   letter-spacing: -0.25px;
   color: rgba(102, 108, 116, 1);
-  margin: 0px 0px 40px;
 }
 
 .media-link {
@@ -801,6 +837,19 @@
 }
 
 @media (min-width: 768px) {
+  .media-article h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0px 0px 10px;
+  }
+
+  .media-article p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0px 0px 40px;
+  }
+
   .media-avatar {
     position: absolute;
     right: -47.75px;
@@ -833,9 +882,18 @@
     text-align: center;
   }
 
+  .media-article h2 {
+    font-size: 24px;
+    line-height: 31.64px;
+    margin: 0 0 4px;
+  }
+
+
   .media-article p {
-    font-size: 18px;
-    margin-bottom: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0px 0px 32px;
   }
 
   .media-article,
@@ -857,13 +915,18 @@
 
 /* MainPage.css */
 
-.qr-section {
+.qr-info {
   position: fixed; /* Keep the QR code fixed on the screen */
   bottom: 30px; /* Position from the bottom */
   left: 24px; /* Position from the left */
-  padding: 24px; /* Padding inside the container */
   display: flex;
-  align-items: center; /* Center content horizontally */
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.qr-section, .mobile-download-buttons {
+  padding: 24px;
 }
 
 .qr-container {
@@ -951,22 +1014,42 @@
   margin: 0; /* Это уберет стандартные отступы у параграфа */
 }
 
-
 .qr__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
-@media (min-width: 953px) {
+@media (min-width: 980px) {
   .qrcode-image {
     margin-right: 12px;
   }
+
 }
 
-@media (max-width: 953px) {
+@media (max-width: 980px) {
   .qr-container{
     display: none;
+  }
+
+  .mobile-download-buttons{
+
+  display: flex;
+  max-width: 100%;
+  max-height: 388px; /* Height adjusted to content */
+  background-color: rgba(
+    63,
+    132,
+    229,
+    1
+  ); 
+  left: 0; /* Расположение в левом нижнем углу */
+        right: 0; /* Расположение в правом нижнем углу */
+        bottom: 0; /* Расположение внизу экрана */
+        z-index: 1000;
+  border-radius: 32px; /* Rounded corners as specified */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for styling */
+  color: #ffffff; /* Text color white */
+
   }
 }
