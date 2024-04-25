@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  margin: 90px 0 50px;
+  margin: 90px 0 60px;
 }
 
 .link-section,
@@ -22,13 +22,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: -0.25px;
-}
-
-.description-section p {
   font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -67,17 +60,21 @@
 }
 
 /* Описание */
-.description-section{
+.description-section {
   display: flex;
   justify-content: center;
-  margin: 20px 142px;
+  margin: 20px 142px 0;
 }
 
 .description-section p {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
   font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.25px;
   text-align: left;
   color: rgba(102, 108, 116, 1);
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
 
 .description-bold-text {
@@ -97,7 +94,7 @@
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  margin: 90px 0;
+  margin: 80px 0;
 }
 
 .values-section {
@@ -109,7 +106,6 @@
 .value-card {
   background: rgba(245, 245, 245, 1);
   border-radius: 32px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 24px;
   max-width: 369px; /* Adjust width as necessary */
   text-align: start;
@@ -151,31 +147,57 @@
   color: rgba(102, 108, 116, 1);
   text-decoration-line: underline; /* Добавляет подчеркивание */
   text-decoration-style: solid; /* Стиль линии подчеркивания */
-  text-decoration-color: rgba(82, 76, 189, 1); /* Цвет подчеркивания */
+  text-decoration-color: rgba(82, 76, 189, 1); 
+
 }
 
 @media (max-width: 1200px) {
+  .aboutme__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 90px 0 16px;
+  }
+
   .about-text-content {
     flex-direction: column-reverse;
     gap: 20px;
   }
 
   .description-section {
-    width: 80%;
+    width: 100%;
+  }
+
+  .description-section p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.25px;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  .value-title {
+    font-family: "BodyGrotesqueFit";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.64px;
+    letter-spacing: -0.0025em;
+    text-align: left;
+    margin: 24px 0 4px;
   }
 
   .about-text-content,
-  .description-section p,
   .value-description {
-    font-size: 16px; /* Smaller font size */
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.25px;
+    text-align: left;
   }
 
-  .value-card {
-    width: 80%;
-  }
-
-  .aboutme-title__inner{
-    margin-top: 30px;
+  .aboutme-title__inner {
+    margin-top: 44px;
     flex-direction: column;
     justify-content: center;
     align-items: center;

@@ -321,30 +321,14 @@
 }
 
 @media (min-width: 768px) {
-  .ensure-transparency-section,
-  .save-time-section,
-  .be-sure-section,
-  .find-products-section,
-  .order-section,
-  .conditions-section,
-  .integration-section,
-  .notification-section {
-    padding: 20px;
-  }
-
   .save-time-content,
   .find-products-info {
-    width: 43%;
+    width: 48%;
   }
 
   .save-time-visual,
   .find-products-visual {
     width: 48%;
-  }
-
-  .save-time-button,
-  .find-products-button {
-    margin-top: 64px;
   }
 
   .find-products-button {
@@ -364,6 +348,7 @@
   letter-spacing: -0.0025em;
   text-align: left;
   color: rgba(15, 23, 33, 1);
+  margin-bottom: 24px;
 }
 
 .integration-item,
