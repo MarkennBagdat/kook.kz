@@ -45,7 +45,7 @@
   line-height: 24px;
   letter-spacing: -0.1px;
   text-align: center;
-  width: 110px; /* Hug width */
+  max-width: 110px; /* Hug width */
   height: 32px; /* Fixed height */
   color: rgba(82, 76, 189, 1); /* Link text color */
   text-decoration: none;
@@ -77,17 +77,6 @@
   margin-bottom: 24px;
 }
 
-.description-bold-text {
-  font-weight: 600; /* Bold font weight */
-  font-size: 18px; /* Match the font size from your requirements */
-  line-height: 24px; /* Match the line height from your requirements */
-  letter-spacing: -0.25px; /* Match the letter spacing from your requirements */
-  text-align: left;
-  color: rgba(0, 0, 0, 1);
-  font-weight: bold;
-  cursor: pointer;
-}
-
 /* 3 часть */
 
 .aboutme-title__inner {
@@ -113,7 +102,6 @@
 
 .icon-wrapper {
   border-radius: 16px;
-  opacity: 0px;
 }
 
 .value-icon {
@@ -172,9 +160,6 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: -0.25px;
-    text-align: left;
-    margin-bottom: 16px;
   }
 
   .value-title {
