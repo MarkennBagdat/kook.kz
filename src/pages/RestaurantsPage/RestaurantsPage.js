@@ -13,6 +13,7 @@ import FAQ from "../SamePages/FAQ";
 import QRCode from "../SamePages/QRCode";
 import "../MainPage/Divider/MainPage.css";
 import FormSection from "../../pages/FormPage/FormSection";
+import Partners from "./Divider/PartnersC";
 
 const RestaurantsPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,6 +35,7 @@ const RestaurantsPage = () => {
       <BeSureSection openFormModal={toggleModal} />
       {isModalOpen && <FormSection toggleModal={toggleModal} />}
       {/* <Testimonials /> */}
+      <Partners />
       <AccessSection openFormModal={toggleModal} />
       {isModalOpen && <FormSection toggleModal={toggleModal} />}
       <FAQ />

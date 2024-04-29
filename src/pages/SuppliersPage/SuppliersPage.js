@@ -12,6 +12,7 @@ import FAQ from "../SamePages/FAQ";
 // import Testimonials from "../SamePages/Testimonials";
 import QRCode from "../SamePages/QRCode";
 import FormSection from "../../pages/FormPage/FormSection";
+import WorkPartners from "../SuppliersPage/Divider/PartnersW";
 
 
 const SuppliersPage = () => {
@@ -33,6 +34,7 @@ const SuppliersPage = () => {
       <NotificationSection openFormModal={toggleModal} />
       {isModalOpen && <FormSection toggleModal={toggleModal} />}
       {/* <Testimonials /> */}
+      <WorkPartners />
       <AccessSection openFormModal={toggleModal} />
       {isModalOpen && <FormSection toggleModal={toggleModal} />}
       <FAQ />
