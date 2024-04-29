@@ -1,17 +1,37 @@
 // FindProductsSection.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../SuppliersPage/Divider/suppliersPage.css"; // Path to your CSS file
-import Visual from "../../../Picture/Visual (2).png"; // Path to your visual image
+import Visual2 from "../../../Picture/Visual (23).png"; // Path to your visual image
 import StarIcon from "../../../Picture/Star1.svg";
+import VisualM2 from "../../../Picture/Visual2 RestM.png";
+
 
 const FindProductsSection = ({ openFormModal }) => {
+  const [bannerSrc, setBannerSrc] = useState(Visual2);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 768) {
+        setBannerSrc(VisualM2);
+      } else {
+        setBannerSrc(Visual2);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call once immediately
+
+    // Cleanup function
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="find-products-section">
       <div className="container">
         <div className="find__inner">
           <div className="find-products-visual">
             <img
-              src={Visual}
+              src={bannerSrc}
               alt="Mobile app interface"
               className="phone-image"
             />

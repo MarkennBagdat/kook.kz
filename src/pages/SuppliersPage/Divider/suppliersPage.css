@@ -1,5 +1,8 @@
 /* 1ST SECTION */
 /* MAIN */
+:root {
+  --background-image: url('../../../Picture/Banner-2.png');
+}
 
 .suplier {
   margin-top: 88px;
@@ -17,6 +20,7 @@
   background-position: center;
   color: white;
   border-radius: 32px;
+  background-image: var(--background-image);
 }
 
 .hero-content {
@@ -116,6 +120,10 @@
 }
 
 @media (min-width: 769px) {
+  :root {
+    --background-image: url('../../../Picture/Banner-2.png');
+  }
+
   .hero-section {
     text-align: left;
     padding: 80px;
@@ -144,6 +152,10 @@
 }
 
 @media (max-width: 769px) {
+  :root {
+    --background-image: url('../../../Picture/Banner (6).png');
+  }
+  
   .hero-section {
     justify-content: center;
     padding-top: 40px;
@@ -154,7 +166,7 @@
     justify-content: center;
     align-items: center;
     padding: 16px 16px 224px;
-    max-width: 310px;;
+    max-width: 310px;
   }
 
   .hero-title {
@@ -199,9 +211,7 @@
 .suplier-item span {
   padding-left: 8px;
   font-family: "Inter", sans-serif;
-  font-size: 18px;
   font-weight: 500;
-  line-height: 24px;
   letter-spacing: -0.25px;
   text-align: left;
   color: rgba(15, 23, 33, 1); /* Assuming you want the text to be white */
@@ -209,14 +219,15 @@
 
 .save-time-item .suplier-highlight {
   background: rgba(230, 70, 70, 1); /* Green background for highlighted text */
-  color: #ffffff; /* White text color for highlighted text */
-  padding: 0.2em; /* Optional: if you want padding around the highlighted text */
+  color: #ffffff; 
+  padding: 0.2em;
 }
 
 .save-time-list,
 .find-products-list {
   padding: 0;
   list-style: none;
+  margin-bottom: 10%;
 }
 
 .star-icon {
@@ -284,9 +295,7 @@
 
 .save-time-item span {
   font-family: "Inter", sans-serif;
-  font-size: 18px;
   font-weight: 500;
-  line-height: 24px;
   letter-spacing: -0.25px;
   text-align: left;
   color: rgba(15, 23, 33, 1); /* Assuming you want the text to be white */
@@ -294,7 +303,8 @@
 
 .save-time-item .save-highlight {
   background: rgba(53, 163, 123, 1); /* Green background for highlighted text */
-  color: #ffffff; /* White text color for highlighted text */
+  color: #ffffff; 
+  padding: 0.2em;
 }
 
 .phone-image {
@@ -304,7 +314,7 @@
 
 .statuses-container {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 8px; /* Adjust the gap between the text and the image */
 }
 
@@ -321,20 +331,10 @@
 }
 
 @media (min-width: 768px) {
-  .ensure-transparency-section,
-  .save-time-section,
-  .be-sure-section,
-  .find-products-section,
-  .order-section,
-  .conditions-section,
-  .integration-section,
-  .notification-section {
-    padding: 20px;
-  }
 
   .save-time-content,
   .find-products-info {
-    width: 43%;
+    width: 45%;
   }
 
   .save-time-visual,
@@ -342,14 +342,27 @@
     width: 48%;
   }
 
-  .save-time-button,
-  .find-products-button {
-    margin-top: 64px;
-  }
-
   .find-products-button {
     width: 218px;
     height: 56px;
+  }
+
+  .save-time-content,
+.find-products-info {
+  margin: 48px 0 24px;
+}
+
+  .find-products-title,
+  .save-time-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .find-products-item span,
+  .integration-item span,
+  .save-time-item span {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -358,12 +371,11 @@
 .find-products-title,
 .save-time-title {
   font-family: "BodyGrotesque", sans-serif;
-  font-size: 32px;
   font-weight: 700;
-  line-height: 40px;
   letter-spacing: -0.0025em;
   text-align: left;
   color: rgba(15, 23, 33, 1);
+  margin-bottom: 24px;
 }
 
 .integration-item,
@@ -382,7 +394,6 @@
 .integration-item span {
   margin-right: 8px;
   font-family: "Inter", sans-serif;
-  font-size: 18px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.25px;
@@ -440,10 +451,32 @@
   .find-products-list {
     padding: 0;
     list-style: none;
-    margin: 32px 0;
+    margin: 25px 0;
   }
 
   .statuses-container {
-    flex-direction: column; 
-   }
+    flex-direction: column;
+  }
+
+  .find-products-title,
+  .save-time-title {
+    font-size: 24px;
+    line-height: 31.64px;
+  }
+
+  .integration-item span,
+  .find-products-item span,
+  .save-time-item span {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .save-time-content,
+  .find-products-info {
+    margin: 0 0 24px;
+  }
+
+  .statuses-icon {
+    width: 100%;
+  }
 }

@@ -1,5 +1,5 @@
 // Import necessary components and styles
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import Navbar from "./Navbar";
 import "./navbar.css";
 import FormSection from "../../pages/FormPage/FormSection";
@@ -27,6 +27,25 @@ function NavbarContainer() {
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
     };
+
+    useEffect(() => {
+        function handleOutsideClick(event) {
+            if (!event.target.closest('.navbar')) {
+                setIsContactDropdownOpen(false);
+                setIsLoginDropdownOpen(false);
+                setIsMobileMenuOpen(false);
+            }
+        }
+
+        if (isContactDropdownOpen || isLoginDropdownOpen || isMobileMenuOpen) {
+            document.addEventListener('mousedown', handleOutsideClick);
+        } else {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        }
+
+        return () => document.removeEventListener('mousedown', handleOutsideClick);
+    }, [isContactDropdownOpen, isLoginDropdownOpen, isMobileMenuOpen]);
+
 
     return (
         <>

@@ -1,8 +1,8 @@
 import React from "react";
 import "./AboutPage.css"; // Make sure this path is correct
-import MissionIcon from "../../../Picture/IconAbout1.png";
-import VisionIcon from "../../../Picture/IconAbout2.png";
-import ValuesIcon from "../../../Picture/IconAbout3.png";
+import MissionIcon from "../../../Picture/Icon.svg";
+import VisionIcon from "../../../Picture/Icon (1).svg";
+import ValuesIcon from "../../../Picture/Icon (2).svg";
 
 const TitleSection = () => {
   return (

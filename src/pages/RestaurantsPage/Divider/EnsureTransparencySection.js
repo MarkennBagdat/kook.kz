@@ -1,10 +1,30 @@
 // EnsureTransparencySection.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../SuppliersPage/Divider/suppliersPage.css"; // Path to your CSS file
-import Visual from "../../../Picture/Visual (3).png";
+import Visual3 from "../../../Picture/Visual (26).png";
 import Star from "../../../Picture/Star1.svg";
+import VisualM3 from "../../../Picture/Visual3 RestM.png";
+
 
 const EnsureTransparencySection = ({ openFormModal }) => {
+  const [bannerSrc, setBannerSrc] = useState(Visual3);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 768) {
+        setBannerSrc(VisualM3);
+      } else {
+        setBannerSrc(Visual3);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call once immediately
+
+    // Cleanup function
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="ensure-transparency-section">
       <div className="container">
@@ -43,7 +63,7 @@ const EnsureTransparencySection = ({ openFormModal }) => {
             </button>
           </div>
           <div className="save-time-visual">
-            <img src={Visual} alt="Phone visual" className="phone-image" />
+            <img src={bannerSrc} alt="Phone visual" className="phone-image" />
           </div>
         </div>
       </div>

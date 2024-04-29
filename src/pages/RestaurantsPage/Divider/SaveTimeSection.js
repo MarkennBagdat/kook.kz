@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../SuppliersPage/Divider/suppliersPage.css"; // Path to your CSS file
-import Visual from "../../../Picture/Visual (1).png"; // Update the import if your image is in a different directory
+import Visual1 from "../../../Picture/Visual (24).png"; // Update the import if your image is in a different directory
 import Star from "../../../Picture/Star1.svg"; // Update the import if your image is in a different directory
+import VisualM1 from "../../../Picture/Visual1 RestM.png";
 
 const SaveTimeSection = ({ openFormModal }) => {
+  const [bannerSrc, setBannerSrc] = useState(Visual1);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 768) {
+        setBannerSrc(VisualM1);
+      } else {
+        setBannerSrc(Visual1);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call once immediately
+
+    // Cleanup function
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="save-time-section">
       <div className="container">
@@ -37,7 +56,7 @@ const SaveTimeSection = ({ openFormModal }) => {
         <button className="save-time-button" onClick={openFormModal}>Начать бесплатно</button>
       </div>
       <div className="save-time-visual">
-        <img src={Visual} alt="Phone visual" className="phone-image" />
+        <img src={bannerSrc} alt="Phone visual" className="phone-image" />
       </div>
       </div>
       </div>

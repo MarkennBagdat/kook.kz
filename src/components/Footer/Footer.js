@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Footer.css";
 import AppStoreBadge from "../../Picture/Logo (1).svg";
 import GooglePlayBadge from "../../Picture/Logos.svg";
@@ -7,6 +6,7 @@ import LinkedinIcon from "../../Picture/brand-linkedin (1).png";
 import WhatsappIcon from "../../Picture/brand-whatsapp (1).png";
 import Logo from "../../Picture/Logo.svg";
 import Star from "../../Picture/Star 1.png";
+import ScrollToTopLink from "../../pages/SamePages/ScrollToTopLink";
 
 function Footer() {
   return (
@@ -48,16 +48,16 @@ function Footer() {
               <h3>Карта сайта</h3>
               <ul>
                 <li>
-                  <Link to="/">Главная</Link> {/* Use Link component */}
+                  <ScrollToTopLink to="/">Главная</ScrollToTopLink>{" "}
                 </li>
                 <li>
-                  <Link to="/restaurants">Рестораны</Link>
+                  <ScrollToTopLink to="/restaurants">Рестораны</ScrollToTopLink>
                 </li>
                 <li>
-                  <Link to="/suppliers">Поставщики</Link>
+                  <ScrollToTopLink to="/suppliers">Поставщики</ScrollToTopLink>
                 </li>
                 <li>
-                  <Link to="/about">О нас</Link>
+                  <ScrollToTopLink to="/about">О нас</ScrollToTopLink>
                 </li>
               </ul>
             </div>

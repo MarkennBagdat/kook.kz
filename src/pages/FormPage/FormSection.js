@@ -153,6 +153,7 @@ const FormSection = ({ toggleModal }) => {
           type="email"
           name="email"
           placeholder="Почта *"
+          required
           value={email}
           onChange={handleInputChange}
           onBlur={() => handleBlur("email")}
@@ -255,6 +256,7 @@ const FormSection = ({ toggleModal }) => {
           type="email"
           name="email"
           placeholder="Почта *"
+          required
           value={email}
           onChange={handleInputChange}
           className={emailError ? "error" : ""}
