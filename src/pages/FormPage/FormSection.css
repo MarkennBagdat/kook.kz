@@ -64,6 +64,9 @@
 }
 
 .close-btn {
+  position: absolute;
+  right: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
   border: none;
   background: transparent;
@@ -75,13 +78,6 @@
   border-radius: 50%; /* Rounded border to make it a circle */
   opacity: 1; /* Fully opaque */
   background-color: rgba(238, 238, 238, 1); /* Light grey background */
-}
-
-.close-btn {
-  position: absolute;
-  right: 24px; /* Правый отступ, как в вашем примере */
-  font-size: 1.5rem;
-  cursor: pointer;
 }
 
 .form-section {
@@ -96,18 +92,16 @@
   height: 32px; /* Высота каждой вкладки */
   padding: 0 12px; /* Внутренние отступы вокруг текста */
   font-family: "Inter", sans-serif;
-  border: none; /* Убрать границу */
   background: transparent; /* Начальный фон для неактивной вкладки */
   cursor: pointer; /* Стиль курсора для указания на кликабельность */
   transition: background-color 0.3s;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 .form-tab.active {
   background-color: rgba(82, 76, 189, 1); /* Цвет фона для активной вкладки */
   color: white; /* Цвет текста для активной вкладки */
   opacity: 1;
-  border-radius: 16px;
 }
 
 /* Добавьте стили для hover эффекта, если это необходимо */
