@@ -1154,7 +1154,6 @@
 
 .marquee-content {
   display: flex;
-  
   flex-shrink: 0;
   animation: scroll 20s linear infinite;
 }
@@ -1165,16 +1164,17 @@
   align-items: center; /* Centers the children horizontally */
   justify-content: center;
   flex-shrink: 0;
-  max-width: 278px;
+  max-width: 250px;
+  width: 100%;
   height: auto;
 }
 
 @keyframes scroll {
   from {
-    transform: translate3d(50%, 0, 0); /* Start off the middle of the screen */
+    transform: translate3d(30%, 0, 0); /* Start off the middle of the screen */
   }
   to {
-    transform: translate3d(-150%, 0, 0); /* End off the left edge of the screen */
+    transform: translate3d(-280%, 0, 0); /* End off the left edge of the screen */
   }
 }
 
@@ -1192,10 +1192,6 @@
 }
 
 @media (min-width: 780px) {
-  .marquee-item {
-    width: 278px;
-  }
-
   .img_company {
     width: 100px; /* Smaller size on mobile */
     height: 100px; /* Smaller size on mobile */

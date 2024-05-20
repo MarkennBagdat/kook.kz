@@ -22,7 +22,7 @@ const Partners = () => {
         <div className="faq-title">Нам доверяют</div>
         <div className="marquee">
           <div className="marquee-content">
-            {[...logos, ...logos, ...logos].map((logo, index) => (
+            {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
               <div className="marquee-item" key={index}>
                 <img src={logo.src} alt={logo.alt} className="img_company" />
                 <p className="company-name">{logo.name}</p>
