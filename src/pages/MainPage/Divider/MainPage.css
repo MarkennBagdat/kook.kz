@@ -932,6 +932,7 @@
 }
 
 /* MainPage.css */
+
 .qr {
   position: relative;
   max-width: 1392px;
@@ -1155,7 +1156,7 @@
 .marquee-content {
   display: flex;
   flex-shrink: 0;
-  animation: scroll 20s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 
 .marquee-item {
