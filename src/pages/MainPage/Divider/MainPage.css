@@ -1156,13 +1156,13 @@
 .marquee-content {
   display: flex;
   flex-shrink: 0;
-  animation: scroll 30s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 .marquee-item {
-  display: flex; /* Establishes a flex container */
-  flex-direction: column; /* Stacks the children vertically */
-  align-items: center; /* Centers the children horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   flex-shrink: 0;
   max-width: 250px;
@@ -1171,13 +1171,14 @@
 }
 
 @keyframes scroll {
-  from {
-    transform: translate3d(30%, 0, 0); /* Start off the middle of the screen */
+  0% {
+    transform: translate3d(0, 0, 0); /* Start off the right edge of the screen */
   }
-  to {
-    transform: translate3d(-280%, 0, 0); /* End off the left edge of the screen */
+  100% {
+    transform: translate3d(-100%, 0, 0); /* End off the left edge of the screen */
   }
 }
+
 
 
 .img_company {

@@ -12,24 +12,23 @@ function QRCode() {
 
   useEffect(() => {
     function handleScroll() {
-      const footer = document.querySelector('.footer'); // Use the actual class or ID of your footer
-      const qrInfo = document.querySelector('.qr-info');
+      const footer = document.querySelector(".footer"); // Use the actual class or ID of your footer
+      const qrInfo = document.querySelector(".qr-info");
       const footerRect = footer.getBoundingClientRect();
       const footerPosition = footerRect.top - window.innerHeight;
-  
+
       if (footerPosition <= 0) {
         // We've reached the footer
-        qrInfo.style.display = 'none';
+        qrInfo.style.display = "none";
       } else {
-        qrInfo.style.display = 'block';
+        qrInfo.style.display = "block";
       }
     }
-  
-    window.addEventListener('scroll', handleScroll);
-  
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
 
   return (
     <div className="qr">
@@ -54,7 +53,7 @@ function QRCode() {
                 href="https://apps.apple.com/ca/app/kook-kz/id6444289181"
                 className="download-button app-store"
               >
-               <p> App Store</p>
+                <p> App Store</p>
                 <img src={AppStoreIcon} alt="App Store" />
               </a>
               <a
