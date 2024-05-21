@@ -1148,15 +1148,23 @@
 /* MainPage.css */
 
 .marquee {
-  overflow: hidden !important;
-  user-select: none;
-  gap: var(--gap);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content,
+.marquee-content-rest {
+  display: inline-flex;
+  align-items: center;
+  animation: slide 80s linear infinite;
 }
 
 .marquee-content {
-  display: flex;
-  flex-shrink: 0;
-  animation: scroll 10s linear infinite;
+  animation: slide 80s linear infinite;
+}
+
+.marquee-content-rest {
+  animation: slide 30s linear infinite;
 }
 
 .marquee-item {
@@ -1165,21 +1173,17 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  max-width: 250px;
-  width: 100%;
   height: auto;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translate3d(0, 0, 0); /* Start off the right edge of the screen */
+@keyframes slide {
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translate3d(-100%, 0, 0); /* End off the left edge of the screen */
+  to {
+    transform: translateX(-100%);
   }
 }
-
-
 
 .img_company {
   width: 100px;
@@ -1194,22 +1198,22 @@
 }
 
 @media (min-width: 780px) {
-  .img_company {
-    width: 100px; /* Smaller size on mobile */
-    height: 100px; /* Smaller size on mobile */
-  }
-
   .company_name {
     font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .marquee-item {
+    max-width: 250px;
+    width: 100%;
   }
 }
 
 /* Ensure responsiveness and alignment */
 @media (max-width: 780px) {
   .marquee-item {
-    width: 124px;
+    width: 180px;
     justify-content: flex-start;
   }
 

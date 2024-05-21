@@ -12,7 +12,6 @@ const logos = [
   { src: TGRIcon, alt: "TGR Company", name: "TGR Company" },
   { src: CityFoodIcon, alt: "City Food Trade", name: "City Food Trade" },
   { src: GlobalHalalIcon, alt: "Global Halal Food", name: "Global Halal Food" },
-  // Add more logos and names as needed
 ];
 
 const Partners = () => {
@@ -21,7 +20,7 @@ const Partners = () => {
       <div className="container">
         <div className="faq-title">Нам доверяют</div>
         <div className="marquee">
-          <div className="marquee-content">
+          <div className="marquee-content-rest">
             {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
               <div className="marquee-item" key={index}>
                 <img src={logo.src} alt={logo.alt} className="img_company" />
