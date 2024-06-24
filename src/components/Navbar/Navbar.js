@@ -196,7 +196,7 @@ function Navbar({
               </button>
               {isLoginDropdownOpen && (
                 <div className="dropdown-content-login">
-                  <a href="https://shop.3f.kz/" className="dropdown-item-login">
+                  <a href="https://shop.kook.kz/" className="dropdown-item-login">
                     <img
                       src={RestIcon}
                       alt="Restaurant"
@@ -206,7 +206,7 @@ function Navbar({
                     <img src={Action} alt="Action" className="chevron-right" />
                   </a>
                   <a
-                    href="https://shop.3f.kz/index.php?route=vendor/login"
+                    href="https://shop.kook.kz/index.php?route=vendor/login"
                     className="dropdown-item-login"
                   >
                     <img src={PostIcon} alt="Supplier" className="icon-login" />
