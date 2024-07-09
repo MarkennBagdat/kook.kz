@@ -7,6 +7,7 @@ import WhatsappIcon from "../../Picture/brand-whatsapp (1).png";
 import Logo from "../../Picture/Logo.svg";
 import Star from "../../Picture/Star 1.png";
 import ScrollToTopLink from "../../pages/SamePages/ScrollToTopLink";
+import PersonalDataProcessing from "../../Picture/ОбработкаПерсональныхДанных2.pdf";
 
 function Footer() {
   return (
@@ -63,12 +64,13 @@ function Footer() {
             </div>
             <div className="footer-contacts">
               <h3>Контакты</h3>
-              <a href="mailto:support@kook.kz">support@kook.kz</a>
+              <a href="mailto:support@kook.kz" className="footer-contacts_a">support@kook.kz</a>
               <div className="social-links">
                 <a
                   href="https://www.linkedin.com/company/kook-startup/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="footer-contacts_a"
                 >
                   <img src={LinkedinIcon} alt="LinkedIn" />
                 </a>
@@ -76,8 +78,21 @@ function Footer() {
                   href="https://api.whatsapp.com/send?phone=77717488223"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="footer-contacts_a"
                 >
                   <img src={WhatsappIcon} alt="WhatsApp" />
+                </a>
+              </div>
+              <div className="footer-bottom_text">
+                <p className="footer_text_two">2024 @ТОО "ЮНИКОРН СТАРТАП"</p>
+                <a
+                  href={PersonalDataProcessing}
+                  download="ОбработкаПерсональныхДанных.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer_text_two"
+                >
+                  Обработка персональных данных
                 </a>
               </div>
             </div>

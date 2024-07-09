@@ -18,6 +18,23 @@
     max-width: 400px;
 }
 
+
+.footer-bottom_text {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.footer_text_two{
+    display: block; /* To ensure the full width is clickable and to position the icons below the email */
+    font-family: "Inter", sans-serif; /* Adjust if needed */
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 10px;
+    color: #fff;
+}
+
+
 .logo {
     height: 40px;
     display: flex; /* This will align the logo and text side by side */
@@ -119,8 +136,7 @@
     margin: 0;
 }
 
-.footer-sitemap ul li a,
-.footer-contacts a {
+.footer-sitemap ul li a{
     color: #fff;
     text-decoration: none;
 }
@@ -140,7 +156,6 @@
 } */
 .footer-sitemap h3 {
     margin: 8px 0 24px;
-
     font-family: "BodyGrotesque", sans-serif; /* Adjust if needed */
     font-size: 20px;
     font-weight: 700;
@@ -189,7 +204,7 @@
     text-align: left;
 }
 
-.footer-contacts a {
+.footer-contacts_a {
     display: block; /* To ensure the full width is clickable and to position the icons below the email */
     font-family: "Inter", sans-serif; /* Adjust if needed */
     font-size: 16px;
@@ -212,7 +227,7 @@
 }
 
 /* Additional styles for links to remove the default blue color and underline */
-.footer-contacts a,
+.footer-contacts_a,
 .social-links a {
     color: inherit; /* Inherits the white color specified above */
     text-decoration: none; /* No underline */
@@ -275,6 +290,13 @@
     .footer-star {
         display: none;
     }
+}
+
+@media (max-width: 980px) {
+    .footer-bottom_text {
+        display: flex;
+        flex-direction: column;
+    }    
 }
 
 /* Responsive styles for mobile */
