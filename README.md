@@ -24,6 +24,6 @@ To get a local copy up and running, follow these steps:
    ```bash
    git clone https://github.com/MarkennBagdat/kook.kz.git
 
-   ![image](https://github.com/user-attachments/assets/284d21a4-2ca8-4f0f-9777-fd18c176e9e8)
-   ![image](https://github.com/user-attachments/assets/8233d67f-e8b8-4512-bf79-d50cb8861105)
-   ![image](https://github.com/user-attachments/assets/18ddb44e-487a-47b6-9bdd-d2a9bc2175e0)
+![image](https://github.com/user-attachments/assets/284d21a4-2ca8-4f0f-9777-fd18c176e9e8)
+![image](https://github.com/user-attachments/assets/8233d67f-e8b8-4512-bf79-d50cb8861105)
+![image](https://github.com/user-attachments/assets/18ddb44e-487a-47b6-9bdd-d2a9bc2175e0)
