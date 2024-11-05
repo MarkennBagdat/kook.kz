@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/dada5ddc-e901-446f-93df-3f62aec6bc5e)# Kook.kz
+# Kook.kz
 
 Welcome to the Kook.kz project! This dynamic web application is designed to provide an engaging user experience for our visitors. The website features a modern and responsive design, ensuring accessibility across various devices.
 
